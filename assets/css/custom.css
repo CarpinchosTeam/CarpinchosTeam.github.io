@@ -1,0 +1,6 @@
+:root {
+    /* common CSS variables */
+    --body-font: 'Lora', 'Times New Roman', serif;
+    --header-font: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --mid-col: #808080;
+  }

@@ -1,0 +1,31 @@
+# Jekyll build output
+_site/
+.sass-cache
+.vagrant
+
+# Jekyll Cache
+.jekyll-cache/
+.jekyll-metadata
+
+# Sass compilation cache
+.sass-cache/
+
+# Bundler files
+vendor/bundle/
+.bundle/
+
+# Ruby version manager files
+.ruby-version
+.rbenv-vars
+.rvmrc
+
+# Node modules
+node_modules/
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db

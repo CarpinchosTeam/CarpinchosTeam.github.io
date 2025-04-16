@@ -1,0 +1,16 @@
+- event: indyscc23
+  name: SC23 IndySCC
+  year: 2023
+  location: Denver, United States (remote)
+  award: Third place
+
+- event: asc24
+  name: ASC Student Supercomputer Challenge 2024
+  year: 2024
+  location: Shanghai, China
+  award: Most Popular Team
+
+- event: indyscc24
+  name: SC24 IndySCC
+  year: 2024
+  location: Atlanta, United States (remote)

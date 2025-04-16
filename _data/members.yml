@@ -1,0 +1,124 @@
+- name: "Alejandro Silva"
+  affiliation: "Universidad Nacional de Córdoba"
+  field: "Ciencias de la Computación"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Former member"
+  github: "AIDEA775"
+  status: "former"
+  competitions:
+  - indyscc23
+  - asc24
+  - indyscc24
+
+- name: "Marcos Tolcachir"
+  affiliation: "Universidad Nacional de Córdoba"
+  field: "Ciencias de la Computación"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Former member"
+  github: "marcost2"
+  status: "former"
+  competitions:
+  - indyscc23
+
+- name: "Juan Ignacio Folco"
+  affiliation: "Universidad Católica de Córdoba"
+  field: "??"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Former member"
+  github: "juanfolco"
+  status: "former"
+  competitions:
+  - indyscc23
+
+- name: "Francisco Michati"
+  affiliation: "Universidad Nacional de Rosario"
+  field: "Física"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Former member"
+  github: "FranciscoMichati"
+  status: "former"
+  competitions:
+  - asc24
+  
+- name: "Alvaro Roy Schachner"
+  affiliation: "Universidad Nacional de Córdoba"
+  field: "Ciencias de la Computación"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Former member"
+  github: "alvaro-sch"
+  status: "former"
+  competitions:
+  - indyscc23
+  - asc24
+  - indyscc24
+
+- name: "Lucía Martínez Gavier"
+  affiliation: "Universidad Nacional de Córdoba"
+  field: "Ciencias de la Computación"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Former member"
+  github: "LuciaMartinezGavier"
+  status: "former"
+  competitions:
+  - indyscc23
+
+- name: "Lara Kurtz"
+  affiliation: "Universidad Nacional de Córdoba"
+  field: "Ciencias de la Computación"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Member"
+  github: "klartz"
+  status: "current"
+  competitions:
+  - indyscc23
+  - asc24
+  - indyscc24
+
+- name: "Milagros Carabelos"
+  affiliation: "Universidad Nacional de Córdoba"
+  field: "Ciencias de la Computación"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Member"
+  github: "milicarabelos"
+  status: "current"
+  competitions:
+  - indyscc24
+
+- name: "Tomás Bazán"
+  affiliation: "Universidad Nacional de Córdoba"
+  field: "Ciencias de la Computación"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Member"
+  github: "TomasBazan"
+  status: "current"
+  competitions:
+  - indyscc24
+
+- name: "Javier Mercado Alcoba"
+  affiliation: "Universidad Nacional de Córdoba"
+  field: "Matemática Aplicada"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Member"
+  github: "javimalcob"
+  status: "current"
+  competitions:
+  - indyscc24
+
+- name: "Marcos Mazzini"
+  affiliation: "Universidad Nacional de Córdoba"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Former coach"
+  github: "marcosmazz"
+  status: "former"
+  competitions:
+  - indyscc23
+  - asc24
+
+- name: "Carlos Bederián"
+  affiliation: "Universidad Nacional de Córdoba"
+  # picture: "assets/images/placeholder-profile.png"
+  role: "Coach"
+  github: "zzzoom"
+  status: "current"
+  competitions:
+  - indyscc24
