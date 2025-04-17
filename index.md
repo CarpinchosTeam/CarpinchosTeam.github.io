@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Carpinchos
+title: CARPINCHOS
 subtitle: This is the official website for the HPC Team
 ---
 

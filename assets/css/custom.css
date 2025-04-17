@@ -1,6 +1,29 @@
 :root {
-    /* common CSS variables */
-    --body-font: 'Lora', 'Times New Roman', serif;
-    --header-font: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --mid-col: #808080;
-  }
+  /* common CSS variables */
+  --body-font: 'Lora', 'Times New Roman', serif;
+  --header-font: 'Archive', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --primary: #4C40D4;
+  --primary-dark: #767582;
+
+  --mid-col: #808080;
+  --page-col: #F7F7FC;
+  --text-col: #222832;
+
+  --link-col: #4C40D4;
+  --hover-col: #6456FF;
+
+  --navbar-col: #03002A;
+  --navbar-text-col: #767582;
+  --navbar-border-col: #DDDDDD;
+
+  --footer-col: #EAEAEA;
+  --footer-text-col: #777777;
+  --footer-link-col: #404040;
+  --footer-hover-col: #0085A1;
+}
+
+@font-face {
+  font-family: 'Archive';
+  src: url(/assets/fonts/Archive.otf) format('opentype');
+}
