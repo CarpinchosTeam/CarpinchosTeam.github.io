@@ -335,9 +335,9 @@ img {
 
 .navbar-custom .avatar-container {
   position: absolute;
-  left: 50%;
-  width: 3.125rem;
-  bottom: -1.5rem;
+  left: 10%;
+  width: 20rem;
+  bottom: -14rem;
   transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -374,8 +374,8 @@ img {
 
 @media (min-width: 1200px) {
   .navbar-custom.top-nav-regular .avatar-container {
-    width: 6.25rem;
-    bottom: -1.9375rem;
+    width: 24rem;
+    bottom: -15rem;
   }
 
   .navbar-custom.top-nav-regular .avatar-container .avatar-img-border {
@@ -657,7 +657,7 @@ footer .footer-custom-content {
 /* --- Post and page headers --- */
 
 .intro-header {
-  margin: 5rem 0 1.25rem;
+  margin: 10rem 0 1.25rem;
   position: relative;
 }
 .intro-header.big-img {
