@@ -1,0 +1,76 @@
+<div class="member-container">
+{% for member in members %}
+  <div class="member-card">
+    {% if member.picture %}
+    <img src="{{ site.baseurl }}/{{ member.picture }}" alt="Photo of {{ member.name }}" class="member-photo">
+    {% else %}
+    <img src="https://github.com/{{ member.github }}.png?size=100" alt="GitHub profile picture of {{ member.name }}" class="member-photo">
+    {% endif %}
+
+    <div class="member-info">
+      <h4>{{ member.name }}</h4>
+      <p class="role">{{ member.role }}</p>
+      <p>{% if member.field %}{{ member.field }}, {% endif %}{{ member.affiliation }}</p>
+
+      {% if member.github %}
+        <a href="https://github.com/{{ member.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+
+<style>
+.member-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.member-card {
+  text-align: center;
+  width: 250px; /* Increased width */
+  padding: 15px;
+  background:rgb(255, 255, 255);
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+@media (max-width: 768px) {
+  .member-card {
+    width: 200px; /* Increased width for smaller screens */
+  }
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+}
+
+.member-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.member-info h4 {
+  margin: 5px 0;
+  color: #2c3e50;
+}
+
+.member-info p {
+  margin: 3px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.member-info .role {
+  font-style: italic;
+  color: var(--primary-dark);
+}
+  </style>

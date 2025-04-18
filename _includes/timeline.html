@@ -1,0 +1,92 @@
+
+<div class="events-container">
+  {% if site.data.events %}
+    {% assign sorted_events = site.data.events | sort: 'year' | reverse %}
+    {% for event in sorted_events %}
+      <div class="event">
+        <div class="year">{{ event.year }}</div>
+        <div class="line"></div>
+        <div class="event-card">
+          <h4>{{ event.name }}</h4>
+          <div class="event-details">
+            <p><strong>Location:</strong> {{ event.location }}</p>
+            {% if event.award %}
+            <p><strong>Award:</strong> {{ event.award }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+  <p>No event data found.</p>
+  {% endif %}
+</div>
+
+<style>
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  max-width: 70%;
+}
+
+.event {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.event .year {
+  width: 3em;
+  flex-shrink: 0;
+  margin-top: 15px;
+  color: var(--primary-dark);
+  font-family: 'Archive';
+}
+
+.event .line {
+  width: 2px;
+  background: var(--primary-dark);
+  margin: 0 8px;
+}
+
+.event .line::before {
+  height: 16px;
+  width: 16px;
+  right: 7px;
+  content: "";
+  border: 2px solid var(--primary-dark);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.event-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  margin-left: 12px;
+  width: 100%;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+}
+
+.event-card h4 {
+  font-family: 'Poppins';
+  margin: 0;
+}
+
+.event-card p {
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--text-col);
+  margin: 0;
+}
+
+.event-details {
+  margin-top: 0.25em;
+}
+</style>
