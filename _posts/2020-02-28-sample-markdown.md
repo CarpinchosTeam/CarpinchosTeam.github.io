@@ -14,7 +14,12 @@ This is a demo post to show you how to write blog posts with markdown.  I strong
 
 **Here is some bold text**
 
-## Here is a secondary heading
+# Here is a heading 1
+## Here is a heading 2
+### Here is a heading 3
+#### Here is a heading 4
+##### Here is a heading 5
+###### Here is a heading 6
 
 [This is a link to a different site](https://deanattali.com/) and [this is a link to a section inside this page](#local-urls).
 

@@ -1,7 +1,7 @@
 :root {
   /* common CSS variables */
   --body-font: 'Lora', 'Times New Roman', serif;
-  --header-font: 'Archive', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* --header-font: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
 
   --primary: #4c40d4;
   --primary-dark: #767582;
@@ -30,4 +30,9 @@
 
 h1, h2, h3, h4, h6 {
   color: #03002a;
+}
+
+.page-heading > h1 {
+  font-family: 'Archive';
+  text-transform: uppercase;
 }
