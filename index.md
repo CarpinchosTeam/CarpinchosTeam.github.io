@@ -9,10 +9,8 @@ We are a Student Cluster Competition team representing the Universidad Nacional 
 
 
 # Competitions & Events
+
 {% include timeline.html %}
-
-
-{% if site.data.members %}
 
 # Team Roster
 
@@ -28,6 +26,8 @@ Meet the dedicated students and mentors who make up Team Carpinchos.
 {% assign members = site.data.members | where: "status", 'former' %}
 {% include members.html %}
 
-{% else %}
-  <p>No member data found.</p>
-{% endif %}
+# Album
+
+TODO
+
+# Posts

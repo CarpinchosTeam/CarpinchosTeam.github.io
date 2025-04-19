@@ -13,7 +13,7 @@
 title: Carpinchos Team
 
 # Your name to show in the footer
-author: UNC Supercómputo
+# author: UNC Supercómputo
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -84,6 +84,8 @@ edit_page_button: true
 # If this setting is off, then long sub-menu words might get cut off
 # See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
 navbar-var-length: false
+
+remove-ads: true
 
 # The keywords to associate with your website, for SEO purposes
 #keywords: "my,list,of,keywords"
