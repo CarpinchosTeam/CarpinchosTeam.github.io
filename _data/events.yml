@@ -22,7 +22,7 @@
       link: https://www.pagina12.com.ar/617661-la-universidad-nacional-de-cordoba-salio-tercera-en-el-mundi
     - key: Periferia
       link: https://periferia.com.ar/Desplazamientos/la-universidad-nacional-de-cordoba-quedo-tercera-en-el-certamen-mundial-de-informatica/
-  poster:
+  poster: assets/pdf/IndySCC23-Poster.pdf
 
 - event: asc24
   name: ASC Student Supercomputer Challenge 2024
@@ -50,4 +50,4 @@
   notes:
     - key: UNC Supercómputo
       link: https://supercomputo.unc.edu.ar/2024/11/22/carpinchos-unico-equipo-latam-en-indyscc/
-  poster:
+  poster: assets/pdf/IndySCC24-Poster.pdf

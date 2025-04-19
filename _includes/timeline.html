@@ -22,6 +22,11 @@
           {%- endif -%}
         {% endfor %}
         </p>
+        {% if event.poster %}
+        <p><strong>Poster:</strong>
+          <a href="{{ event.poster }}" target="_blank" rel="noopener noreferrer">.pdf</a>
+        </p>
+        {% endif %}
       </div>
     </div>
   </div>
