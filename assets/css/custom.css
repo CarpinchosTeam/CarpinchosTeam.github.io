@@ -3,11 +3,11 @@
   --body-font: 'Lora', 'Times New Roman', serif;
   --header-font: 'Archive', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-  --primary: #4C40D4;
+  --primary: #4c40d4;
   --primary-dark: #767582;
 
-  --mid-col: #808080;
-  --page-col: #f1f1f1;
+  --mid-col: #767582;
+  --page-col: hsl(245, 20%, 95%);
   --text-col: #222832;
 
   --link-col: #4C40D4;
@@ -17,13 +17,17 @@
   --navbar-text-col: #767582;
   --navbar-border-col: #DDDDDD;
 
-  --footer-col: #EAEAEA;
-  --footer-text-col: #777777;
-  --footer-link-col: #404040;
-  --footer-hover-col: #0085A1;
+  --footer-col: hsl(245, 10%, 90%);
+  --footer-text-col: #767582;
+  --footer-link-col: #767582;
+  --footer-hover-col: #6456FF;
 }
 
 @font-face {
   font-family: 'Archive';
   src: url(/assets/fonts/Archive.otf) format('opentype');
+}
+
+h1, h2, h3, h4, h6 {
+  color: #03002a;
 }
