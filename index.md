@@ -5,8 +5,6 @@ subtitle: This is the official website for the HPC Team
 ---
 
 
-# Hello!
-
 We are a Student Cluster Competition team representing the Universidad Nacional de Córdoba (UNC), Argentina.
 
 

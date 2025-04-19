@@ -25,7 +25,7 @@ gem "jekyll-paginate", "~> 1.1"
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Warnings
-gem "json"
+#gem "json"
 gem "base64"
 gem "bigdecimal"
 
