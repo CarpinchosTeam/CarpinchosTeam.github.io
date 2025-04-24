@@ -13,7 +13,7 @@
         <p><strong>Award:</strong> {{ event.award }}</p>
         {% endif %}
 
-        <p><strong>Notes:</strong>
+        <p><strong>Press:</strong>
         {% for note in event.notes %}
           {%- if forloop.length > 0 -%}
           <a href="{{ note.link }}"
