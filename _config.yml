@@ -46,12 +46,12 @@ round-avatar: false
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
-  github: daattali
-  twitter: daattali
-  instagram: deanat78
-  telegram: yourname
-  discord: "invite_code"
+  email: "carpinchos@googlegroups.com"
+  #github: daattali
+  #twitter: daattali
+  #instagram: deanat78
+  #telegram: yourname
+  discord: "https://discord.gg/rR3nMPAba2"
 
 ###########################
 # --- General options --- #

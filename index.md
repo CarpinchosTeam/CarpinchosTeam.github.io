@@ -26,8 +26,4 @@ Meet the dedicated students and mentors who make up Team Carpinchos.
 {% assign members = site.data.members | where: "status", 'former' %}
 {% include members.html %}
 
-# Album
-
-TODO
-
 # Posts
