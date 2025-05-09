@@ -117,8 +117,8 @@
 - name: "Carlos Bederián"
   affiliation: "Universidad Nacional de Córdoba"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Coach"
+  role: "Former coach"
   github: "zzzoom"
-  status: "current"
+  status: "former"
   competitions:
   - indyscc24
