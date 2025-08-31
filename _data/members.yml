@@ -2,13 +2,14 @@
   affiliation: "Universidad Nacional de Córdoba"
   field: "Ciencias de la Computación"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Former member"
+  role: "Coach, Former member"
   github: "AIDEA775"
-  status: "former"
+  status: "current"
   competitions:
   - indyscc23
   - asc24
   - indyscc24
+  - indyscc25
 
 - name: "Marcos Tolcachir"
   affiliation: "Universidad Nacional de Córdoba"
@@ -73,6 +74,7 @@
   - indyscc23
   - asc24
   - indyscc24
+  - indyscc25
 
 - name: "Milagros Carabelos"
   affiliation: "Universidad Nacional de Córdoba"
@@ -83,6 +85,7 @@
   status: "current"
   competitions:
   - indyscc24
+  - indyscc25
 
 - name: "Tomás Bazán"
   affiliation: "Universidad Nacional de Córdoba"
@@ -93,6 +96,7 @@
   status: "current"
   competitions:
   - indyscc24
+  - indyscc25
 
 - name: "Javier Mercado Alcoba"
   affiliation: "Universidad Nacional de Córdoba"
@@ -103,6 +107,25 @@
   status: "current"
   competitions:
   - indyscc24
+  - indyscc25
+
+- name: "Ignacio Facello"
+  affiliation: "Universidad Nacional de Córdoba"
+  field: "Ciencias de la Computación"
+  role: "Member"
+  github: "IgnacioFacello"
+  status: "current"
+  competitions:
+  - indyscc25
+
+- name: "Tomas Alejandro Hubmann"
+  affiliation: "Universidad Nacional de Córdoba"
+  field: "Ciencias de la Computación"
+  role: "Member"
+  github: "HubmannTomasAlejandro"
+  status: "current"
+  competitions:
+  - indyscc25
 
 - name: "Marcos Mazzini"
   affiliation: "Universidad Nacional de Córdoba"
