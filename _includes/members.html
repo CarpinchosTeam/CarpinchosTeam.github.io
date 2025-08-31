@@ -1,5 +1,5 @@
 <div class="member-container">
-{% for member in members %}
+{% for member in members reversed %}
   <div class="member-card">
     {% if member.picture %}
     <img src="{{ site.baseurl }}/{{ member.picture }}" alt="Photo of {{ member.name }}" class="member-photo">
@@ -29,13 +29,13 @@
   flex-wrap: wrap;
   gap: 20px;
   margin: 2rem 0;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .member-card {
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
+  flex: 48%;
   text-align: center;
   background:rgb(255, 255, 255);
   border-radius: 8px;
