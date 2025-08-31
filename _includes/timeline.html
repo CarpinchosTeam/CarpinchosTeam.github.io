@@ -13,15 +13,16 @@
         <p><strong>Award:</strong> {{ event.award }}</p>
         {% endif %}
 
-        <p><strong>Press:</strong>
-        {% for note in event.notes %}
-          {%- if forloop.length > 0 -%}
-          <a href="{{ note.link }}"
-            target="_blank"
-            rel="noopener noreferrer">{{ note.key }}</a>{% unless forloop.last %}, {% endunless -%}
-          {%- endif -%}
-        {% endfor %}
-        </p>
+        {% if event.notes %}
+          <p><strong>Press:</strong>
+          {% for note in event.notes %}
+            <a href="{{ note.link }}"
+              target="_blank"
+              rel="noopener noreferrer">{{ note.key }}</a>{% unless forloop.last %}, {% endunless -%}
+          {% endfor %}
+          </p>
+        {% endif %}
+
         {% if event.poster %}
         <p><strong>Poster:</strong>
           <a href="{{ event.poster }}" target="_blank" rel="noopener noreferrer">.pdf</a>
