@@ -352,7 +352,7 @@ img {
 
 .navbar-custom .avatar-container .avatar-img-border {
   width: 100%;
-  margin-left: -50%;
+  margin-left: -32%;
   {% unless site.round-avatar == false %}
     border-radius: 50%;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, .8);
@@ -375,7 +375,7 @@ img {
 @media (min-width: 1200px) {
   .navbar-custom.top-nav-regular .avatar-container {
     width: 24rem;
-    bottom: -15rem;
+    bottom: -11rem;
   }
 
   .navbar-custom.top-nav-regular .avatar-container .avatar-img-border {
@@ -388,7 +388,7 @@ img {
   }
 
   .navbar-custom.top-nav-regular .avatar-container .avatar-img {
-    width: 100%;
+    width: 72%;
   }
 }
 
