@@ -335,9 +335,9 @@ img {
 
 .navbar-custom .avatar-container {
   position: absolute;
-  left: 10%;
-  width: 20rem;
-  bottom: -14rem;
+  left: 0%;
+  width: 14rem;
+  bottom: -10rem;
   transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -373,6 +373,16 @@ img {
 }
 
 @media (min-width: 1200px) {
+
+  .navbar-custom .avatar-container {
+    position: absolute;
+    left: 10%;
+    width: 20rem;
+    bottom: -14rem;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+  }
   .navbar-custom.top-nav-regular .avatar-container {
     width: 24rem;
     bottom: -11rem;
