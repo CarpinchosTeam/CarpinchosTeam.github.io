@@ -10,6 +10,7 @@
   - asc24
   - indyscc24
   - indyscc25
+  - asc26
 
 - name: "Marcos Tolcachir"
   affiliation: "Universidad Nacional de Córdoba"
@@ -75,6 +76,7 @@
   - asc24
   - indyscc24
   - indyscc25
+  - asc26
 
 - name: "Milagros Carabelos"
   affiliation: "Universidad Nacional de Córdoba"
@@ -86,6 +88,7 @@
   competitions:
   - indyscc24
   - indyscc25
+  - asc26
 
 - name: "Tomás Bazán"
   affiliation: "Universidad Nacional de Córdoba"
@@ -97,6 +100,7 @@
   competitions:
   - indyscc24
   - indyscc25
+  - asc26
 
 - name: "Javier Mercado Alcoba"
   affiliation: "Universidad Nacional de Córdoba"
@@ -108,6 +112,7 @@
   competitions:
   - indyscc24
   - indyscc25
+  - asc26
 
 - name: "Ignacio Facello"
   affiliation: "Universidad Nacional de Córdoba"
@@ -117,13 +122,14 @@
   status: "current"
   competitions:
   - indyscc25
+  - asc26
 
 - name: "Tomas Alejandro Hubmann"
   affiliation: "Universidad Nacional de Córdoba"
   field: "Ciencias de la Computación"
   role: "Member"
   github: "thubmann2002"
-  status: "current"
+  status: "former"
   competitions:
   - indyscc25
 
