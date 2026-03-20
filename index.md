@@ -13,6 +13,9 @@ We're a self funded team, your support helps us travel to competitions and keep 
 - **Alias ARS**: teamcarpinchos
 - **Alias USD**: teamcarpinchos.usd
 
+**Bank**: Brubank<br>
+**Account holder**: Alejandro Ismael Silva
+
 # Competitions & Events
 
 {% include timeline.html %}
