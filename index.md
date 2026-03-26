@@ -16,6 +16,7 @@ We're a self funded team, your support helps us travel to competitions and keep 
 **Bank**: Brubank<br>
 **Account holder**: Alejandro Ismael Silva
 
+[Letter of Intent](https://docs.google.com/presentation/d/1CdKjTrHeCHs50wEVKzI28m1R14SMBw_xwptN4yIPCAo/edit?slide=id.p#slide=id.p)
 # Competitions & Events
 
 {% include timeline.html %}
