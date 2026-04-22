@@ -40,5 +40,11 @@ Join to the Bancarpinchos!
 - Hormann Manrique Nicolas
 - Zapico Barrionuevo
 - Alejandro Peralta Frias
+- Hernan Enrique Modrow
+- Rocio Diaz Martin
+- Diego Piloni
+- Adrian Marcelo Edelste
+- TxPipe
+- Special mention to anonimus Bancarpinchos
 
 # Posts
