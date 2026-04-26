@@ -37,6 +37,7 @@ Meet the dedicated students and mentors who make up Team Carpinchos.
 
 # Bancarpinchos
 Join to the Bancarpinchos!
+<div style="column-count: 2; column-gap: 40px;" markdown="1">
 - Hormann Manrique Nicolas
 - Zapico Barrionuevo
 - Alejandro Peralta Frias
@@ -45,6 +46,11 @@ Join to the Bancarpinchos!
 - Diego Piloni
 - Adrian Marcelo Edelste
 - TxPipe
-- Special mention to anonimus Bancarpinchos
+- GO CARPINCHOS!
+- Alejandro Peralta Frias (Ale)
+- Juana Salas
+- Eric Gabriel Hegi
+- Fran
+</div>
 
 # Posts
