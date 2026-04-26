@@ -13,7 +13,6 @@ gem "kramdown", "~> 2.3"
 gem "webrick", "~> 1.8"
 
 # Plugins specified in _config.yml
-gem "jekyll-remote-theme", "~> 0.4.3"
 gem "jekyll-feed", "~> 0.17.0"
 
 # Other common Jekyll plugins (optional, uncomment if used)
@@ -22,7 +21,8 @@ gem "jekyll-sitemap", "~> 1.4"
 gem "jekyll-paginate", "~> 1.1"
 
 # Fix security vulnerability in addressable
-gem "addressable", ">= 2.9.0"
+gem "addressable", "~> 2.8.8"
+gem "public_suffix", "~> 5.0.5"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
