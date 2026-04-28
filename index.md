@@ -51,6 +51,10 @@ Join to the Bancarpinchos!
 - Juana Salas
 - Eric Gabriel Hegi
 - Fran
+- Francisco Matias Cuenca
+- Feraud Santiago
+- Paz Roberto Jose Roque
+- Jorge Carlos Gabriel F
 </div>
 
 # Posts
