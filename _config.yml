@@ -21,7 +21,7 @@ title: Carpinchos Team
 
 navbar-links:
   # About us: "about"
-  Home: "#"
+  Inicio: "#"
   UNC Supercómputo: "https://supercomputo.unc.edu.ar"
   Bancarpinchos: "#bancarpinchos"
 
@@ -157,8 +157,11 @@ footer-hover-col: "#0085A1"
 # --- Misc --- #
 ################
 
+# Site language
+language: "es"
+
 # Ruby Date Format to show dates of posts
-date_format: "%B %-d, %Y"
+date_format: "%-d de %B, %Y"
 
 # Facebook App ID
 #fb_app_id: ""

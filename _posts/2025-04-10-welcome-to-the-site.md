@@ -1,14 +1,12 @@
 ---
 layout: post
-title:  "Welcome to the New Team Carpinchos Website!"
+title:  "¡Bienvenidos al nuevo sitio del Equipo Carpinchos!"
 date:   2025-04-10 08:45:00 -0300
 categories: announcement
 ---
 
-We are excited to launch the official website for Team Carpinchos!
+Estamos muy contentos de presentarles el sitio oficial de los Carpinchos.
 
-This site will serve as the central hub for information about our team, our participation in HPC competitions like the Student Cluster Competition (SCC), and updates on our progress.
+Acá vamos a centralizar toda la información sobre el equipo, nuestra participación en las competencias de HPC y las novedades de nuestro progreso.
 
-Explore the site to learn more about our mission, meet the team members, and see the events we've attended.
-
-More content and features will be added soon. Stay tuned!
+Los invitamos a recorrer el sitio para conocer nuestra misión, quiénes somos y en qué proyectos estuvimos trabajando. De a poco vamos a ir sumando más contenidos y funcionalidades, ¡quédense atentos!

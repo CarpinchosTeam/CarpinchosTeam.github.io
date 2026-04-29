@@ -1,8 +1,8 @@
 - event: indyscc23
   name: SC23 IndySCC
   year: 2023
-  location: Denver, United States (remote)
-  award: Third place
+  location: Denver, Estados Unidos (remoto)
+  award: Tercer puesto
   notes:
     - key: La Voz (impreso)
       link: https://www.lavoz.com.ar/ciudadanos/un-equipo-cordobes-de-supercomputacion-entre-los-tres-mejores-en-una-competencia-mundial/
@@ -28,7 +28,7 @@
   name: ASC Student Supercomputer Challenge 2024
   year: 2024
   location: Shanghai, China
-  award: Most Popular Team
+  award: Equipo más popular
   notes:
     - key: La Voz
       link: https://www.lavoz.com.ar/ciudadanos/un-equipo-de-supercomputacion-de-la-unc-viaja-a-china-para-una-competencia-internacional/
@@ -46,7 +46,7 @@
 - event: indyscc24
   name: SC24 IndySCC
   year: 2024
-  location: Atlanta, United States (remote)
+  location: Atlanta, Estados Unidos (remoto)
   notes:
     - key: UNC Supercómputo
       link: https://supercomputo.unc.edu.ar/2024/11/22/carpinchos-unico-equipo-latam-en-indyscc/
@@ -56,7 +56,7 @@
 - event: indyscc25
   name: SC25 IndySCC
   year: 2025
-  location: St. Louis, United States
+  location: St. Louis, Estados Unidos
   notes:
     - key: UNC Supercómputo
       link: https://supercomputo.unc.edu.ar/2025/11/26/carpinchos-en-indyscc25/

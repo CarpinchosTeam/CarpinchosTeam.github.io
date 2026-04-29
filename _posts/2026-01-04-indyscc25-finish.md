@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "IndySCC25 has finished, What's next?"
+title:  "Terminó el IndySCC25, ¿qué es lo que sigue?"
 date:   2026-01-04 20:00:00 -0300
 categories: announcement
 ---
-We traveled, we ate, we got shocked by the conference, we didn't sleep too much.
+Viajamos, conocimos gente, nos sorprendió la escala de la conferencia y dormimos bastante poco.
 
-The IndySCC25 passed, and it was incredible. We felt like guests of honor, having access to full conference sponsorship by the committee of the IndySCC25 was amazing.
+El IndySCC25 ya pasó y la experiencia fue increíble. Nos hicieron sentir como invitados de honor; contar con el patrocinio total del comité de la conferencia fue una oportunidad increible.
 
-We all expected a big conference, but this was something else. 3 blocks of pure HPC, with lots of exhibitions, booths showing their technology, workshops and tutorials.
+Esperábamos un evento grande, pero esto superó nuestras expectativas. Eran tres cuadras dedicadas puramente al HPC, con muchísimas exhibiciones, stands tecnológicos, talleres y tutoriales.
 
-The first day of the conference we started the competition, 46hs to compile and run three applications. We divided the work in three teams.
+El primer día arrancamos con la competencia: 46 horas para compilar y ejecutar tres aplicaciones. Para organizarnos, dividimos el trabajo en tres frentes:
 
 #### Structural Simulation Toolkit
 - Ignacio Facello
@@ -24,9 +24,8 @@ The first day of the conference we started the competition, 46hs to compile and 
 - Milagros Carabelos
 - Tomas Bazan
 
-The competition didn't result as we expected, but in retrospective we performed quite well. We couldn't compile and run the Mystery App, but it turns out that most of the teams couldn't compile it either. In the other tasks we achieved a reasonable performance. More information in the [UNC Supercomputo article](https://supercomputo.unc.edu.ar/2025/11/26/carpinchos-en-indyscc25/).
+Los resultados no fueron exactamente los que esperábamos, pero mirando hacia atrás, el desempeño del equipo fue muy bueno. No logramos compilar ni ejecutar la "Mystery App", pero resultó que a la gran mayoría de los equipos les pasó lo mismo. En las otras tareas alcanzamos un rendimiento razonable. Pueden leer más detalles en el [artículo de UNC Supercómputo](https://supercomputo.unc.edu.ar/2025/11/26/carpinchos-en-indyscc25/).
 
-We'd like to thank, once again, our advisor Alejandro Silva, for the support and the walks between sessions that helped us clear our minds during the competition.
+Queremos agradecerle, una vez más, a nuestro asesor Alejandro Silva por el apoyo y por esas caminatas entre sesiones que nos ayudaron a despejar la cabeza durante la competencia.
 
-There is a lot to improve, we're already focused on our next competition, **ASC26**.
-
+Sabemos que hay mucho por mejorar y ya estamos enfocados en nuestro próximo desafío: la **ASC26**.

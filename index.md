@@ -1,42 +1,42 @@
 ---
 layout: home
 title: Carpinchos
-subtitle: This is the official website for the HPC Team
+subtitle: Este es el sitio web oficial del equipo de HPC
 ---
 
 
-We are a Student Cluster Competition team representing the Universidad Nacional de Córdoba (UNC), Argentina.
+Somos un equipo de Supercomputación que representa a la Universidad Nacional de Córdoba (UNC), Argentina.
 
-# Support Us!
-We're a self funded team, your support helps us travel to competitions and keep forming the next generation of Carpinchos.
+# ¡Apoyanos!
+Somos un equipo autofinanciado, tu apoyo nos ayuda a viajar a las competencias y seguir formando a la próxima generación de Carpinchos.
 - [**Cafecito**](https://cafecito.app/teamcarpinchos)
 - **Alias ARS**: teamcarpinchos
 - **Alias USD**: teamcarpinchos.usd
 
-**Bank**: Brubank<br>
-**Account holder**: Alejandro Ismael Silva
+**Banco**: Brubank<br>
+**Titular de la cuenta**: Alejandro Ismael Silva
 
-[Letter of Intent](https://docs.google.com/presentation/d/1CdKjTrHeCHs50wEVKzI28m1R14SMBw_xwptN4yIPCAo/edit?slide=id.p#slide=id.p)
-# Competitions & Events
+[Carta de intención](https://docs.google.com/presentation/d/1CdKjTrHeCHs50wEVKzI28m1R14SMBw_xwptN4yIPCAo/edit?slide=id.p#slide=id.p)
+# Competencias y Eventos
 
 {% include timeline.html %}
 
-# Team Roster
+# Integrantes del Equipo
 
-Meet the dedicated students and mentors who make up Team Carpinchos.
+Conocé a los estudiantes y mentores que forman el Equipo Carpinchos.
 
-## Current Members & Coaches
+## Miembros y Coachs Actuales
 
 {% assign members = site.data.members | where: "status", 'current' %}
 {% include members.html %}
 
-## Alumni & Former Coaches
+## Ex-miembros y Coachs Anteriores
 
 {% assign members = site.data.members | where: "status", 'former' %}
 {% include members.html %}
 
 # Bancarpinchos
-Join to the Bancarpinchos!
+¡Sumate a los Bancarpinchos!
 <div style="column-count: 2; column-gap: 40px;" markdown="1">
 - Hormann Manrique Nicolas
 - Zapico Barrionuevo

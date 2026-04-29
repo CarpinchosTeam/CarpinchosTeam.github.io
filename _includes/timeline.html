@@ -8,13 +8,13 @@
     <div class="event-card">
       <h4>{{ event.name }}</h4>
       <div class="event-details">
-        <p><strong>Location:</strong> {{ event.location }}</p>
+        <p><strong>Ubicación:</strong> {{ event.location }}</p>
         {% if event.award %}
-        <p><strong>Award:</strong> {{ event.award }}</p>
+        <p><strong>Premio:</strong> {{ event.award }}</p>
         {% endif %}
 
         {% if event.notes %}
-          <p><strong>Press:</strong>
+          <p><strong>Prensa:</strong>
           {% for note in event.notes %}
             <a href="{{ note.link }}"
               target="_blank"
@@ -24,7 +24,7 @@
         {% endif %}
 
         {% if event.poster %}
-        <p><strong>Poster:</strong>
+        <p><strong>Póster:</strong>
           <a href="{{ event.poster }}" target="_blank" rel="noopener noreferrer">.pdf</a>
         </p>
         {% endif %}

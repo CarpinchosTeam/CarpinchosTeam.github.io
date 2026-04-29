@@ -1,14 +1,15 @@
 ---
 layout: post
-title:  "Team Carpinchos Assembled for Upcoming Competitions"
+title:  "Equipo Carpinchos Assembly"
 date:   2025-03-15 10:00:00 -0300
 categories: team update
 ---
 
-We are thrilled to announce the formation of Team Carpinchos!
+¡Estamos muy contentos de contarles que se formó el Equipo Carpinchos!
 
-A group of dedicated students and mentors from the Universidad Nacional de Córdoba have come together with the shared goal of competing in the Student Cluster Competition series.
+Nos juntamos un grupo de estudiantes y mentores de la Universidad Nacional de Córdoba con un objetivo claro: competir en las Student Cluster Competition.
 
-Our team is currently preparing for upcoming challenges, focusing on learning HPC technologies, optimizing scientific applications, and building a powerful cluster.
+Ahora mismo nos estamos preparando para los desafíos que se vienen, metiéndole a pleno al aprendizaje de tecnologías HPC, optimizando aplicaciones científicas y armando un clúster que vuele.
 
-Follow our journey here and on our social media channels!
+¡Seguinos en nuestro viaje por acá y en nuestras redes!
+[@teamcarpinchos](https://www.instagram.com/teamcarpinchos/)

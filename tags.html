@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 'Tag Index'
+title: 'Índice de etiquetas'
 ---
 
-{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+{% assign date_format = site.date_format | default: "%-d de %B, %Y" %}
 
 {%- capture site_tags -%}
     {%- for tag in site.tags -%}
@@ -27,7 +27,25 @@ title: 'Tag Index'
             <div class="tag-entry">
                 <a href="{{ post.url | relative_url }}">{{- post.title | strip_html -}}</a>
                 <div class="entry-date">
-                    <time datetime="{{- post.date | date_to_xmlschema -}}">{{- post.date | date: date_format -}}</time>
+                    <time datetime="{{- post.date | date_to_xmlschema -}}">
+                        {% assign m = post.date | date: "%-m" %}
+                        {{ post.date | date: "%-d" }} de
+                        {% case m %}
+                          {% when '1' %}enero
+                          {% when '2' %}febrero
+                          {% when '3' %}marzo
+                          {% when '4' %}abril
+                          {% when '5' %}mayo
+                          {% when '6' %}junio
+                          {% when '7' %}julio
+                          {% when '8' %}agosto
+                          {% when '9' %}septiembre
+                          {% when '10' %}octubre
+                          {% when '11' %}noviembre
+                          {% when '12' %}diciembre
+                        {% endcase %},
+                        {{ post.date | date: "%Y" }}
+                    </time>
                 </div>
             </div>
         {%- endfor -%}

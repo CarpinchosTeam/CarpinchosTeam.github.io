@@ -2,7 +2,7 @@
   affiliation: "Universidad Nacional de Córdoba"
   field: "Ciencias de la Computación"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Coach, Former member"
+  role: "Coach, Miembro anterior"
   github: "AIDEA775"
   status: "current"
   competitions:
@@ -16,7 +16,7 @@
   affiliation: "Universidad Nacional de Córdoba"
   field: "Ciencias de la Computación"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Former member"
+  role: "Miembro anterior"
   github: "marcost2"
   status: "former"
   competitions:
@@ -26,7 +26,7 @@
   affiliation: "Universidad Católica de Córdoba"
   field: "Bioinformática"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Former member"
+  role: "Miembro anterior"
   github: "juanfolco"
   status: "former"
   competitions:
@@ -36,7 +36,7 @@
   affiliation: "Universidad Nacional de Rosario"
   field: "Física"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Former member"
+  role: "Miembro anterior"
   github: "FranciscoMichati"
   status: "former"
   competitions:
@@ -46,7 +46,7 @@
   affiliation: "Universidad Nacional de Córdoba"
   field: "Ciencias de la Computación"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Former member"
+  role: "Miembro anterior"
   github: "alvaro-sch"
   status: "former"
   competitions:
@@ -58,7 +58,7 @@
   affiliation: "Universidad Nacional de Córdoba"
   field: "Ciencias de la Computación"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Former member"
+  role: "Miembro anterior"
   github: "LuciaMartinezGavier"
   status: "former"
   competitions:
@@ -68,7 +68,7 @@
   affiliation: "Universidad Nacional de Córdoba"
   field: "Ciencias de la Computación"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Member"
+  role: "Miembro"
   github: "klartz"
   status: "current"
   competitions:
@@ -82,7 +82,7 @@
   affiliation: "Universidad Nacional de Córdoba"
   field: "Ciencias de la Computación"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Member"
+  role: "Miembro"
   github: "milicarabelos"
   status: "current"
   competitions:
@@ -94,7 +94,7 @@
   affiliation: "Universidad Nacional de Córdoba"
   field: "Ciencias de la Computación"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Member"
+  role: "Miembro"
   github: "TomasBazan"
   status: "current"
   competitions:
@@ -106,7 +106,7 @@
   affiliation: "Universidad Nacional de Córdoba"
   field: "Física"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Member"
+  role: "Miembro"
   github: "javimalcob"
   status: "current"
   competitions:
@@ -117,7 +117,7 @@
 - name: "Ignacio Facello"
   affiliation: "Universidad Nacional de Córdoba"
   field: "Ciencias de la Computación"
-  role: "Member"
+  role: "Miembro"
   github: "IgnacioFacello"
   status: "current"
   competitions:
@@ -127,7 +127,7 @@
 - name: "Tomas Alejandro Hubmann"
   affiliation: "Universidad Nacional de Córdoba"
   field: "Ciencias de la Computación"
-  role: "Member"
+  role: "Miembro"
   github: "thubmann2002"
   status: "former"
   competitions:
@@ -136,7 +136,7 @@
 - name: "Marcos Mazzini"
   affiliation: "Universidad Nacional de Córdoba"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Former coach"
+  role: "Coach anterior"
   github: "marcosmazz"
   status: "former"
   competitions:
@@ -146,7 +146,7 @@
 - name: "Carlos Bederián"
   affiliation: "Universidad Nacional de Córdoba"
   # picture: "assets/images/placeholder-profile.png"
-  role: "Former coach"
+  role: "Coach anterior"
   github: "zzzoom"
   status: "former"
   competitions:

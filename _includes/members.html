@@ -2,9 +2,9 @@
 {% for member in members reversed %}
   <div class="member-card">
     {% if member.picture %}
-    <img src="{{ site.baseurl }}/{{ member.picture }}" alt="Photo of {{ member.name }}" class="member-photo">
+    <img src="{{ site.baseurl }}/{{ member.picture }}" alt="Foto de {{ member.name }}" class="member-photo">
     {% else %}
-    <img src="https://github.com/{{ member.github }}.png?size=100" alt="GitHub profile picture of {{ member.name }}" class="member-photo">
+    <img src="https://github.com/{{ member.github }}.png?size=100" alt="Foto de perfil de GitHub de {{ member.name }}" class="member-photo">
     {% endif %}
 
     <div class="member-info">
@@ -18,7 +18,7 @@
     </div>
   </div>
 {% else %}
-  <p>No member data found.</p>
+  <p>No se encontraron datos de miembros.</p>
 {% endfor %}
 </div>
 

@@ -35,13 +35,47 @@
           
           {% if include.type == "post" %} 
             {% if page.author %}
-              By <strong>{{ page.author | strip_html }}</strong><br>
+              Por <strong>{{ page.author | strip_html }}</strong><br>
             {% endif%}
-            <span class="post-meta">Posted on {{ page.date | date: date_format }}</span>
+            <span class="post-meta">
+              {% assign m = page.date | date: "%-m" %}
+              Publicado el {{ page.date | date: "%-d" }} de
+              {% case m %}
+                {% when '1' %}enero
+                {% when '2' %}febrero
+                {% when '3' %}marzo
+                {% when '4' %}abril
+                {% when '5' %}mayo
+                {% when '6' %}junio
+                {% when '7' %}julio
+                {% when '8' %}agosto
+                {% when '9' %}septiembre
+                {% when '10' %}octubre
+                {% when '11' %}noviembre
+                {% when '12' %}diciembre
+              {% endcase %},
+              {{ page.date | date: "%Y" }}
+            </span>
             {% if page.last-updated %}
               <span class="post-meta">
                 <span class="d-none d-md-inline middot">&middot;</span>
-                Last updated {{ page.last-updated | date: date_format }}
+                {% assign m = page.last-updated | date: "%-m" %}
+                Última actualización {{ page.last-updated | date: "%-d" }} de
+                {% case m %}
+                  {% when '1' %}enero
+                  {% when '2' %}febrero
+                  {% when '3' %}marzo
+                  {% when '4' %}abril
+                  {% when '5' %}mayo
+                  {% when '6' %}junio
+                  {% when '7' %}julio
+                  {% when '8' %}agosto
+                  {% when '9' %}septiembre
+                  {% when '10' %}octubre
+                  {% when '11' %}noviembre
+                  {% when '12' %}diciembre
+                {% endcase %},
+                {{ page.last-updated | date: "%Y" }}
               </span>
             {% endif %}
             {% if page.readtime %}
