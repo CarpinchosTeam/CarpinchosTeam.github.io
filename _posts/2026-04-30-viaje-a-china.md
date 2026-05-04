@@ -26,7 +26,9 @@ Personal de otras instituciones
 
 **UNC Supercómputo (CCAD)**, por brindarnos fondos para el merch y, como siempre, su infraestructura para poder entrenarnos.
 
-Y nuestro sponsor plata, **TxPipe**.
+Nuestro sponsor plata, [**TxPipe**](https://txpipe.io/).
+
+Y nuestro sponsor oro, [**InPunto**](https://inpunto.la/).
 
 Gracias a su gestión y compromiso con el equipo, ya dimos el paso más importante para poder representar a la Universidad Nacional de Córdoba en esta instancia internacional.
 
@@ -35,6 +37,8 @@ Si querés seguir dándonos una mano con estos gastos de logística que nos qued
 - **Alias ARS**: teamcarpinchos
 - **Alias USD**: teamcarpinchos.usd
 
-Nuevamente, gracias a FAMAF, a UNC Supercómputo y a TxPipe por confiar en nosotros y por hacer que este viaje sea finalmente una realidad.
+Nuevamente, gracias a FAMAF, a UNC Supercómputo, TxPipe y a Inpunto por confiar en nosotros y por hacer que este viaje sea finalmente una realidad.
 
 Nos vemos en China.
+
+Edit: Actualizamos este post para darle la bienvenida a InPunto, nuestro nuevo sponsor oro.
