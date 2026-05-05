@@ -16,7 +16,12 @@ Somos un equipo autofinanciado, tu apoyo nos ayuda a viajar a las competencias y
 **Banco**: Brubank<br>
 **Titular de la cuenta**: Alejandro Ismael Silva
 
-[Carta de intención](https://docs.google.com/presentation/d/1CdKjTrHeCHs50wEVKzI28m1R14SMBw_xwptN4yIPCAo/edit?slide=id.p#slide=id.p)
+[Sumate a los sponsors de Carpinchos (Carta de Intención)](https://docs.google.com/presentation/d/1CdKjTrHeCHs50wEVKzI28m1R14SMBw_xwptN4yIPCAo/edit?slide=id.p#slide=id.p)
+# Sponsors
+- Sponsor oro, [**InPunto**](https://inpunto.la/).
+- Sponsor plata, [**TxPipe**](https://txpipe.io/).
+- Sponsor bronce, [**Nerdearla**](https://nerdearla.com/)
+
 # Competencias y Eventos
 
 {% include timeline.html %}
