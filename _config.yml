@@ -211,3 +211,6 @@ collections:
   premios:
     output: true
     permalink: /premios/:name/
+  aplicaciones:
+    output: true
+    permalink: /aplicaciones/:name/

@@ -25,4 +25,9 @@ notes:
 - key: Periferia
   link: https://periferia.com.ar/Desplazamientos/la-universidad-nacional-de-cordoba-quedo-tercera-en-el-certamen-mundial-de-informatica/
 poster: assets/pdf/IndySCC23-Poster.pdf
+apps:
+- hpl
+- gromacs
+- cesm
+- ospray-studio
 ---

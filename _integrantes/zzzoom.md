@@ -5,6 +5,6 @@ affiliation: Universidad Nacional de Córdoba
 role: Coach anterior
 github: zzzoom
 status: former
-competitions:
+coach_competitions:
 - indyscc24
 ---

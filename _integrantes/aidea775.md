@@ -10,6 +10,7 @@ competitions:
 - indyscc23
 - asc24
 - indyscc24
+coach_competitions:
 - indyscc25
 - asc26
 ---

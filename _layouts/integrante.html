@@ -28,19 +28,37 @@ layout: base
         {{ content }}
       </div>
       
-      <h3 class="border-bottom pb-2">Competencias Disputadas</h2>
-      <ul class="list-group list-group-flush mb-5">
+      {% if page.competitions and page.competitions.size > 0 %}
+      <h3 class="border-bottom pb-2">Competencias (Estudiante)</h3>
+      <ul class="list-group list-group-flush mb-4">
       {% for event_id in page.competitions %}
         {% assign comp = site.competencias | where: "event", event_id | first %}
         {% if comp %}
           <li class="list-group-item bg-transparent">
-            🏆 <a href="{{ comp.url | relative_url }}" class="fw-bold">{{ comp.name }} ({{ comp.year }})</a>
+            🏆 <a href="{{ comp.url | relative_url }}" class="fw-bold text-decoration-none">{{ comp.name }} ({{ comp.year }})</a>
           </li>
         {% else %}
           <li class="list-group-item bg-transparent">{{ event_id }}</li>
         {% endif %}
       {% endfor %}
       </ul>
+      {% endif %}
+
+      {% if page.coach_competitions and page.coach_competitions.size > 0 %}
+      <h3 class="border-bottom pb-2 mt-4">Competencias (Coach)</h3>
+      <ul class="list-group list-group-flush mb-4">
+      {% for event_id in page.coach_competitions %}
+        {% assign comp = site.competencias | where: "event", event_id | first %}
+        {% if comp %}
+          <li class="list-group-item bg-transparent">
+            📋 <a href="{{ comp.url | relative_url }}" class="fw-bold text-decoration-none text-dark">{{ comp.name }} ({{ comp.year }})</a>
+          </li>
+        {% else %}
+          <li class="list-group-item bg-transparent">{{ event_id }}</li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+      {% endif %}
     </div>
   </div>
 </main>

@@ -141,7 +141,7 @@ hr {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .timeline::after {
@@ -152,16 +152,19 @@ hr {
   top: 0;
   bottom: 0;
   left: 50px;
-  margin-left: -2px;
   border-radius: 4px;
 }
 
 .timeline-item {
-  padding: 10px 40px;
   position: relative;
-  background-color: inherit;
   width: 100%;
-  padding-left: 100px;
+  padding-left: 90px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
 }
 
 .timeline-item::after {
@@ -169,13 +172,12 @@ hr {
   position: absolute;
   width: 20px;
   height: 20px;
-  right: -10px;
   background-color: var(--page-col);
-  border: 4px solid var(--accent-orange);
-  top: 15px;
+  border: 4px solid var(--accent);
+  top: 24px;
   border-radius: 50%;
   z-index: 1;
-  left: 40px;
+  left: 42px;
 }
 
 .timeline-content {
@@ -195,21 +197,21 @@ hr {
 .timeline-year {
   font-family: var(--ui-font);
   font-weight: 900;
-  font-size: 1.2rem;
-  color: var(--accent-orange);
+  font-size: 1.25rem;
+  color: var(--primary);
   margin-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 600px) {
   .timeline::after {
-    left: 31px;
+    left: 20px;
   }
   .timeline-item {
-    padding-left: 70px;
-    padding-right: 25px;
+    padding-left: 50px;
+    padding-right: 0;
   }
   .timeline-item::after {
-    left: 21px;
+    left: 12px;
   }
 }
 

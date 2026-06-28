@@ -18,4 +18,12 @@ notes:
   link: https://eldebate.com.ar/los-carpinchos-el-equipo-argentino-elegido-entre-los-25-mejores-en-el-mundial-de-supercomputacion-en-china/
 - key: weixin
   link: https://mp.weixin.qq.com/s/NgdL4q4Nf8CO-seyLdSJ0w
+apps:
+- hpl
+- hpcg
+- opencaeporo
+- gomars
+- aquilachat2-34b
+- paraseis
+- wannier-tools
 ---

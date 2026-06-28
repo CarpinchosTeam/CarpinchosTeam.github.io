@@ -1,0 +1,31 @@
+---
+layout: base
+---
+
+{% include header.html type="page" %}
+
+<main class="container-md mt-5">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <h1 class="mb-4">{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="lead">{{ page.description }}</p>
+      {% endif %}
+      
+      <div class="mb-5">
+        {{ content }}
+      </div>
+
+      <h3 class="border-bottom pb-2">Competencias donde fue utilizada</h3>
+      <ul class="list-group list-group-flush mb-5">
+      {% for comp in site.competencias %}
+        {% if comp.apps contains page.slug %}
+          <li class="list-group-item bg-transparent">
+            🏆 <a href="{{ comp.url | relative_url }}" class="fw-bold text-decoration-none">{{ comp.name }} ({{ comp.year }})</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</main>
