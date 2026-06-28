@@ -29,21 +29,21 @@ title: Inicio
     </div>
     <div class="row text-center mt-5">
       <div class="col-md-4 mb-5 px-4">
-        <div class="mb-4 text-primary">
+        <div class="mb-4 text-orange">
           <i class="fa-solid fa-trophy" style="font-size: 4rem;"></i>
         </div>
         <h4 class="fw-bold mb-3">Competimos internacionalmente</h4>
         <p class="text-muted" style="font-size: 1.1rem;">Representamos a Argentina en las competencias de supercómputo más exigentes del mundo.</p>
       </div>
       <div class="col-md-4 mb-5 px-4">
-        <div class="mb-4 text-primary">
+        <div class="mb-4 text-orange">
           <i class="fa-solid fa-graduation-cap" style="font-size: 4rem;"></i>
         </div>
         <h4 class="fw-bold mb-3">Formamos estudiantes</h4>
         <p class="text-muted" style="font-size: 1.1rem;">Capacitamos a la próxima generación de profesionales y científicos en computación de alto rendimiento.</p>
       </div>
       <div class="col-md-4 mb-5 px-4">
-        <div class="mb-4 text-primary">
+        <div class="mb-4 text-orange">
           <i class="fa-solid fa-microchip" style="font-size: 4rem;"></i>
         </div>
         <h4 class="fw-bold mb-3">Desarrollamos tecnología</h4>
@@ -105,8 +105,8 @@ title: Inicio
           <h4 class="fw-bold mb-2"><a href="{{ comp.url | relative_url }}" class="text-decoration-none text-dark">{{ comp.name }}</a></h4>
           <p class="text-muted mb-2"><i class="fa-solid fa-location-dot me-2 text-primary"></i>{{ comp.location }}</p>
           {% if comp.award %}
-          <div class="d-inline-block bg-light rounded-pill px-3 py-1 mb-3">
-            <span class="text-primary fw-bold small ui-font"><i class="fa-solid fa-award me-2"></i>{{ comp.award }}</span>
+          <div class="d-inline-block bg-light rounded-pill px-3 py-1 mb-3 border border-warning" style="border-color: rgba(253, 116, 8, 0.3) !important;">
+            <span class="text-orange fw-bold small ui-font"><i class="fa-solid fa-award me-2"></i>{{ comp.award }}</span>
           </div>
           {% endif %}
           <div class="mt-2">
@@ -195,7 +195,7 @@ title: Inicio
       <div class="col-lg-6">
         <div class="bg-white text-dark rounded-4 p-4 p-md-5 shadow-lg">
           <div class="d-flex align-items-center mb-4 border-bottom pb-3">
-            <i class="fa-solid fa-heart text-primary fs-3 me-3"></i>
+            <i class="fa-solid fa-heart text-orange fs-3 me-3"></i>
             <h4 class="fw-bold m-0">¡Gracias Bancarpinchos!</h4>
           </div>
           <div class="bancarpinchos-list pe-3" style="max-height: 350px; overflow-y: auto;">

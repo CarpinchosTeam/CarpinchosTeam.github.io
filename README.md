@@ -51,7 +51,7 @@ Edit the `_data/members.yml` file.
 To build and preview the site locally:
 
 1.  Ensure you have Ruby and Bundler installed.
-2.  Run `bundle config path 'vendor/bundle' --local` to store dependencies in a subdirectory.
+2.  Run `bundle config path '.bundle/vendor' --local` to store dependencies in a subdirectory.
 2.  Run `bundle install` to install dependencies (defined in `Gemfile`).
 3.  Run `bundle exec jekyll serve` to build the site and start a local server (usually at `http://localhost:4000`).
 

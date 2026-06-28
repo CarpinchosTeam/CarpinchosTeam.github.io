@@ -7,24 +7,24 @@
   /* Modern Identity Palette */
   --primary: #03002A;       /* Dark Blue (from logo) */
   --primary-light: #0d0a47; /* Slightly lighter blue */
-  --accent: #05a0af;        /* Teal/Turquoise */
+  --accent: #1cb0d5;        /* Strong Cyan */
   --accent-orange: #fd7408; /* Orange from logo */
 
   --mid-col: #767582;
   --page-col: #FAFAFA;      /* Very light grey for background */
   --text-col: #2D3142;      /* Dark grey for text */
 
-  --link-col: #05a0af;
-  --hover-col: #37aecc;
+  --link-col: #1cb0d5;
+  --hover-col: #1796b5;
 
   --navbar-col: #03002A;
   --navbar-text-col: #FFFFFF;
-  --navbar-border-col: #05a0af;
+  --navbar-border-col: #1cb0d5;
 
   --footer-col: #EAEAEA;
   --footer-text-col: #777777;
-  --footer-link-col: #05a0af;
-  --footer-hover-col: #37aecc;
+  --footer-link-col: #1cb0d5;
+  --footer-hover-col: #1796b5;
 }
 
 body {
@@ -107,6 +107,10 @@ h1, h2, h3, h4, h5, h6, .page-heading > h1 {
   color: var(--accent) !important;
 }
 
+.text-orange {
+  color: var(--accent-orange) !important;
+}
+
 .bg-primary {
   background-color: var(--primary) !important;
 }
@@ -167,7 +171,7 @@ hr {
   height: 20px;
   right: -10px;
   background-color: var(--page-col);
-  border: 4px solid var(--accent);
+  border: 4px solid var(--accent-orange);
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -192,7 +196,7 @@ hr {
   font-family: var(--ui-font);
   font-weight: 900;
   font-size: 1.2rem;
-  color: var(--accent);
+  color: var(--accent-orange);
   margin-bottom: 0.5rem;
 }
 
