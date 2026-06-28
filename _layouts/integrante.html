@@ -1,0 +1,46 @@
+---
+layout: base
+---
+
+{% include header.html type="page" %}
+
+<main class="container-md mt-5">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <div class="d-flex align-items-center mb-4">
+        {% if page.github %}
+        <img src="https://github.com/{{ page.github }}.png?size=150" alt="{{ page.name }}" class="rounded-circle me-4 shadow-sm" style="width: 120px; height: 120px; object-fit: cover;">
+        {% endif %}
+        <div>
+          <h1 class="mb-1">{{ page.name }}</h1>
+          <p class="lead text-primary fw-bold mb-0">{{ page.role }}</p>
+        </div>
+      </div>
+      
+      <div class="card bg-light border-0 mb-5 p-4">
+        <p class="mb-1"><strong>Afiliación:</strong> {{ page.affiliation }} ({{ page.field }})</p>
+        {% if page.github %}
+        <p class="mb-0"><strong>GitHub:</strong> <a href="https://github.com/{{ page.github }}" target="_blank">@{{ page.github }}</a></p>
+        {% endif %}
+      </div>
+      
+      <div class="mb-5">
+        {{ content }}
+      </div>
+      
+      <h3 class="border-bottom pb-2">Competencias Disputadas</h2>
+      <ul class="list-group list-group-flush mb-5">
+      {% for event_id in page.competitions %}
+        {% assign comp = site.competencias | where: "event", event_id | first %}
+        {% if comp %}
+          <li class="list-group-item bg-transparent">
+            🏆 <a href="{{ comp.url | relative_url }}" class="fw-bold">{{ comp.name }} ({{ comp.year }})</a>
+          </li>
+        {% else %}
+          <li class="list-group-item bg-transparent">{{ event_id }}</li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</main>

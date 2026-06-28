@@ -1,0 +1,51 @@
+---
+layout: base
+---
+
+{% include header.html type="page" %}
+
+<main class="container-md mt-5">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <h1>{{ page.name }} ({{ page.year }})</h1>
+      <p class="lead"><strong>Ubicación:</strong> {{ page.location }}</p>
+      
+      {% if page.award %}
+      <div class="alert alert-success mt-4">
+        <strong>🏆 Premio Destacado:</strong> {{ page.award }}
+      </div>
+      {% endif %}
+      
+      <div class="mt-4 mb-5">
+        {{ content }}
+      </div>
+      
+      <h3 class="mt-5 border-bottom pb-2">Integrantes del Equipo</h2>
+      <ul class="list-group list-group-flush mb-5">
+      {% for integrante in site.integrantes %}
+        {% if integrante.competitions contains page.event %}
+          <li class="list-group-item bg-transparent">
+            <a href="{{ integrante.url | relative_url }}" class="fw-bold">{{ integrante.name }}</a> 
+            <span class="text-muted ms-2">({{ integrante.role }})</span>
+          </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+      
+      {% if page.notes %}
+      <h3 class="mt-5 border-bottom pb-2">Publicaciones y Entrevistas</h2>
+      <ul class="list-unstyled mb-5">
+        {% for nota in page.notes %}
+          <li class="mb-2">📰 <a href="{{ nota.link }}" target="_blank" rel="noopener noreferrer">{{ nota.key }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.poster %}
+      <div class="mt-4">
+        <a href="{{ page.poster | relative_url }}" class="btn btn-outline-primary" target="_blank">Ver Poster PDF</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</main>

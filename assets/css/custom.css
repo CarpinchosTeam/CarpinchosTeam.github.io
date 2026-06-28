@@ -1,38 +1,85 @@
 :root {
   /* common CSS variables */
   --body-font: 'Lora', 'Times New Roman', serif;
-  /* --header-font: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+  --header-font: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-  --primary: #4c40d4;
-  --primary-dark: #767582;
+  /* Modern Identity Palette */
+  --primary: #03002A;       /* Dark Blue (from logo) */
+  --primary-light: #0d0a47; /* Slightly lighter blue */
+  --accent: #05a0af;        /* Teal/Turquoise */
+  --accent-orange: #fd7408; /* Orange from logo */
 
   --mid-col: #767582;
-  --page-col: hsl(245, 20%, 95%);
-  --text-col: #222832;
+  --page-col: #FAFAFA;      /* Very light grey for background */
+  --text-col: #2D3142;      /* Dark grey for text */
 
-  --link-col: #4C40D4;
-  --hover-col: #6456FF;
+  --link-col: #05a0af;
+  --hover-col: #37aecc;
 
   --navbar-col: #03002A;
-  --navbar-text-col: #EDEFF0;
-  --navbar-border-col: #DDDDDD;
+  --navbar-text-col: #FFFFFF;
+  --navbar-border-col: #05a0af;
 
-  --footer-col: hsl(245, 10%, 90%);
-  --footer-text-col: #767582;
-  --footer-link-col: #767582;
-  --footer-hover-col: #6456FF;
+  --footer-col: #EAEAEA;
+  --footer-text-col: #777777;
+  --footer-link-col: #05a0af;
+  --footer-hover-col: #37aecc;
 }
 
-@font-face {
-  font-family: 'Archive';
-  src: url(/assets/fonts/Archive.otf) format('opentype');
+body {
+  font-family: var(--body-font);
+  background-color: var(--page-col);
+  color: var(--text-col);
+  line-height: 1.8;
 }
 
-h1, h2, h3, h4, h6 {
-  color: #03002a;
+h1, h2, h3, h4, h5, h6, .page-heading > h1 {
+  font-family: var(--header-font);
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 1rem;
 }
 
-.page-heading > h1 {
-  font-family: 'Archive';
-  text-transform: uppercase;
+/* Utilities for modern airy feel */
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  border-radius: 50px;
+  font-family: var(--header-font);
+  font-weight: 800;
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-col);
+  border-color: var(--hover-col);
+}
+
+.btn-outline-primary {
+  color: var(--accent);
+  border-color: var(--accent);
+  border-radius: 50px;
+  font-family: var(--header-font);
+  font-weight: 800;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.text-primary {
+  color: var(--accent) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+/* Remove excessive borders */
+.card {
+  border: none !important;
+}
+
+hr {
+  border-top: 1px solid rgba(0,0,0,0.05);
 }
