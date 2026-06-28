@@ -24,15 +24,7 @@ gem "jekyll-paginate", "~> 1.1"
 # Fix security vulnerability in addressable
 gem "addressable", ">= 2.9.0"
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 # Warnings
-#gem "json"
+gem "json"
 gem "base64"
 gem "bigdecimal"
-
-
-# spec.add_development_dependency "bundler", ">= 1.16"
-# spec.add_development_dependency "rake", "~> 12.0"
-# spec.add_development_dependency "appraisal", "~> 2.5"
