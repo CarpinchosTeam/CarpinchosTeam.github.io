@@ -2,6 +2,7 @@
   /* common CSS variables */
   --body-font: 'Lora', 'Times New Roman', serif;
   --header-font: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ui-font: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   /* Modern Identity Palette */
   --primary: #03002A;       /* Dark Blue (from logo) */
@@ -45,26 +46,61 @@ h1, h2, h3, h4, h5, h6, .page-heading > h1 {
   background-color: var(--accent);
   border-color: var(--accent);
   border-radius: 50px;
-  font-family: var(--header-font);
+  font-family: var(--ui-font);
   font-weight: 800;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
   background-color: var(--hover-col);
   border-color: var(--hover-col);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 160, 175, 0.3);
 }
 
 .btn-outline-primary {
   color: var(--accent);
   border-color: var(--accent);
   border-radius: 50px;
-  font-family: var(--header-font);
+  font-family: var(--ui-font);
   font-weight: 800;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
 }
 
 .btn-outline-primary:hover {
   background-color: var(--accent);
   border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 160, 175, 0.2);
+}
+
+.btn-outline-light {
+  font-family: var(--ui-font);
+  font-weight: 800;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.btn-light {
+  font-family: var(--ui-font);
+  font-weight: 800;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 .text-primary {
@@ -75,11 +111,123 @@ h1, h2, h3, h4, h5, h6, .page-heading > h1 {
   background-color: var(--primary) !important;
 }
 
+/* UI Elements */
+.ui-font {
+  font-family: var(--ui-font);
+}
+
 /* Remove excessive borders */
 .card {
   border: none !important;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
 }
 
 hr {
   border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: var(--accent);
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  margin-left: -2px;
+  border-radius: 4px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+  padding-left: 100px;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: var(--page-col);
+  border: 4px solid var(--accent);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  left: 40px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.timeline-year {
+  font-family: var(--ui-font);
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+  .timeline-item {
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .timeline-item::after {
+    left: 21px;
+  }
+}
+
+/* Impact numbers */
+.impact-number {
+  font-family: var(--ui-font);
+  font-weight: 900;
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+/* Avatars */
+.avatar-circle {
+  border: 3px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.avatar-circle:hover {
+  transform: scale(1.05);
+  border-color: var(--accent);
 }
