@@ -8,7 +8,7 @@ title: Inicio
   <div style="background-color: rgba(3, 0, 42, 0.85); position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
   <div class="container position-relative py-5" style="z-index: 1;">
     <img src="{{ '/assets/img/logo-carpincho.svg' | relative_url }}" alt="Carpinchos Logo" style="width: 220px; margin-bottom: 2.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
-    <h1 class="display-3 fw-bolder text-white mb-4" style="letter-spacing: -1px;">Equipo Carpinchos</h1>
+    <h1 class="display-3 fw-bolder text-white mb-4" style="letter-spacing: -1px; font-size: clamp(2.5rem, 12vw, 4.5rem) !important;">Team Carpinchos</h1>
     <h3 class="h5 fw-normal text-white mb-4" style="opacity: 0.9; letter-spacing: 1px; text-transform: uppercase;">Una iniciativa de <a href="https://supercomputo.unc.edu.ar" class="text-white fw-bold text-decoration-none border-bottom border-white pb-1">UNC Supercómputo</a></h3>
     <p class="lead fw-normal mx-auto mb-5 text-light" style="max-width: 800px; font-size: 1.5rem; line-height: 1.6;">
       Somos el equipo de Computación de Alto Rendimiento de la Universidad Nacional de Córdoba.
@@ -70,24 +70,25 @@ title: Inicio
   </section>
 
   <!-- 4. IMPACTO -->
-  <section class="py-5 bg-white rounded-lg p-5 text-center shadow-sm my-5" id="impacto">
-    <h2 class="display-5 fw-bold mb-5">El Impacto</h2>
+  <section class="bg-white rounded-lg p-2 py-4 text-center shadow-sm my-5" id="impacto">
+    <h2 class="display-5 fw-bold mb-3">El Impacto</h2>
+    <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto 30px auto; border-radius: 2px;"></div>
     <div class="row mt-4">
-      <div class="col-6 col-md-3 mb-4">
+      <div class="col-6 col-md-3">
         <div class="impact-number">{{ site.competencias | size }}</div>
-        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px;">Competencias<br>Internacionales</p>
+        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px; font-size: clamp(0.65rem, 3.5vw, 0.875rem); word-break: break-word;">Competencias<br>Internacionales</p>
       </div>
-      <div class="col-6 col-md-3 mb-4">
+      <div class="col-6 col-md-3">
         <div class="impact-number">{{ site.integrantes | size }}</div>
-        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px;">Estudiantes<br>Formados</p>
+        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px; font-size: clamp(0.65rem, 3.5vw, 0.875rem); word-break: break-word;">Estudiantes<br>Formados</p>
       </div>
-      <div class="col-6 col-md-3 mb-4">
+      <div class="col-6 col-md-3">
         <div class="impact-number">+100</div>
-        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px;">Donapinchos</p>
+        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px; font-size: clamp(0.65rem, 3.5vw, 0.875rem); word-break: break-word;">Donapinchos</p>
       </div>
-      <div class="col-6 col-md-3 mb-4">
+      <div class="col-6 col-md-3">
         <div class="impact-number">5</div>
-        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px;">Sponsors e<br>Instituciones</p>
+        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px; font-size: clamp(0.65rem, 3.5vw, 0.875rem); word-break: break-word;">Sponsors e<br>Instituciones</p>
       </div>
     </div>
   </section>
@@ -143,9 +144,9 @@ title: Inicio
           <div class="col-6 col-md-4 text-center mb-5">
             <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
               {% if integrante.github %}
-              <img src="https://github.com/{{ integrante.github }}.png?size=150" alt="{{ integrante.name }}" class="rounded-circle mb-3 avatar-circle" style="width: 130px; height: 130px; object-fit: cover;">
+              <img src="https://github.com/{{ integrante.github }}.png?size=150" alt="{{ integrante.name }}" class="rounded-circle mb-3 avatar-circle" style="width: 130px; max-width: 100%; aspect-ratio: 1/1; height: auto; object-fit: cover;">
               {% else %}
-              <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 130px; height: 130px;"></div>
+              <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 130px; max-width: 100%; aspect-ratio: 1/1; height: auto;"></div>
               {% endif %}
               <h5 class="fw-bold mb-1 text-dark">{{ integrante.name }}</h5>
               <span class="text-primary ui-font small fw-bold">{{ integrante.field }}</span>
@@ -162,9 +163,9 @@ title: Inicio
           <div class="col-6 col-md-4 text-center mb-5">
             <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
               {% if integrante.github %}
-              <img src="https://github.com/{{ integrante.github }}.png?size=150" alt="{{ integrante.name }}" class="rounded-circle mb-3 avatar-circle" style="width: 130px; height: 130px; object-fit: cover; border-color: var(--accent-orange);">
+              <img src="https://github.com/{{ integrante.github }}.png?size=150" alt="{{ integrante.name }}" class="rounded-circle mb-3 avatar-circle" style="width: 130px; max-width: 100%; aspect-ratio: 1/1; height: auto; object-fit: cover; border-color: var(--accent-orange);">
               {% else %}
-              <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 130px; height: 130px; border-color: var(--accent-orange);"></div>
+              <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 130px; max-width: 100%; aspect-ratio: 1/1; height: auto; border-color: var(--accent-orange);"></div>
               {% endif %}
               <h5 class="fw-bold mb-1 text-dark">{{ integrante.name }} <i class="fa-solid fa-chalkboard-user text-orange ml-1"></i></h5>
               <span class="text-orange ui-font small fw-bold">Coach</span>
