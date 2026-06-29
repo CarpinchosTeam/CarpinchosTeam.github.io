@@ -4,7 +4,7 @@ name: Fabricio	Velez
 affiliation: Universidad Nacional de Córdoba
 field: Biomédica
 role: Miembro
-github: DanielaCourel
+github: velezfabri
 competitions:
 - indyscc26
 ---
