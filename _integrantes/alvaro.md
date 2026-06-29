@@ -5,7 +5,6 @@ affiliation: Universidad Nacional de Córdoba
 field: Ciencias de la Computación
 role: Antiguo Miembro
 github: alvaro-sch
-status: former
 competitions:
 - indyscc23
 - asc24

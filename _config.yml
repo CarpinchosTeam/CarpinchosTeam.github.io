@@ -20,10 +20,13 @@ title: Carpinchos Team
 ###############################################
 
 navbar-links:
-  # About us: "about"
-  Inicio: "#"
+  Inicio: "/"
+  Propósito: "/#proposito"
+  Historia: "/#recorrido"
+  Equipo: "/#equipo"
+  Sponsors: "/#sponsors"
+  Comunidad: "/#apoyanos"
   UNC Supercómputo: "https://supercomputo.unc.edu.ar"
-  Bancarpinchos: "#bancarpinchos"
 
 ################
 # --- Logo --- #

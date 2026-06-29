@@ -25,7 +25,7 @@
 
   --navbar-col: #03002A;
   --navbar-text-col: #FFFFFF;
-  --navbar-border-col: #1cb0d5;
+  --navbar-border-col: #03002A;
 
   --footer-col: #EAEAEA;
   --footer-text-col: #777777;
@@ -37,7 +37,7 @@ body {
   font-family: var(--body-font);
   background-color: var(--page-col);
   color: var(--text-col);
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 h1,

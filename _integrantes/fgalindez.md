@@ -1,13 +1,10 @@
 ---
 layout: integrante
-name: Javier Mercado Alcoba
+name: Francisco Galindez
 affiliation: Universidad Nacional de Córdoba
 field: Física
 role: Miembro
-github: javimalcob
+github: FranGalindez
 competitions:
-- indyscc24
-- indyscc25
-- asc26
 - indyscc26
 ---

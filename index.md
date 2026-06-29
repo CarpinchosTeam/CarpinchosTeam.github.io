@@ -9,12 +9,13 @@ title: Inicio
   <div class="container position-relative py-5" style="z-index: 1;">
     <img src="{{ '/assets/img/logo-carpincho.svg' | relative_url }}" alt="Carpinchos Logo" style="width: 220px; margin-bottom: 2.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
     <h1 class="display-3 fw-bolder text-white mb-4" style="letter-spacing: -1px;">Equipo Carpinchos</h1>
+    <h3 class="h5 fw-normal text-white mb-4" style="opacity: 0.9; letter-spacing: 1px; text-transform: uppercase;">Una iniciativa de <a href="https://supercomputo.unc.edu.ar" class="text-white fw-bold text-decoration-none border-bottom border-white pb-1">UNC Supercómputo</a></h3>
     <p class="lead fw-normal mx-auto mb-5 text-light" style="max-width: 800px; font-size: 1.5rem; line-height: 1.6;">
       Somos el equipo de Computación de Alto Rendimiento de la Universidad Nacional de Córdoba.
     </p>
-    <div class="d-flex justify-content-center gap-4 flex-wrap">
-      <a href="#recorrido" class="btn btn-primary btn-lg px-5 shadow-lg">Conocé nuestra historia</a>
-      <a href="#apoyanos" class="btn btn-outline-light btn-lg px-5">Apoyanos</a>
+    <div class="justify-content-center flex-wrap">
+      <a href="#recorrido" class="btn btn-primary btn-lg px-5 mx-2 shadow-lg">Conocé nuestra historia</a>
+      <a href="#apoyanos" class="btn btn-outline-light btn-lg px-5 mx-2">Apoyanos</a>
     </div>
   </div>
 </section>
@@ -44,10 +45,10 @@ title: Inicio
       </div>
       <div class="col-md-4 mb-5 px-4">
         <div class="mb-4 text-orange">
-          <i class="fa-solid fa-microchip" style="font-size: 4rem;"></i>
+          <i class="fa-solid fa-users" style="font-size: 4rem;"></i>
         </div>
-        <h4 class="fw-bold mb-3">Desarrollamos tecnología</h4>
-        <p class="text-muted" style="font-size: 1.1rem;">Creamos software, optimizamos algoritmos y diseñamos infraestructura para resolver problemas complejos.</p>
+        <h4 class="fw-bold mb-3">Fortalecemos el ecosistema HPC</h4>
+        <p class="text-muted" style="font-size: 1.1rem;">Compartimos conocimiento, y colaboramos con la comunidad para impulsar el HPC en Argentina y la región.</p>
       </div>
     </div>
   </section>
@@ -59,7 +60,10 @@ title: Inicio
         <h2 class="display-5 fw-bold mb-4">Nuestro Propósito</h2>
         <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto 30px auto; border-radius: 2px;"></div>
         <p class="lead text-muted" style="font-size: 1.35rem; line-height: 1.8;">
-          Las competencias internacionales no son un fin en sí mismo, sino una poderosa herramienta. Las utilizamos como motor para <strong class="text-dark">formar estudiantes de excelencia en HPC</strong>, desarrollar tecnologías de vanguardia y fortalecer la comunidad científica y tecnológica de nuestra región.
+          Las competencias de HPC son una de las formas más intensivas de formación en computación de alto rendimiento. Cada edición reúne estudiantes que durante meses aprenden optimización, programación paralela, arquitectura de computadoras y trabajo en equipo para resolver desafíos reales bajo restricciones de energía y hardware.
+        </p>
+        <p class="lead text-muted mt-3" style="font-size: 1.35rem; line-height: 1.8;">
+          En Carpinchos usamos esas competencias como una excusa para formar profesionales y fortalecer la comunidad de HPC en Argentina.
         </p>
       </div>
     </div>
@@ -79,7 +83,7 @@ title: Inicio
       </div>
       <div class="col-6 col-md-3 mb-4">
         <div class="impact-number">+100</div>
-        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px;">Donapinchos<br>Activos</p>
+        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px;">Donapinchos</p>
       </div>
       <div class="col-6 col-md-3 mb-4">
         <div class="impact-number">5</div>
@@ -136,7 +140,7 @@ title: Inicio
         <!-- Estudiantes -->
         {% for integrante in site.integrantes %}
           {% if integrante.competitions contains active_comp %}
-          <div class="col-6 col-md-4 col-lg-3 text-center mb-5">
+          <div class="col-6 col-md-4 text-center mb-5">
             <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
               {% if integrante.github %}
               <img src="https://github.com/{{ integrante.github }}.png?size=150" alt="{{ integrante.name }}" class="rounded-circle mb-3 avatar-circle" style="width: 130px; height: 130px; object-fit: cover;">
@@ -155,7 +159,7 @@ title: Inicio
     <div class="row justify-content-center mt-2">
         {% for integrante in site.integrantes %}
           {% if integrante.coach_competitions contains active_comp %}
-          <div class="col-6 col-md-4 col-lg-3 text-center mb-5">
+          <div class="col-6 col-md-4 text-center mb-5">
             <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
               {% if integrante.github %}
               <img src="https://github.com/{{ integrante.github }}.png?size=150" alt="{{ integrante.name }}" class="rounded-circle mb-3 avatar-circle" style="width: 130px; height: 130px; object-fit: cover; border-color: var(--accent-orange);">
@@ -178,39 +182,30 @@ title: Inicio
     <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto; border-radius: 2px;"></div>
     <p class="lead text-muted mt-4 mb-5">Instituciones y empresas que apuestan por el talento universitario.</p>
     
+    {% assign regular_sponsors = site.sponsors | where: "type", "sponsor" | sort: "order" %}
     <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap mt-5">
+      {% for sponsor in regular_sponsors %}
       <div class="text-center">
-        <a href="https://inpunto.la/" target="_blank" class="text-decoration-none text-dark d-block card bg-white p-4" style="width: 220px; height: 120px; display: flex !important; align-items: center; justify-content: center;">
-          <h3 class="m-0 fw-bold" style="letter-spacing: -1px;">InPunto</h3>
+        <a href="{{ sponsor.link }}" target="_blank" class="text-decoration-none text-dark d-block card bg-transparent p-4" style="width: 220px; height: 120px; display: flex !important; align-items: center; justify-content: center;">
+          <img src="{{ 'assets/logos/' | append: sponsor.logo | relative_url }}" alt="{{ sponsor.title }}" class="img-fluid" style="max-height: 80px; max-width: 100%; object-fit: contain;">
         </a>
-        <p class="mt-3 text-muted fw-bold small text-uppercase ui-font">Sponsor Oro</p>
+        {% if sponsor.level %}
+        <p class="mt-3 text-muted fw-bold small text-uppercase ui-font">{{ sponsor.level }}</p>
+        {% endif %}
       </div>
-      <div class="text-center">
-        <a href="https://txpipe.io/" target="_blank" class="text-decoration-none text-dark d-block card bg-white p-4" style="width: 220px; height: 120px; display: flex !important; align-items: center; justify-content: center;">
-          <h3 class="m-0 fw-bold" style="letter-spacing: -1px;">TxPipe</h3>
-        </a>
-        <p class="mt-3 text-muted fw-bold small text-uppercase ui-font">Sponsor Plata</p>
-      </div>
-      <div class="text-center">
-        <a href="https://nerdearla.com/" target="_blank" class="text-decoration-none text-dark d-block card bg-white p-4" style="width: 220px; height: 120px; display: flex !important; align-items: center; justify-content: center;">
-          <h3 class="m-0 fw-bold" style="letter-spacing: -1px;">Nerdearla</h3>
-        </a>
-        <p class="mt-3 text-muted fw-bold small text-uppercase ui-font">Sponsor Bronce</p>
-      </div>
+      {% endfor %}
     </div>
 
     <h3 class="h4 fw-bold mt-5 mb-4 text-muted">Apoyo Institucional</h3>
+    {% assign institutional_sponsors = site.sponsors | where: "type", "institutional" | sort: "order" %}
     <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap">
+      {% for inst in institutional_sponsors %}
       <div class="text-center">
-        <div class="text-decoration-none text-dark d-block card bg-white p-4" style="width: 220px; height: 120px; display: flex !important; align-items: center; justify-content: center;">
-          <h3 class="m-0 fw-bold" style="letter-spacing: -1px;">FAMAF</h3>
-        </div>
+        <a href="{{ inst.link }}" target="_blank" class="text-decoration-none text-dark d-block card bg-transparent p-4" style="width: 220px; height: 120px; display: flex !important; align-items: center; justify-content: center;">
+          <img src="{{ 'assets/logos/' | append: inst.logo | relative_url }}" alt="{{ inst.title }}" class="img-fluid" style="max-height: 80px; max-width: 100%; object-fit: contain;">
+        </a>
       </div>
-      <div class="text-center">
-        <div class="text-decoration-none text-dark d-block card bg-white p-4" style="width: 220px; height: 120px; display: flex !important; align-items: center; justify-content: center;">
-          <h3 class="m-0 fw-bold" style="letter-spacing: -1px;">CEIMAF</h3>
-        </div>
-      </div>
+      {% endfor %}
     </div>
 
     <div class="mt-5 pt-3">
@@ -226,7 +221,9 @@ title: Inicio
         <h2 class="display-4 fw-bold text-white mb-4">La comunidad que nos sostiene</h2>
         <div style="width: 60px; height: 4px; background-color: var(--accent); margin-bottom: 30px; border-radius: 2px;"></div>
         <p class="lead mb-4" style="font-size: 1.25rem; line-height: 1.7; opacity: 0.9;">
-          Durante nuestra campaña de recaudación, más de 100 personas (nuestros <strong>Donapinchos</strong>) nos brindaron su apoyo económico. Además, contamos con {{ site.data.bancarpinchos | size }} personas muy especiales que aportaron más de 25 USD, convirtiéndose en nuestros <strong>Bancarpinchos</strong>. ¡Gracias a todos por hacer posible que representemos a la Universidad Nacional de Córdoba en competencias internacionales!
+          Más de 100 personas apoyaron económicamente al equipo.
+          Además, contamos con {{ site.data.bancarpinchos | size }} personas muy especiales que aportaron más de 25 USD, convirtiéndose en nuestros <strong>Bancarpinchos</strong>.
+          ¡Gracias a todos por hacer posible que representemos a la Universidad Nacional de Córdoba en competencias internacionales!
         </p>
         <div class="mt-5">
           <a href="https://cafecito.app/teamcarpinchos" target="_blank" class="btn btn-light btn-lg text-primary ui-font px-4 py-3 shadow">

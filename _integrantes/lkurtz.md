@@ -5,7 +5,6 @@ affiliation: Universidad Nacional de Córdoba
 field: Ciencias de la Computación
 role: Coach y Antiguo Miembro
 github: klartz
-status: current
 competitions:
 - indyscc23
 - asc24
