@@ -1,0 +1,69 @@
+---
+layout: base
+---
+
+<main class="container-md mt-5 pt-5">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <div class="d-flex align-items-center mb-4">
+        {% if page.github %}
+        <img src="https://github.com/{{ page.github }}.png?size=150" alt="{{ page.name }}"
+          class="rounded-circle mr-4 shadow-sm" style="width: 120px; height: 120px; object-fit: cover;">
+        {% endif %}
+        <div>
+          <h1 class="mb-1">{{ page.name }}</h1>
+          <span class="lead text-primary fw-bold mb-0">{{ page.role }}</span>
+          <br>
+          {{ page.affiliation }}
+          {% if page.field and page.field != "" %} ({{ page.field }}){% endif %}
+          {% if page.github %}
+          <br>
+          GitHub:
+          <a href="https://github.com/{{ page.github }}" target="_blank">@{{page.github }}</a>
+          {% endif %}
+
+
+        </div>
+      </div>
+
+
+      <div class="mb-5">
+        {{ content }}
+      </div>
+
+      {% if page.competitions and page.competitions.size > 0 %}
+      <h3 class="border-bottom pb-2">Competencias (Estudiante)</h3>
+      <ul class="list-group list-group-flush mb-4">
+        {% for event_id in page.competitions %}
+        {% assign comp = site.competencias | where: "event", event_id | first %}
+        {% if comp %}
+        <li class="list-group-item bg-transparent">
+          🏆 <a href="{{ comp.url | relative_url }}" class="fw-bold text-decoration-none">{{ comp.name }} ({{ comp.year
+            }})</a>
+        </li>
+        {% else %}
+        <li class="list-group-item bg-transparent">{{ event_id }}</li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.coach_competitions and page.coach_competitions.size > 0 %}
+      <h3 class="border-bottom pb-2 mt-4">Competencias (Coach)</h3>
+      <ul class="list-group list-group-flush mb-4">
+        {% for event_id in page.coach_competitions %}
+        {% assign comp = site.competencias | where: "event", event_id | first %}
+        {% if comp %}
+        <li class="list-group-item bg-transparent">
+          📋 <a href="{{ comp.url | relative_url }}" class="fw-bold text-decoration-none text-dark">{{ comp.name }} ({{
+            comp.year }})</a>
+        </li>
+        {% else %}
+        <li class="list-group-item bg-transparent">{{ event_id }}</li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</main>

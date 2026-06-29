@@ -7,8 +7,8 @@ layout: page
 {% assign posts = paginator.posts | default: site.posts %}
 
 <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
-<ul class="posts-list list-unstyled" role="list">
-  {% for post in posts %}
+<ul class="posts-list list-unstyled home-posts" role="list">
+  {% for post in posts limit:3 %}
   <li class="post-preview">
     <article>
 
@@ -115,23 +115,6 @@ layout: page
   {% endfor %}
 </ul>
 
-{% if paginator.total_pages > 1 %}
-<ul class="pagination main-pager">
-  {% if paginator.previous_page %}
-  <li class="page-item previous">
-    <a class="page-link" href="{{ paginator.previous_page_path | absolute_url }}">
-      <i class="fas fa-arrow-left" alt="Entradas más recientes"></i>
-      <span class="d-none d-sm-inline-block">Entradas más recientes</span>
-    </a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="page-item next">
-    <a class="page-link" href="{{ paginator.next_page_path | absolute_url }}">
-      <span class="d-none d-sm-inline-block">Entradas más antiguas</span>
-      <i class="fas fa-arrow-right" alt="Entradas más antiguas"></i>
-    </a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+<div class="text-center mt-4 mb-5">
+  <a href="{{ '/tags' | relative_url }}" class="btn btn-primary">Ver todas las noticias</a>
+</div>

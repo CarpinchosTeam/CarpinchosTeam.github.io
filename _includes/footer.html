@@ -2,47 +2,51 @@
   <div class="container-md beautiful-jekyll-footer">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-      {% include social-networks-links.html %}
-      {% if page.footer-extra %}
+        {% include social-networks-links.html %}
+        {% if page.footer-extra %}
         <div class="footer-custom-content">
           {% for file in page.footer-extra %}
-            {% include {{ file }} %}
+          {% include {{ file }} %}
           {% endfor %}
         </div>
-      {% endif %}
-      <p class="copyright text-muted">
-      {% if site.author %}
-        {{ site.author }}
-        &nbsp;&bull;&nbsp;
-      {% endif %}
-      <!-- {{ site.time | date: '%Y' }} -->
-
-      <a href="https://supercomputo.unc.edu.ar">UNC Supercómputo</a>
-
-      {% if site.url-pretty %}
-        &nbsp;&bull;&nbsp;
-        <span class="author-site">
-          <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '/' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
-        </span>
-      {% endif %}
-
-      {% if site.matomo %}
-        {% if site.matomo.opt-out %}
-          &nbsp;&bull;&nbsp;
-          <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">No rastrear</a>
         {% endif %}
-      {% endif%}
+        <p class="copyright text-muted">
+          {% if site.author %}
+          {{ site.author }}
+          &nbsp;&bull;&nbsp;
+          {% endif %}
+          <!-- {{ site.time | date: '%Y' }} -->
 
-      {% if site.edit_page_button and site.github.repository_url %}
-        &nbsp;&bull;&nbsp;
-        <a title="Editar esta página en GitHub" href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}" class="text_muted">Editar página</a>
-       {% endif%}
+          <a href="https://supercomputo.unc.edu.ar">Fundados y entrenados por UNC Supercómputo</a>
 
-      </p>
-      {% unless site.remove-ads %}<p class="theme-by text-muted">
-        Desarrollado con
-        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
-      </p>{% endunless %}
+          {% if site.url-pretty %}
+          &nbsp;&bull;&nbsp;
+          <span class="author-site">
+            <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '/' | absolute_url }}{% endif %}">{{
+              site.url-pretty }}</a>
+          </span>
+          {% endif %}
+
+          {% if site.matomo %}
+          {% if site.matomo.opt-out %}
+          &nbsp;&bull;&nbsp;
+          <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank"
+            class="text_muted">No rastrear</a>
+          {% endif %}
+          {% endif%}
+
+          {% if site.edit_page_button and site.github.repository_url %}
+          &nbsp;&bull;&nbsp;
+          <a title="Editar esta página en GitHub"
+            href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}"
+            class="text_muted">Editar página</a>
+          {% endif%}
+
+        </p>
+        {% unless site.remove-ads %}<p class="theme-by text-muted">
+          Desarrollado con
+          <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+        </p>{% endunless %}
       </div>
     </div>
   </div>
