@@ -14,8 +14,8 @@ title: Inicio
       Somos el equipo de Computación de Alto Rendimiento de la Universidad Nacional de Córdoba.
     </p>
     <div class="justify-content-center flex-wrap">
-      <a href="#recorrido" class="btn btn-primary btn-lg px-5 mx-2 shadow-lg">Conocé nuestra historia</a>
-      <a href="#apoyanos" class="btn btn-outline-light btn-lg px-5 mx-2">Apoyanos</a>
+      <a href="#recorrido" class="btn btn-primary btn-lg px-5 m-2 shadow-lg">Conocé nuestra historia</a>
+      <a href="#apoyanos" class="btn btn-outline-light btn-lg px-5 m-2">Apoyanos</a>
     </div>
   </div>
 </section>
@@ -70,7 +70,7 @@ title: Inicio
   </section>
 
   <!-- 4. IMPACTO -->
-  <section class="py-5 bg-white rounded-4 p-5 text-center shadow-sm my-5" id="impacto">
+  <section class="py-5 bg-white rounded-lg p-5 text-center shadow-sm my-5" id="impacto">
     <h2 class="display-5 fw-bold mb-5">El Impacto</h2>
     <div class="row mt-4">
       <div class="col-6 col-md-3 mb-4">
@@ -127,7 +127,7 @@ title: Inicio
   </section>
 
   <!-- 6. EQUIPO ACTUAL -->
-  <section class="py-5 my-5 bg-white rounded-4 p-5 shadow-sm" id="equipo">
+  <section class="py-5 my-5 bg-white rounded-lg p-5 shadow-sm" id="equipo">
     <div class="text-center mb-5">
       <h2 class="display-5 fw-bold mb-3">El Equipo Actual</h2>
       <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto; border-radius: 2px;"></div>
@@ -209,15 +209,15 @@ title: Inicio
     </div>
 
     <div class="mt-5 pt-3">
-      <a href="https://docs.google.com/presentation/d/1CdKjTrHeCHs50wEVKzI28m1R14SMBw_xwptN4yIPCAo/edit?slide=id.p#slide=id.p" target="_blank" class="btn btn-outline-primary">Convertirse en Sponsor <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+      <a href="https://docs.google.com/presentation/d/1CdKjTrHeCHs50wEVKzI28m1R14SMBw_xwptN4yIPCAo/edit?slide=id.p#slide=id.p" target="_blank" class="btn btn-outline-primary">Convertirse en Sponsor <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i></a>
     </div>
   </section>
 
   <!-- 8. BANCARPINCHOS -->
-  <section class="py-5 my-5 bg-primary text-white rounded-4 p-5 shadow-lg" id="apoyanos" style="position: relative; overflow: hidden;">
+  <section class="py-5 my-5 bg-primary text-white rounded-lg p-5 shadow-lg" id="apoyanos" style="position: relative; overflow: hidden;">
     <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 200%; background: radial-gradient(circle, rgba(5,160,175,0.15) 0%, rgba(3,0,42,0) 70%); pointer-events: none;"></div>
     <div class="row align-items-center position-relative" style="z-index: 1;">
-      <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
+      <div class="col-lg-6 mb-5 mb-lg-0 pr-lg-5">
         <h2 class="display-4 fw-bold text-white mb-4">La comunidad que nos sostiene</h2>
         <div style="width: 60px; height: 4px; background-color: var(--accent); margin-bottom: 30px; border-radius: 2px;"></div>
         <p class="lead mb-4" style="font-size: 1.25rem; line-height: 1.7; opacity: 0.9;">
@@ -233,12 +233,12 @@ title: Inicio
         <p class="mt-4 small ui-font" style="opacity: 0.7;">Alias ARS: teamcarpinchos &bull; Alias USD: teamcarpinchos.usd</p>
       </div>
       <div class="col-lg-6">
-        <div class="bg-white text-dark rounded-4 p-4 p-md-5 shadow-lg">
+        <div class="bg-white text-dark rounded-lg p-4 p-md-5 shadow-lg">
           <div class="d-flex align-items-center mb-4 border-bottom pb-3">
             <i class="fa-solid fa-heart text-orange fs-3 mr-2"></i>
             <h4 class="fw-bold m-0">¡Gracias Bancarpinchos!</h4>
           </div>
-          <div class="bancarpinchos-list pe-3" style="max-height: 350px; overflow-y: auto;">
+          <div class="bancarpinchos-list pr-3" style="max-height: 350px; overflow-y: auto;">
             <ul class="list-unstyled mb-0" style="column-count: 2; column-gap: 2rem;">
               {% for donor in site.data.bancarpinchos %}
               <li class="mb-3">
@@ -253,13 +253,13 @@ title: Inicio
   </section>
 
   <!-- 9. NOTICIAS -->
-  <section class="py-5 mt-5 border-top border-2" id="noticias" style="border-color: rgba(0,0,0,0.05) !important;">
+  <section class="py-5 mt-5 border-top" id="noticias" style="border-color: rgba(0,0,0,0.05) !important; border-top-width: 2px !important;">
     <div class="row align-items-center mb-5">
       <div class="col-md-8">
         <h3 class="display-6 fw-bold mb-0">Últimas Novedades</h3>
       </div>
-      <div class="col-md-4 text-md-end mt-3 mt-md-0">
-        <a href="{{ '/tags' | relative_url }}" class="btn btn-outline-primary btn-sm">Ver archivo de noticias</a>
+      <div class="col-md-4 text-md-right mt-3 mt-md-0">
+        <a href="{{ '/posts/' | relative_url }}" class="btn btn-outline-primary btn-sm">Ver archivo de noticias</a>
       </div>
     </div>
     
@@ -270,7 +270,7 @@ title: Inicio
         <div class="card h-100 bg-white p-4">
           <div class="text-primary ui-font small fw-bold mb-3"><i class="fa-regular fa-calendar mr-2"></i>{{ post.date | date: "%d/%m/%Y" }}</div>
           <h5 class="fw-bold mb-3"><a href="{{ post.url | relative_url }}" class="text-dark text-decoration-none">{{ post.title }}</a></h5>
-          <p class="text-muted small mb-0">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+          <p class="text-muted small mb-0 mt-0">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
         </div>
       </div>
       {% endfor %}

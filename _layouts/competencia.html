@@ -42,7 +42,7 @@ layout: base
         <div class="row">
           {% for award in page.awards %}
           <div class="col-12 col-md-6 mb-3">
-            <div class="card border-0 shadow-sm rounded-4 h-100 bg-white custom-hover">
+            <div class="card border-0 shadow-sm rounded-lg h-100 bg-white custom-hover">
               <div class="card-body d-flex align-items-center p-3">
                 <div class="rounded-circle d-flex align-items-center justify-content-center mr-3"
                   style="width: 50px; height: 50px; flex-shrink: 0; background-color: rgba(255, 102, 0, 0.1);">
@@ -76,7 +76,7 @@ layout: base
         {% for integrante in site.integrantes %}
         {% if integrante.competitions contains page.event %}
         <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm text-center py-3 rounded-4 custom-hover bg-white">
+          <div class="card h-100 border-0 shadow-sm text-center py-3 rounded-lg custom-hover bg-white">
             <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
               <div class="card-body px-2">
                 <i class="fa-solid fa-user text-primary mb-3" style="font-size: 2rem;"></i>
@@ -104,7 +104,7 @@ layout: base
         {% for integrante in site.integrantes %}
         {% if integrante.coach_competitions contains page.event %}
         <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm text-center py-3 rounded-4 custom-hover"
+          <div class="card h-100 border-0 shadow-sm text-center py-3 rounded-lg custom-hover"
             style="background-color: rgba(255,102,0,0.03);">
             <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
               <div class="card-body px-2">
@@ -126,7 +126,7 @@ layout: base
         {% for app_slug in page.apps %}
         {% assign app_obj = site.aplicaciones | where: "slug", app_slug | first %}
         <div class="col-md-6 mb-4">
-          <div class="card h-100 border-0 shadow-sm rounded-4 p-1 custom-hover bg-white">
+          <div class="card h-100 border-0 shadow-sm rounded-lg p-1 custom-hover bg-white">
             <div class="card-body">
               {% if app_obj %}
               <div class="d-flex align-items-center mb-2">
@@ -162,7 +162,7 @@ layout: base
       <div class="list-group list-group-flush mb-5">
         {% for nota in page.notes %}
         <a href="{{ nota.link }}" target="_blank" rel="noopener noreferrer"
-          class="list-group-item list-group-item-action border-0 px-4 py-3 d-flex align-items-center rounded-4 shadow-sm custom-hover mb-3"
+          class="list-group-item list-group-item-action border-0 px-4 py-3 d-flex align-items-center rounded-lg shadow-sm custom-hover mb-3"
           style="background-color: #f8f9fa;">
           <div class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow-sm mr-3"
             style="width: 45px; height: 45px; flex-shrink: 0;">
