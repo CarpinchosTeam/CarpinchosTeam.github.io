@@ -1,12 +1,11 @@
 ---
 layout: integrante
-name: Ignacio Facello
+name: Tomas Alejandro Hubmann
 affiliation: Universidad Nacional de Córdoba
 field: Ciencias de la Computación
-role: Miembro
-github: IgnacioFacello
-status: current
+role: Antiguo Miembro
+github: thubmann2002
+status: former
 competitions:
 - indyscc25
-- asc26
 ---

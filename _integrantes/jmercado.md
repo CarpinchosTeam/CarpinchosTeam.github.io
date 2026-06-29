@@ -10,4 +10,5 @@ competitions:
 - indyscc24
 - indyscc25
 - asc26
+- indyscc26
 ---

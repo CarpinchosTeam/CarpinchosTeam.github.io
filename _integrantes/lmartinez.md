@@ -1,13 +1,11 @@
 ---
 layout: integrante
-name: Milagros Carabelos
+name: Lucía Martínez Gavier
 affiliation: Universidad Nacional de Córdoba
 field: Ciencias de la Computación
-role: Miembro
-github: milicarabelos
-status: current
+role: Antiguo Miembro
+github: LuciaMartinezGavier
+status: former
 competitions:
-- indyscc24
-- indyscc25
-- asc26
+- indyscc23
 ---

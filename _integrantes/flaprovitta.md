@@ -1,11 +1,11 @@
 ---
 layout: integrante
-name: Lucía Martínez Gavier
+name: Facundo Jose Laprovitta
 affiliation: Universidad Nacional de Córdoba
 field: Ciencias de la Computación
-role: Miembro anterior
-github: LuciaMartinezGavier
-status: former
+role: Miembro
+github: faculapro
+status: current
 competitions:
-- indyscc23
+- indyscc26
 ---

@@ -1,13 +1,11 @@
 ---
 layout: integrante
-name: Tomás Bazán
+name: Marcos Tolcachir
 affiliation: Universidad Nacional de Córdoba
 field: Ciencias de la Computación
-role: Miembro
-github: TomasBazan
-status: current
+role: Antiguo Miembro
+github: marcost2
+status: former
 competitions:
-- indyscc24
-- indyscc25
-- asc26
+- indyscc23
 ---

@@ -3,7 +3,7 @@ layout: integrante
 name: Lara Kurtz
 affiliation: Universidad Nacional de Córdoba
 field: Ciencias de la Computación
-role: Miembro
+role: Coach y Antiguo Miembro
 github: klartz
 status: current
 competitions:
@@ -12,4 +12,6 @@ competitions:
 - indyscc24
 - indyscc25
 - asc26
+coach_competitions:
+- indyscc26
 ---

@@ -2,100 +2,107 @@
 layout: base
 ---
 
-{% include header.html type="page" %}
-
-<main class="container-md mt-5">
+<main class="container-md mt-5 pt-5">
   <div class="row">
     <div class="col-lg-10 offset-lg-1">
       <h1>{{ page.name }} ({{ page.year }})</h1>
       <p class="lead"><strong>Ubicación:</strong> {{ page.location }}</p>
-      
-      {% if page.award %}
+
+      {% if page.awards %}
       <div class="alert alert-success mt-4">
-        <strong>🏆 Premio Destacado:</strong> {{ page.award }}
+        <strong>🏆 Premios:</strong>
+        <ul class="mb-0 mt-2">
+          {% for award in page.awards %}
+          <li>{{ award }}</li>
+          {% endfor %}
+        </ul>
       </div>
       {% endif %}
-      
+
       <div class="mt-4 mb-5">
         {{ content }}
       </div>
-      
+
       {% assign has_students = false %}
       {% for integrante in site.integrantes %}
-        {% if integrante.competitions contains page.event %}
-          {% assign has_students = true %}
-        {% endif %}
+      {% if integrante.competitions contains page.event %}
+      {% assign has_students = true %}
+      {% endif %}
       {% endfor %}
 
       {% if has_students %}
       <h3 class="mt-5 border-bottom pb-2">Integrantes del Equipo</h3>
       <ul class="list-group list-group-flush mb-4">
-      {% for integrante in site.integrantes %}
+        {% for integrante in site.integrantes %}
         {% if integrante.competitions contains page.event %}
-          <li class="list-group-item bg-transparent px-0 border-0">
-            <i class="fa-solid fa-user text-primary me-2"></i>
-            <a href="{{ integrante.url | relative_url }}" class="fw-bold text-decoration-none">{{ integrante.name }}</a> 
-          </li>
+        <li class="list-group-item bg-transparent px-0 border-0">
+          <i class="fa-solid fa-user text-primary mr-2"></i>
+          <a href="{{ integrante.url | relative_url }}" class="fw-bold text-decoration-none">{{ integrante.name }}</a>
+        </li>
         {% endif %}
-      {% endfor %}
+        {% endfor %}
       </ul>
       {% endif %}
 
       {% assign has_coaches = false %}
       {% for integrante in site.integrantes %}
-        {% if integrante.coach_competitions contains page.event %}
-          {% assign has_coaches = true %}
-        {% endif %}
+      {% if integrante.coach_competitions contains page.event %}
+      {% assign has_coaches = true %}
+      {% endif %}
       {% endfor %}
 
       {% if has_coaches %}
       <h3 class="mt-4 border-bottom pb-2">Coaches</h3>
       <ul class="list-group list-group-flush mb-5">
-      {% for integrante in site.integrantes %}
+        {% for integrante in site.integrantes %}
         {% if integrante.coach_competitions contains page.event %}
-          <li class="list-group-item bg-transparent px-0 border-0">
-            <i class="fa-solid fa-chalkboard-user text-orange me-2"></i> 
-            <a href="{{ integrante.url | relative_url }}" class="fw-bold text-decoration-none text-dark">{{ integrante.name }}</a> 
-          </li>
+        <li class="list-group-item bg-transparent px-0 border-0">
+          <i class="fa-solid fa-chalkboard-user text-orange mr-2"></i>
+          <a href="{{ integrante.url | relative_url }}" class="fw-bold text-decoration-none text-dark">{{
+            integrante.name }}</a>
+        </li>
         {% endif %}
-      {% endfor %}
+        {% endfor %}
       </ul>
       {% endif %}
 
       {% if page.apps and page.apps.size > 0 %}
       <h3 class="mt-5 border-bottom pb-2">Aplicaciones Evaluadas</h3>
-      <ul class="list-group list-group-flush mb-5" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
-      {% for app_slug in page.apps %}
+      <ul class="list-group list-group-flush mb-5"
+        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
+        {% for app_slug in page.apps %}
         {% assign app_obj = site.aplicaciones | where: "slug", app_slug | first %}
         {% if app_obj %}
         <li class="list-group-item bg-transparent px-0 border-0 py-1">
-          <i class="fa-solid fa-microchip text-primary me-2"></i>
-          <a href="{{ app_obj.url | relative_url }}" class="fw-bold text-decoration-none text-dark">{{ app_obj.title }}</a>
+          <i class="fa-solid fa-microchip text-primary mr-2"></i>
+          <a href="{{ app_obj.url | relative_url }}" class="fw-bold text-decoration-none text-dark">{{ app_obj.title
+            }}</a>
         </li>
         {% else %}
         <li class="list-group-item bg-transparent px-0 border-0 py-1">
-          <i class="fa-solid fa-microchip text-primary me-2"></i>
+          <i class="fa-solid fa-microchip text-primary mr-2"></i>
           <span class="fw-bold">{{ app_slug }}</span>
         </li>
         {% endif %}
-      {% endfor %}
-      </ul>
-      {% endif %}
-      
-      {% if page.notes %}
-      <h3 class="mt-5 border-bottom pb-2">Publicaciones y Entrevistas</h2>
-      <ul class="list-unstyled mb-5">
-        {% for nota in page.notes %}
-          <li class="mb-2">📰 <a href="{{ nota.link }}" target="_blank" rel="noopener noreferrer">{{ nota.key }}</a></li>
         {% endfor %}
       </ul>
       {% endif %}
 
-      {% if page.poster %}
-      <div class="mt-4">
-        <a href="{{ page.poster | relative_url }}" class="btn btn-outline-primary" target="_blank">Ver Poster PDF</a>
-      </div>
-      {% endif %}
+      {% if page.notes %}
+      <h3 class="mt-5 border-bottom pb-2">Publicaciones y Entrevistas</h2>
+        <ul class="list-unstyled mb-5">
+          {% for nota in page.notes %}
+          <li class="mb-2">📰 <a href="{{ nota.link }}" target="_blank" rel="noopener noreferrer">{{ nota.key }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if page.poster %}
+        <div class="mt-4">
+          <a href="{{ page.poster | relative_url }}" class="btn btn-outline-primary" target="_blank">Ver Poster PDF</a>
+        </div>
+        {% endif %}
     </div>
   </div>
 </main>

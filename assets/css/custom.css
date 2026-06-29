@@ -5,14 +5,20 @@
   --ui-font: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   /* Modern Identity Palette */
-  --primary: #03002A;       /* Dark Blue (from logo) */
-  --primary-light: #0d0a47; /* Slightly lighter blue */
-  --accent: #1cb0d5;        /* Strong Cyan */
-  --accent-orange: #fd7408; /* Orange from logo */
+  --primary: #03002A;
+  /* Dark Blue (from logo) */
+  --primary-light: #0d0a47;
+  /* Slightly lighter blue */
+  --accent: #1cb0d5;
+  /* Strong Cyan */
+  --accent-orange: #fd7408;
+  /* Orange from logo */
 
   --mid-col: #767582;
-  --page-col: #FAFAFA;      /* Very light grey for background */
-  --text-col: #2D3142;      /* Dark grey for text */
+  --page-col: #FAFAFA;
+  /* Very light grey for background */
+  --text-col: #2D3142;
+  /* Dark grey for text */
 
   --link-col: #1cb0d5;
   --hover-col: #1796b5;
@@ -34,7 +40,13 @@ body {
   line-height: 1.8;
 }
 
-h1, h2, h3, h4, h5, h6, .page-heading > h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.page-heading>h1 {
   font-family: var(--header-font);
   font-weight: 800;
   color: var(--primary);
@@ -129,11 +141,11 @@ h1, h2, h3, h4, h5, h6, .page-heading > h1 {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
 }
 
 hr {
-  border-top: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* Timeline Styles */
@@ -185,13 +197,13 @@ hr {
   background-color: white;
   position: relative;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
 .timeline-content:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-year {
@@ -206,13 +218,29 @@ hr {
   .timeline::after {
     left: 20px;
   }
+
   .timeline-item {
     padding-left: 50px;
     padding-right: 0;
   }
+
   .timeline-item::after {
     left: 12px;
   }
+}
+
+/* Reducir alto de la navbar */
+@media (min-width: 1200px) {
+  .navbar-custom {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 /* Impact numbers */
@@ -230,9 +258,10 @@ hr {
 /* Avatars */
 .avatar-circle {
   border: 3px solid white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
+
 .avatar-circle:hover {
   transform: scale(1.05);
   border-color: var(--accent);

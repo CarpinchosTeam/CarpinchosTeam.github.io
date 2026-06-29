@@ -4,7 +4,9 @@ event: indyscc23
 name: SC23 IndySCC
 year: 2023
 location: Denver, Estados Unidos (remoto)
-award: Tercer puesto
+awards:
+  - 2do puesto (HPL)
+  - 3er puesto (tabla general)
 notes:
 - key: La Voz (impreso)
   link: https://www.lavoz.com.ar/ciudadanos/un-equipo-cordobes-de-supercomputacion-entre-los-tres-mejores-en-una-competencia-mundial/

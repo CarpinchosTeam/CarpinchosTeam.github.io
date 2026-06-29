@@ -78,12 +78,12 @@ title: Inicio
         <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px;">Estudiantes<br>Formados</p>
       </div>
       <div class="col-6 col-md-3 mb-4">
-        <div class="impact-number">{{ site.data.bancarpinchos | size }}</div>
-        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px;">Bancarpinchos<br>Activos</p>
+        <div class="impact-number">+100</div>
+        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px;">Donapinchos<br>Activos</p>
       </div>
       <div class="col-6 col-md-3 mb-4">
-        <div class="impact-number">3</div>
-        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px;">Sponsors<br>Institucionales</p>
+        <div class="impact-number">5</div>
+        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px;">Sponsors e<br>Instituciones</p>
       </div>
     </div>
   </section>
@@ -93,7 +93,7 @@ title: Inicio
     <div class="text-center mb-5">
       <h2 class="display-5 fw-bold mb-3">Historia y Competencias</h2>
       <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto; border-radius: 2px;"></div>
-      <p class="lead text-muted mt-4">El archivo de nuestra participación en el mundo.</p>
+      <p class="lead text-muted mt-4">El archivo de nuestras participaciones.</p>
     </div>
     
     <div class="timeline mt-5">
@@ -103,13 +103,17 @@ title: Inicio
         <div class="timeline-content">
           <div class="timeline-year">{{ comp.year }}</div>
           <h4 class="fw-bold mb-2"><a href="{{ comp.url | relative_url }}" class="text-decoration-none text-dark">{{ comp.name }}</a></h4>
-          <p class="text-muted mb-2"><i class="fa-solid fa-location-dot me-2 text-primary"></i>{{ comp.location }}</p>
-          {% if comp.award %}
-          <div class="d-inline-block bg-light rounded-pill px-3 py-1 mb-3 border border-warning" style="border-color: rgba(253, 116, 8, 0.3) !important;">
-            <span class="text-orange fw-bold small ui-font"><i class="fa-solid fa-award me-2"></i>{{ comp.award }}</span>
-          </div>
+          <span class="text-muted mb-2"><i class="fa-solid fa-location-dot mr-2 text-primary"></i>{{ comp.location }}</span>
+          {% if comp.awards %}
+            {% for award in comp.awards %}
+            <br>
+            <span class="text-orange fw-bold small ui-font {% if forloop.last == false %}mb-1{% endif %}">
+            <i class="fa-solid fa-award mr-2"></i>
+            {{ award }}
+            </span>
+            {% endfor %}
           {% endif %}
-          <div class="mt-2">
+          <div>
             <a href="{{ comp.url | relative_url }}" class="fw-bold text-primary ui-font text-decoration-none" style="font-size: 0.9rem;">Ver detalles completos <i class="fa-solid fa-arrow-right ms-1"></i></a>
           </div>
         </div>
@@ -126,20 +130,45 @@ title: Inicio
     </div>
     
     <div class="row justify-content-center mt-5">
-      {% assign current_members = site.integrantes | where: "status", 'current' %}
-      {% for integrante in current_members %}
-      <div class="col-6 col-md-4 col-lg-3 text-center mb-5">
-        <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
-          {% if integrante.github %}
-          <img src="https://github.com/{{ integrante.github }}.png?size=150" alt="{{ integrante.name }}" class="rounded-circle mb-3 avatar-circle" style="width: 130px; height: 130px; object-fit: cover;">
-          {% else %}
-          <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 130px; height: 130px;"></div>
+      {% assign active_comp = site.competencias | where: "active", true | map: "event" | first %}
+      
+      {% if active_comp %}
+        <!-- Estudiantes -->
+        {% for integrante in site.integrantes %}
+          {% if integrante.competitions contains active_comp %}
+          <div class="col-6 col-md-4 col-lg-3 text-center mb-5">
+            <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
+              {% if integrante.github %}
+              <img src="https://github.com/{{ integrante.github }}.png?size=150" alt="{{ integrante.name }}" class="rounded-circle mb-3 avatar-circle" style="width: 130px; height: 130px; object-fit: cover;">
+              {% else %}
+              <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 130px; height: 130px;"></div>
+              {% endif %}
+              <h5 class="fw-bold mb-1 text-dark">{{ integrante.name }}</h5>
+              <span class="text-primary ui-font small fw-bold">{{ integrante.field }}</span>
+            </a>
+          </div>
           {% endif %}
-          <h5 class="fw-bold mb-1 text-dark">{{ integrante.name }}</h5>
-          <p class="text-primary ui-font small fw-bold">{{ integrante.role }}</p>
-        </a>
-      </div>
-      {% endfor %}
+        {% endfor %}
+    </div>
+
+    <!-- Coaches -->
+    <div class="row justify-content-center mt-2">
+        {% for integrante in site.integrantes %}
+          {% if integrante.coach_competitions contains active_comp %}
+          <div class="col-6 col-md-4 col-lg-3 text-center mb-5">
+            <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
+              {% if integrante.github %}
+              <img src="https://github.com/{{ integrante.github }}.png?size=150" alt="{{ integrante.name }}" class="rounded-circle mb-3 avatar-circle" style="width: 130px; height: 130px; object-fit: cover; border-color: var(--accent-orange);">
+              {% else %}
+              <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 130px; height: 130px; border-color: var(--accent-orange);"></div>
+              {% endif %}
+              <h5 class="fw-bold mb-1 text-dark">{{ integrante.name }} <i class="fa-solid fa-chalkboard-user text-orange ms-1"></i></h5>
+              <span class="text-orange ui-font small fw-bold">Coach</span>
+            </a>
+          </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
     </div>
   </section>
 
@@ -170,6 +199,20 @@ title: Inicio
       </div>
     </div>
 
+    <h3 class="h4 fw-bold mt-5 mb-4 text-muted">Apoyo Institucional</h3>
+    <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap">
+      <div class="text-center">
+        <div class="text-decoration-none text-dark d-block card bg-white p-4" style="width: 220px; height: 120px; display: flex !important; align-items: center; justify-content: center;">
+          <h3 class="m-0 fw-bold" style="letter-spacing: -1px;">FAMAF</h3>
+        </div>
+      </div>
+      <div class="text-center">
+        <div class="text-decoration-none text-dark d-block card bg-white p-4" style="width: 220px; height: 120px; display: flex !important; align-items: center; justify-content: center;">
+          <h3 class="m-0 fw-bold" style="letter-spacing: -1px;">CEIMAF</h3>
+        </div>
+      </div>
+    </div>
+
     <div class="mt-5 pt-3">
       <a href="https://docs.google.com/presentation/d/1CdKjTrHeCHs50wEVKzI28m1R14SMBw_xwptN4yIPCAo/edit?slide=id.p#slide=id.p" target="_blank" class="btn btn-outline-primary">Convertirse en Sponsor <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
     </div>
@@ -183,11 +226,11 @@ title: Inicio
         <h2 class="display-4 fw-bold text-white mb-4">La comunidad que nos sostiene</h2>
         <div style="width: 60px; height: 4px; background-color: var(--accent); margin-bottom: 30px; border-radius: 2px;"></div>
         <p class="lead mb-4" style="font-size: 1.25rem; line-height: 1.7; opacity: 0.9;">
-          Más de {{ site.data.bancarpinchos | size }} personas apoyan económicamente al equipo y hacen posible que representemos a la Universidad Nacional de Córdoba en competencias internacionales. A ellos los llamamos <strong>Bancarpinchos</strong>.
+          Durante nuestra campaña de recaudación, más de 100 personas (nuestros <strong>Donapinchos</strong>) nos brindaron su apoyo económico. Además, contamos con {{ site.data.bancarpinchos | size }} personas muy especiales que aportaron más de 25 USD, convirtiéndose en nuestros <strong>Bancarpinchos</strong>. ¡Gracias a todos por hacer posible que representemos a la Universidad Nacional de Córdoba en competencias internacionales!
         </p>
         <div class="mt-5">
           <a href="https://cafecito.app/teamcarpinchos" target="_blank" class="btn btn-light btn-lg text-primary ui-font px-4 py-3 shadow">
-            <i class="fa-solid fa-mug-hot me-2"></i> Convertite en Bancarpincho
+            <i class="fa-solid fa-mug-hot mr-2"></i> Convertite en Bancarpincho
           </a>
         </div>
         <p class="mt-4 small ui-font" style="opacity: 0.7;">Alias ARS: teamcarpinchos &bull; Alias USD: teamcarpinchos.usd</p>
@@ -195,7 +238,7 @@ title: Inicio
       <div class="col-lg-6">
         <div class="bg-white text-dark rounded-4 p-4 p-md-5 shadow-lg">
           <div class="d-flex align-items-center mb-4 border-bottom pb-3">
-            <i class="fa-solid fa-heart text-orange fs-3 me-3"></i>
+            <i class="fa-solid fa-heart text-orange fs-3 mr-2"></i>
             <h4 class="fw-bold m-0">¡Gracias Bancarpinchos!</h4>
           </div>
           <div class="bancarpinchos-list pe-3" style="max-height: 350px; overflow-y: auto;">
@@ -228,7 +271,7 @@ title: Inicio
       {% for post in posts limit:3 %}
       <div class="col-md-4 mb-4">
         <div class="card h-100 bg-white p-4">
-          <div class="text-primary ui-font small fw-bold mb-3"><i class="fa-regular fa-calendar me-2"></i>{{ post.date | date: "%d/%m/%Y" }}</div>
+          <div class="text-primary ui-font small fw-bold mb-3"><i class="fa-regular fa-calendar mr-2"></i>{{ post.date | date: "%d/%m/%Y" }}</div>
           <h5 class="fw-bold mb-3"><a href="{{ post.url | relative_url }}" class="text-dark text-decoration-none">{{ post.title }}</a></h5>
           <p class="text-muted small mb-0">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
         </div>

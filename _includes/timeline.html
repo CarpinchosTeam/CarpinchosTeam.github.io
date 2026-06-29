@@ -8,8 +8,15 @@
       <h4><a href="{{ event.url | relative_url }}" class="text-decoration-none">{{ event.name }}</a></h4>
       <div class="event-details">
         <p><strong>Ubicación:</strong> {{ event.location }}</p>
-        {% if event.award %}
-        <p><strong>Premio:</strong> {{ event.award }}</p>
+        {% if event.awards %}
+        <div class="event-awards mb-2">
+          <p class="mb-1" style="font-size: 0.9em; line-height: 22px; color: var(--text-col);"><strong>Premios:</strong></p>
+          <ul class="mb-0 pl-3" style="font-size: 0.9em; line-height: 22px; color: var(--text-col);">
+            {% for award in event.awards %}
+            <li>{{ award }}</li>
+            {% endfor %}
+          </ul>
+        </div>
         {% endif %}
 
         {% if event.notes %}

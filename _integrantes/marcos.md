@@ -2,10 +2,10 @@
 layout: integrante
 name: Marcos Mazzini
 affiliation: Universidad Nacional de Córdoba
-role: Coach anterior
+role: Antiguo Coach
 github: marcosmazz
 status: former
-competitions:
+coach_competitions:
 - indyscc23
 - asc24
 ---
