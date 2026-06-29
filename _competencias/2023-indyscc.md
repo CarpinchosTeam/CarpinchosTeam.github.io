@@ -2,6 +2,7 @@
 layout: competencia
 event: indyscc23
 name: SC23 IndySCC
+logo: sc23.png
 year: 2023
 location: Denver, Estados Unidos (remoto)
 awards:

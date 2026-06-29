@@ -4,7 +4,7 @@ title: Inicio
 ---
 
 <!-- 1. HERO -->
-<section class="hero-section text-center py-5 bg-primary text-white" style="background-image: url('{{ '/assets/img/hero-placeholder.jpg' | relative_url }}'); background-size: cover; background-position: center; position: relative; min-height: 80vh; display: flex; align-items: center;">
+<section class="hero-section text-center py-5 bg-primary text-white" style="background-size: cover; background-position: center; position: relative; min-height: 80vh; display: flex; align-items: center;">
   <div style="background-color: rgba(3, 0, 42, 0.85); position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
   <div class="container position-relative py-5" style="z-index: 1;">
     <img src="{{ '/assets/img/logo-carpincho.svg' | relative_url }}" alt="Carpinchos Logo" style="width: 220px; margin-bottom: 2.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
@@ -106,7 +106,7 @@ title: Inicio
       <div class="timeline-item">
         <div class="timeline-content">
           <div class="timeline-year">{{ comp.year }}</div>
-          <h4 class="fw-bold mb-2"><a href="{{ comp.url | relative_url }}" class="text-decoration-none text-dark">{{ comp.name }}</a></h4>
+          <h4 class="fw-bold mb-2 mt-1"><a href="{{ comp.url | relative_url }}" class="text-decoration-none text-dark">{{ comp.name }}</a></h4>
           <span class="text-muted mb-2"><i class="fa-solid fa-location-dot mr-2 text-primary"></i>{{ comp.location }}</span>
           {% if comp.awards %}
             {% for award in comp.awards %}

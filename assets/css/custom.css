@@ -208,9 +208,9 @@ hr {
 
 .timeline-year {
   font-family: var(--ui-font);
-  font-weight: 900;
-  font-size: 1.25rem;
-  color: var(--primary);
+  font-weight: 700;
+  font-size: 1rem;
+  color: #949ea8;
   margin-bottom: 0.5rem;
 }
 

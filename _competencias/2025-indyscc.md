@@ -2,6 +2,7 @@
 layout: competencia
 event: indyscc25
 name: SC25 IndySCC
+logo: sc25.png
 year: 2025
 location: St. Louis, Estados Unidos
 notes:

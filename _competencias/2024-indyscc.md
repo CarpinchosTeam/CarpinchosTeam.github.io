@@ -2,6 +2,7 @@
 layout: competencia
 event: indyscc24
 name: SC24 IndySCC
+logo: sc24.png
 year: 2024
 location: Atlanta, Estados Unidos (remoto)
 notes:
