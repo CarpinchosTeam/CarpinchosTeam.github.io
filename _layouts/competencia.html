@@ -2,35 +2,67 @@
 layout: base
 ---
 
-<main class="container-md mt-5 pt-5">
+<style>
+  .custom-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .custom-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+  }
+</style>
+
+<main class="container-md mt-5 pt-5 pb-5">
   <div class="row">
     <div class="col-lg-10 offset-lg-1">
-      <div class="mb-4 mt-2">
+
+      <!-- HERO DE COMPETENCIA -->
+      <div class="text-center mb-5 mt-3">
         {% if page.logo %}
-        <div class="mb-3">
+        <div class="mb-4">
           <img src="{{ 'assets/logos/' | append: page.logo | relative_url }}" alt="{{ page.name }} Logo"
-            style="max-height: 120px; max-width: 300px; object-fit: contain;">
+            style="max-height: 140px; max-width: 350px; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.08));">
         </div>
         {% endif %}
-        <h1 class="mb-0">{{ page.name }} ({{ page.year }})</h1>
+        <h1 class="display-4 fw-bold mb-4" style="letter-spacing: -1px;">{{ page.name }}</h1>
+        <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto; border-radius: 2px;">
+        </div>
+        <p class="lead text-muted mt-4 mb-0" style="font-size: 1.3rem;">
+          <i class="fa-solid fa-location-dot text-primary mr-2"></i><strong>{{ page.year }}</strong> &bull; {{
+          page.location }}
+        </p>
       </div>
-      <p class="lead"><strong>Ubicación:</strong> {{ page.location }}</p>
 
+      <!-- PREMIOS -->
       {% if page.awards %}
-      <div class="alert alert-success mt-4">
-        <strong>🏆 Premios:</strong>
-        <ul class="mb-0 mt-2">
+      <div class="mb-5 mt-4">
+        <h3 class="h2 fw-bold mb-4 border-bottom pb-3"><i class="fa-solid fa-trophy text-orange mr-2"></i> Premios y
+          Reconocimientos</h3>
+        <div class="row">
           {% for award in page.awards %}
-          <li>{{ award }}</li>
+          <div class="col-12 col-md-6 mb-3">
+            <div class="card border-0 shadow-sm rounded-4 h-100 bg-white custom-hover">
+              <div class="card-body d-flex align-items-center p-3">
+                <div class="rounded-circle d-flex align-items-center justify-content-center mr-3"
+                  style="width: 50px; height: 50px; flex-shrink: 0; background-color: rgba(255, 102, 0, 0.1);">
+                  <i class="fa-solid fa-award text-orange" style="font-size: 1.5rem;"></i>
+                </div>
+                <h5 class="fw-bold mb-0 text-dark">{{ award }}</h5>
+              </div>
+            </div>
+          </div>
           {% endfor %}
-        </ul>
+        </div>
       </div>
       {% endif %}
 
-      <div class="mt-4 mb-5">
+      <!-- CONTENIDO (Hardware, etc) -->
+      <div class="content-section text-dark mb-5 mt-5" style="font-size: 1.15rem; line-height: 1.8;">
         {{ content }}
       </div>
 
+      <!-- INTEGRANTES -->
       {% assign has_students = false %}
       {% for integrante in site.integrantes %}
       {% if integrante.competitions contains page.event %}
@@ -39,19 +71,26 @@ layout: base
       {% endfor %}
 
       {% if has_students %}
-      <h3 class="mt-5 border-bottom pb-2">Integrantes del Equipo</h3>
-      <ul class="list-group list-group-flush mb-4">
+      <h3 class="h2 fw-bold mt-5 mb-4 border-bottom pb-3">Integrantes del Equipo</h3>
+      <div class="row mb-5">
         {% for integrante in site.integrantes %}
         {% if integrante.competitions contains page.event %}
-        <li class="list-group-item bg-transparent px-0 border-0">
-          <i class="fa-solid fa-user text-primary mr-2"></i>
-          <a href="{{ integrante.url | relative_url }}" class="fw-bold text-decoration-none">{{ integrante.name }}</a>
-        </li>
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card h-100 border-0 shadow-sm text-center py-3 rounded-4 custom-hover bg-white">
+            <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
+              <div class="card-body px-2">
+                <i class="fa-solid fa-user text-primary mb-3" style="font-size: 2rem;"></i>
+                <h5 class="fw-bold text-dark mb-0" style="font-size: 1.1rem;">{{ integrante.name }}</h5>
+              </div>
+            </a>
+          </div>
+        </div>
         {% endif %}
         {% endfor %}
-      </ul>
+      </div>
       {% endif %}
 
+      <!-- COACHES -->
       {% assign has_coaches = false %}
       {% for integrante in site.integrantes %}
       {% if integrante.coach_competitions contains page.event %}
@@ -60,62 +99,93 @@ layout: base
       {% endfor %}
 
       {% if has_coaches %}
-      <h3 class="mt-4 border-bottom pb-2">Coach</h3>
-      <ul class="list-group list-group-flush mb-5">
+      <h3 class="h2 fw-bold mt-5 mb-4 border-bottom pb-3">Coaches</h3>
+      <div class="row mb-5">
         {% for integrante in site.integrantes %}
         {% if integrante.coach_competitions contains page.event %}
-        <li class="list-group-item bg-transparent px-0 border-0">
-          <i class="fa-solid fa-chalkboard-user text-orange mr-2"></i>
-          <a href="{{ integrante.url | relative_url }}" class="fw-bold text-decoration-none text-dark">{{
-            integrante.name }}</a>
-        </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-      {% endif %}
-
-      {% if page.apps and page.apps.size > 0 %}
-      <h3 class="mt-5 border-bottom pb-2">Aplicaciones Evaluadas</h3>
-      <ul class="list-group list-group-flush mb-5"
-        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
-        {% for app_slug in page.apps %}
-        {% assign app_obj = site.aplicaciones | where: "slug", app_slug | first %}
-        {% if app_obj %}
-        <li class="list-group-item bg-transparent px-0 border-0 py-2">
-          <div>
-            <i class="fa-solid fa-microchip text-primary mr-2"></i>
-            <a href="{{ app_obj.url | relative_url }}" class="fw-bold text-decoration-none text-dark">{{ app_obj.title
-              }}</a>
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card h-100 border-0 shadow-sm text-center py-3 rounded-4 custom-hover"
+            style="background-color: rgba(255,102,0,0.03);">
+            <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
+              <div class="card-body px-2">
+                <i class="fa-solid fa-chalkboard-user text-orange mb-3" style="font-size: 2rem;"></i>
+                <h5 class="fw-bold text-dark mb-0" style="font-size: 1.1rem;">{{ integrante.name }}</h5>
+              </div>
+            </a>
           </div>
-          {% if app_obj.description %}
-          <div class="small text-muted mt-1 ms-4" style="line-height: 1.4;">{{ app_obj.description }}</div>
-          {% endif %}
-        </li>
-        {% else %}
-        <li class="list-group-item bg-transparent px-0 border-0 py-2">
-          <i class="fa-solid fa-microchip text-primary mr-2"></i>
-          <span class="fw-bold">{{ app_slug }}</span>
-        </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-      {% endif %}
-
-      {% if page.notes %}
-      <h3 class="mt-5 border-bottom pb-2">Publicaciones y Entrevistas</h2>
-        <ul class="list-unstyled mb-5">
-          {% for nota in page.notes %}
-          <li class="mb-2">📰 <a href="{{ nota.link }}" target="_blank" rel="noopener noreferrer">{{ nota.key }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-
-        {% if page.poster %}
-        <div class="mt-4">
-          <a href="{{ page.poster | relative_url }}" class="btn btn-outline-primary" target="_blank">Ver Poster PDF</a>
         </div>
         {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <!-- APLICACIONES -->
+      {% if page.apps and page.apps.size > 0 %}
+      <h3 class="h2 fw-bold mt-5 mb-4 border-bottom pb-3">Aplicaciones Evaluadas</h3>
+      <div class="row mb-5">
+        {% for app_slug in page.apps %}
+        {% assign app_obj = site.aplicaciones | where: "slug", app_slug | first %}
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-1 custom-hover bg-white">
+            <div class="card-body">
+              {% if app_obj %}
+              <div class="d-flex align-items-center mb-2">
+                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center mr-3"
+                  style="width: 45px; height: 45px; flex-shrink: 0;">
+                  <i class="fa-solid fa-microchip text-primary" style="font-size: 1.3rem;"></i>
+                </div>
+                <h5 class="fw-bold mb-0"><a href="{{ app_obj.url | relative_url }}"
+                    class="text-decoration-none text-dark">{{ app_obj.title }}</a></h5>
+              </div>
+              {% if app_obj.description %}
+              <p class="text-muted small mb-0 ml-5 mt-0" style="padding-left: 10px;">{{ app_obj.description }}</p>
+              {% endif %}
+              {% else %}
+              <div class="d-flex align-items-center">
+                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center mr-3"
+                  style="width: 45px; height: 45px; flex-shrink: 0;">
+                  <i class="fa-solid fa-microchip text-primary" style="font-size: 1.3rem;"></i>
+                </div>
+                <h5 class="fw-bold mb-0 text-dark">{{ app_slug }}</h5>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <!-- PRENSA -->
+      {% if page.notes %}
+      <h3 class="h2 fw-bold mt-5 mb-4 border-bottom pb-3">Prensa y Publicaciones</h3>
+      <div class="list-group list-group-flush mb-5">
+        {% for nota in page.notes %}
+        <a href="{{ nota.link }}" target="_blank" rel="noopener noreferrer"
+          class="list-group-item list-group-item-action border-0 px-4 py-3 d-flex align-items-center rounded-4 shadow-sm custom-hover mb-3"
+          style="background-color: #f8f9fa;">
+          <div class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow-sm mr-3"
+            style="width: 45px; height: 45px; flex-shrink: 0;">
+            <i class="fa-solid fa-newspaper text-primary"></i>
+          </div>
+          <span class="fw-bold text-dark" style="font-size: 1.15rem;">{{ nota.key }} </span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-muted ml-auto" style="font-size: 0.9rem;"></i>
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <!-- POSTER -->
+      {% if page.poster %}
+      <div class="text-center mt-5 mb-5 pb-5">
+        <h3 class="h2 fw-bold mb-4">Póster</h3>
+        <a href="{{ page.poster | relative_url }}" class="btn btn-primary btn-lg px-5 shadow-sm rounded-pill"
+          target="_blank" style="padding-top: 15px; padding-bottom: 15px;">
+          <i class="fa-solid fa-file-pdf mr-2"></i> Ver Póster en PDF
+        </a>
+      </div>
+      {% endif %}
+
     </div>
   </div>
 </main>

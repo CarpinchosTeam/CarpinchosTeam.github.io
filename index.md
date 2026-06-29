@@ -118,7 +118,7 @@ title: Inicio
             {% endfor %}
           {% endif %}
           <div>
-            <a href="{{ comp.url | relative_url }}" class="fw-bold text-primary ui-font text-decoration-none" style="font-size: 0.9rem;">Ver detalles completos <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            <a href="{{ comp.url | relative_url }}" class="fw-bold text-primary ui-font text-decoration-none" style="font-size: 0.9rem;">Ver detalles completos <i class="fa-solid fa-arrow-right ml-1"></i></a>
           </div>
         </div>
       </div>
@@ -166,7 +166,7 @@ title: Inicio
               {% else %}
               <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 130px; height: 130px; border-color: var(--accent-orange);"></div>
               {% endif %}
-              <h5 class="fw-bold mb-1 text-dark">{{ integrante.name }} <i class="fa-solid fa-chalkboard-user text-orange ms-1"></i></h5>
+              <h5 class="fw-bold mb-1 text-dark">{{ integrante.name }} <i class="fa-solid fa-chalkboard-user text-orange ml-1"></i></h5>
               <span class="text-orange ui-font small fw-bold">Coach</span>
             </a>
           </div>
