@@ -6,3 +6,6 @@ navbar-links:
   Sponsors: "/#sponsors"
   Comunidad: "/#apoyanos"
   UNC Supercómputo: "https://supercomputo.unc.edu.ar"
+
+footer:
+  credits: "Fundados y entrenados por UNC Supercómputo"
