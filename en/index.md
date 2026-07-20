@@ -74,7 +74,7 @@ title: Inicio
 
   <!-- 4. IMPACTO -->
   <section class="bg-white rounded-lg p-2 py-4 text-center shadow-sm my-5" id="impacto">
-    <h2 class="display-5 fw-bold mb-3">Our Impact</h2>
+    <h2 class="display-5 fw-bold mb-3">The Impact</h2>
     <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto 30px auto; border-radius: 2px;"></div>
     <div class="row mt-4">
       <div class="col-6 col-md-3">
@@ -99,7 +99,7 @@ title: Inicio
   <!-- 5. COMPETENCIAS (Timeline) -->
   <section class="py-5 my-5" id="recorrido">
     <div class="text-center mb-5">
-      <h2 class="display-5 fw-bold mb-3">Our Story and Competitions</h2>
+      <h2 class="display-5 fw-bold mb-3">Story and Competitions</h2>
       <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto; border-radius: 2px;"></div>
       <p class="lead text-muted mt-4">An archive of our journey</p>
     </div>
