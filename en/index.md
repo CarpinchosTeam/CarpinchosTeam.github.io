@@ -1,8 +1,8 @@
 ---
 layout: base
-lang: es
+lang: en
 ref: inicio
-permalink: /
+permalink: /en/
 title: Inicio
 ---
 

@@ -24,6 +24,20 @@
           </li>
         {%- endif -%}
       {%- endfor -%}
+
+      {%- assign translated_pages = site.pages | where:"ref", page.ref -%}
+      {%- if translated_pages.size > 1 -%}
+        {%- for translation in translated_pages -%}
+          {%- if translation.lang != page.lang -%}
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="{{ translation.url | relative_url }}" title="Cambiar a {{ translation.lang | upcase }}">
+                {{ translation.lang | upcase }}
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
       {% if site.post_search %}
         <li class="nav-item">
           <a class="nav-link" id="nav-search-link" href="#" title="Buscar">
