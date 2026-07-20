@@ -1,8 +1,8 @@
-nav:
-  home: "Home"
-  purpose: "Purpose"
-  history: "History"
-  team: "Team"
-  sponsors: "Sponsors"
-  community: "Community"
-  unchpc: "UNC Supercómputo"
+navbar-links:
+  Home: "/en/"
+  Purpose: "/en/#proposito"
+  History: "/en/#recorrido"
+  Team: "/en/#equipo"
+  Sponsors: "/en/#sponsors"
+  Community: "/en/#apoyanos"
+  UNC Supercómputo: "https://supercomputo.unc.edu.ar"

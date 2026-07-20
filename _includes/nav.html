@@ -6,7 +6,8 @@
 
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
-      {%- for link in site.navbar-links -%}
+      {%- assign nav_links = site.data[page.lang].navbar-links -%}
+      {%- for link in nav_links -%}
         {%- if link[1].first %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
@@ -40,9 +41,9 @@
 
       {% if site.post_search %}
         <li class="nav-item">
-          <a class="nav-link" id="nav-search-link" href="#" title="Buscar">
+        <a class="nav-link" id="nav-search-link" href="#" title="{{ site.data[page.lang].search }}">
             <span id="nav-search-icon" class="fa fa-search"></span>
-            <span id="nav-search-text">Buscar</span>
+            <span id="nav-search-text">{{ site.data[page.lang].search }}</span>
           </a>
         </li>
       {%- endif -%}
