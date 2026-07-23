@@ -1,9 +1,0 @@
-<div class="language-switcher">
-  {% assign translated_pages = site.pages | where:"ref", page.ref %}
-  {% for translation in translated_pages %}
-    <a href="{{ translation.url | relative_url }}" 
-       class="{% if translation.lang == page.lang %}active{% endif %}">
-      {{ translation.lang | upcase }}
-    </a>
-  {% endfor %}
-</div>
