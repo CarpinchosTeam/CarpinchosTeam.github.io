@@ -1,0 +1,11 @@
+navbar-links:
+  Inicio: "/"
+  Propósito: "/#proposito"
+  Historia: "/#recorrido"
+  Equipo: "/#equipo"
+  Sponsors: "/#sponsors"
+  Comunidad: "/#apoyanos"
+  UNC Supercómputo: "https://supercomputo.unc.edu.ar"
+
+footer:
+  credits: "Fundados y entrenados por UNC Supercómputo"

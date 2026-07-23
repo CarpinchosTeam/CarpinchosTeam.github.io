@@ -24,7 +24,13 @@ gem "jekyll-paginate", "~> 1.1"
 # Fix security vulnerability in addressable
 gem "addressable", ">= 2.9.0"
 
+# Fix security vulnerability in Concurrent Ruby
+gem "concurrent-ruby", ">= 1.3.7"
+
+
 # Warnings
 gem "json"
 gem "base64"
 gem "bigdecimal"
+
+gem 'logger'
