@@ -14,10 +14,10 @@ gem "webrick", "~> 1.8"
 
 # Plugins specified in _config.yml
 gem "jekyll-remote-theme", "~> 0.6.3"
-gem "jekyll-feed", "~> 0.17.0"
+gem "jekyll-feed", "~> 0.18.0"
 
 # Other common Jekyll plugins (optional, uncomment if used)
-gem "jekyll-seo-tag", "~> 2.8.0"
+gem "jekyll-seo-tag", "~> 2.9.1"
 gem "jekyll-sitemap", "~> 1.4"
 gem "jekyll-paginate", "~> 1.1"
 
