@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # Gems (Gemfile / Gemfile.lock)
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      # Jekyll 4 is a major migration (liquid, rouge, sass-converter); do it on purpose
+      - dependency-name: "jekyll"
+        update-types: ["version-update:semver-major"]
+    groups:
+      gems:
+        patterns: ["*"]
+
+  # Actions used in .github/workflows (keeps pinned SHAs up to date)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
