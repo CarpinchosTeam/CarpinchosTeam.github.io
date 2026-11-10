@@ -13,7 +13,7 @@ gem "kramdown", "~> 2.3"
 gem "webrick", "~> 1.8"
 
 # Plugins specified in _config.yml
-gem "jekyll-remote-theme", "~> 0.4.3"
+gem "jekyll-remote-theme", "~> 0.6.3"
 gem "jekyll-feed", "~> 0.17.0"
 
 # Other common Jekyll plugins (optional, uncomment if used)
@@ -22,7 +22,10 @@ gem "jekyll-sitemap", "~> 1.4"
 gem "jekyll-paginate", "~> 1.1"
 
 # Fix security vulnerability in addressable
-gem "addressable", ">= 2.9.0"
+gem "addressable", ">= 2.9.1"
+
+# Fix path traversal vulnerability in rubyzip (CVE-2026-85396)
+gem "rubyzip", ">= 3.4.0"
 
 # Fix security vulnerability in Concurrent Ruby
 gem "concurrent-ruby", ">= 1.3.7"
