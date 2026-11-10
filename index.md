@@ -82,7 +82,8 @@ title: Inicio
         <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px; font-size: clamp(0.65rem, 3.5vw, 0.875rem); word-break: break-word;">Competencias<br>Internacionales</p>
       </div>
       <div class="col-6 col-md-3">
-        <div class="impact-number">{{ site.integrantes | size }}</div>
+        {% assign estudiantes = site.integrantes | where_exp: "i", "i.competitions" %}
+        <div class="impact-number">{{ estudiantes | size }}</div>
         <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px; font-size: clamp(0.65rem, 3.5vw, 0.875rem); word-break: break-word;">Estudiantes<br>Formados</p>
       </div>
       <div class="col-6 col-md-3">

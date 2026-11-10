@@ -91,15 +91,15 @@ layout: base
       {% endif %}
 
       <!-- COACHES -->
-      {% assign has_coaches = false %}
+      {% assign coaches_count = 0 %}
       {% for integrante in site.integrantes %}
       {% if integrante.coach_competitions contains page.event %}
-      {% assign has_coaches = true %}
+      {% assign coaches_count = coaches_count | plus: 1 %}
       {% endif %}
       {% endfor %}
 
-      {% if has_coaches %}
-      <h3 class="h2 fw-bold mt-5 mb-4 border-bottom pb-3">Coaches</h3>
+      {% if coaches_count > 0 %}
+      <h3 class="h2 fw-bold mt-5 mb-4 border-bottom pb-3">{% if coaches_count == 1 %}Coach{% else %}Coaches{% endif %}</h3>
       <div class="row mb-5">
         {% for integrante in site.integrantes %}
         {% if integrante.coach_competitions contains page.event %}
