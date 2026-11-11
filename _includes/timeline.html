@@ -11,24 +11,29 @@
 
   {% if item.collection == "charlas" %}
   <div class="timeline-item timeline-item-talk">
+    {%- assign month = item.date | date: "%-m" | minus: 1 -%}
+    {%- assign city = item.location | split: "," | first %}
     <a href="{{ item.url | relative_url }}" class="timeline-talk text-decoration-none">
-      <span class="timeline-talk-title"><i class="fa-solid fa-microphone text-orange mr-2" aria-label="{{ t.talk }}"></i>{{ item.name }}</span>
-      <span class="timeline-talk-meta">
+      <span class="timeline-title"><span class="sr-only">{{ t.talk }}: </span>{{ item.name }}</span>
+      <span class="timeline-meta">
         {%- if item.event %}{{ item.event }} &middot; {% endif -%}
-        {{ item.date | date: "%d/%m/%Y" }} &middot; {{ item.location }}
+        {{ item.date | date: "%-d" }} {{ t.months[month] }} &middot; {{ city }}
       </span>
     </a>
   </div>
   {% else %}
   <div class="timeline-item">
-    <div class="timeline-content">
-      <h4 class="fw-bold mt-0 mb-2"><a href="{{ item.url | relative_url }}" class="text-decoration-none">{{ item.name }}</a></h4>
-      <span class="d-block text-muted"><i class="fa-solid fa-location-dot mr-2 text-primary"></i>{{ item.location }}</span>
-      {% for award in item.awards %}
-      <span class="d-block text-orange fw-bold small ui-font mt-1"><i class="fa-solid fa-award mr-2"></i>{{ award }}</span>
-      {% endfor %}
-      <a href="{{ item.url | relative_url }}" class="d-inline-block mt-2 fw-bold text-primary ui-font text-decoration-none" style="font-size: 0.9rem;">{{ t.details }} <i class="fa-solid fa-arrow-right ml-1"></i></a>
-    </div>
+    <a href="{{ item.url | relative_url }}" class="timeline-content d-block text-decoration-none">
+      <span class="timeline-title">{{ item.name }}</span>
+      <span class="timeline-meta"><i class="fa-solid fa-location-dot mr-1 text-primary"></i>{{ item.location }}</span>
+      {% if item.awards %}
+      <span class="d-flex flex-wrap mt-2" style="gap: 0.4rem;">
+        {% for award in item.awards %}
+        <span class="award-pill"><i class="fa-solid fa-award mr-1"></i>{{ award }}</span>
+        {% endfor %}
+      </span>
+      {% endif %}
+    </a>
   </div>
   {% endif %}
   {% endfor %}

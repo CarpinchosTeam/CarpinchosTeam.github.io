@@ -8,9 +8,9 @@ title: Inicio
 
 <!-- 1. HERO -->
 <section class="hero-section text-center py-5 bg-primary text-white" style="background-size: cover; background-position: center; position: relative; min-height: 80vh; display: flex; align-items: center;">
-  <div style="background-color: rgba(3, 0, 42, 0.85); position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+  <div style="background-color: rgba(19, 50, 79, 0.85); position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
   <div class="container position-relative py-5" style="z-index: 1;">
-    <img src="{{ '/assets/img/logo-carpincho.svg' | relative_url }}" alt="Carpinchos Logo" style="width: 220px; margin-bottom: 2.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">
+    <img src="{{ '/assets/img/logo-borderless.svg' | relative_url }}" alt="Carpinchos Logo" style="width: 300px;">
     <h1 class="display-3 fw-bolder text-white mb-4" style="letter-spacing: -1px; font-size: clamp(2.5rem, 12vw, 4.5rem) !important;">Team Carpinchos</h1>
     <h3 class="h5 fw-normal text-white mb-4" style="opacity: 0.9; letter-spacing: 1px; text-transform: uppercase;">Una iniciativa de <a href="https://supercomputo.unc.edu.ar" class="text-white fw-bold text-decoration-none border-bottom border-white pb-1">UNC Supercómputo</a></h3>
     <p class="lead fw-normal mx-auto mb-5 text-light" style="max-width: 800px; font-size: 1.5rem; line-height: 1.6;">
@@ -25,39 +25,43 @@ title: Inicio
 
 <div class="container-md mt-5">
 
-  <!-- 2. ¿QUÉ HACEMOS? -->
+  <!-- 2. ¿QUÉ HACEMOS? (con los números de impacto) -->
   <section class="py-5" id="que-hacemos">
     <div class="text-center mb-5">
       <h2 class="display-5 fw-bold mb-3">¿Qué hacemos?</h2>
       <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto; border-radius: 2px;"></div>
     </div>
-    <div class="row text-center mt-5">
-      <div class="col-md-4 mb-5 px-4">
-        <div class="mb-4 text-orange">
-          <i class="fa-solid fa-trophy" style="font-size: 4rem;"></i>
+    {% assign estudiantes = site.integrantes | where_exp: "i", "i.competitions" %}
+    <div class="row mt-5">
+      <div class="col-md-4 mb-5">
+        <div class="pillar">
+          <div class="pillar-number">{{ site.competencias | size }}</div>
+          <span class="pillar-unit">competencias internacionales</span>
+          <h4 class="fw-bold mb-2">Competimos</h4>
+          <p class="text-muted mb-0" style="font-size: 1.1rem;">Representamos a Argentina en las competencias de supercómputo más exigentes del mundo.</p>
         </div>
-        <h4 class="fw-bold mb-3">Competimos internacionalmente</h4>
-        <p class="text-muted" style="font-size: 1.1rem;">Representamos a Argentina en las competencias de supercómputo más exigentes del mundo.</p>
       </div>
-      <div class="col-md-4 mb-5 px-4">
-        <div class="mb-4 text-orange">
-          <i class="fa-solid fa-graduation-cap" style="font-size: 4rem;"></i>
+      <div class="col-md-4 mb-5">
+        <div class="pillar">
+          <div class="pillar-number">{{ estudiantes | size }}</div>
+          <span class="pillar-unit">estudiantes</span>
+          <h4 class="fw-bold mb-2">Formamos</h4>
+          <p class="text-muted mb-0" style="font-size: 1.1rem;">Capacitamos a la próxima generación de profesionales y científicos en computación de alto rendimiento.</p>
         </div>
-        <h4 class="fw-bold mb-3">Formamos estudiantes</h4>
-        <p class="text-muted" style="font-size: 1.1rem;">Capacitamos a la próxima generación de profesionales y científicos en computación de alto rendimiento.</p>
       </div>
-      <div class="col-md-4 mb-5 px-4">
-        <div class="mb-4 text-orange">
-          <i class="fa-solid fa-users" style="font-size: 4rem;"></i>
+      <div class="col-md-4 mb-5">
+        <div class="pillar">
+          <div class="pillar-number">{{ site.charlas | size }}</div>
+          <span class="pillar-unit">charlas dictadas</span>
+          <h4 class="fw-bold mb-2">Hacemos comunidad</h4>
+          <p class="text-muted mb-0" style="font-size: 1.1rem;">Compartimos lo que sabemos en universidades y eventos para acercar el HPC a más personas y fortalecer el ecosistema en Argentina y Latinoamérica.</p>
         </div>
-        <h4 class="fw-bold mb-3">Fortalecemos el ecosistema HPC</h4>
-        <p class="text-muted" style="font-size: 1.1rem;">Compartimos conocimiento, y colaboramos con la comunidad para impulsar el HPC en Argentina y la región.</p>
       </div>
     </div>
   </section>
 
   <!-- 3. ¿POR QUÉ HACEMOS ESTO? -->
-  <section class="py-5 my-4" id="proposito">
+  <section class="band py-5 my-4" id="proposito">
     <div class="row justify-content-center">
       <div class="col-lg-9 text-center">
         <h2 class="display-5 fw-bold mb-4">Nuestro Propósito</h2>
@@ -72,31 +76,6 @@ title: Inicio
     </div>
   </section>
 
-  <!-- 4. IMPACTO -->
-  <section class="bg-white rounded-lg p-2 py-4 text-center shadow-sm my-5" id="impacto">
-    <h2 class="display-5 fw-bold mb-3">El Impacto</h2>
-    <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto 30px auto; border-radius: 2px;"></div>
-    <div class="row mt-4">
-      <div class="col-6 col-md-3">
-        <div class="impact-number">{{ site.competencias | size }}</div>
-        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px; font-size: clamp(0.65rem, 3.5vw, 0.875rem); word-break: break-word;">Competencias<br>Internacionales</p>
-      </div>
-      <div class="col-6 col-md-3">
-        {% assign estudiantes = site.integrantes | where_exp: "i", "i.competitions" %}
-        <div class="impact-number">{{ estudiantes | size }}</div>
-        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px; font-size: clamp(0.65rem, 3.5vw, 0.875rem); word-break: break-word;">Estudiantes<br>Formados</p>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="impact-number">+100</div>
-        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px; font-size: clamp(0.65rem, 3.5vw, 0.875rem); word-break: break-word;">Donapinchos</p>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="impact-number">5</div>
-        <p class="text-uppercase fw-bold text-muted small ui-font" style="letter-spacing: 1px; font-size: clamp(0.65rem, 3.5vw, 0.875rem); word-break: break-word;">Sponsors e<br>Instituciones</p>
-      </div>
-    </div>
-  </section>
-
   <!-- 5. COMPETENCIAS (Timeline) -->
   <section class="py-5 my-5" id="recorrido">
     <div class="text-center mb-5">
@@ -104,20 +83,20 @@ title: Inicio
       <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto; border-radius: 2px;"></div>
       <p class="lead text-muted mt-4">El archivo de nuestras participaciones.</p>
     </div>
-    
+
     {% include timeline.html %}
   </section>
 
   <!-- 6. EQUIPO ACTUAL -->
-  <section class="py-5 my-5 bg-white rounded-lg p-5 shadow-sm" id="equipo">
+  <section class="band py-5 my-5" id="equipo">
     <div class="text-center mb-5">
       <h2 class="display-5 fw-bold mb-3">El Equipo Actual</h2>
       <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto; border-radius: 2px;"></div>
     </div>
-    
+
     <div class="row justify-content-center mt-5">
       {% assign active_comp = site.competencias | where: "active", true | map: "event" | first %}
-      
+
       {% if active_comp %}
         <!-- Estudiantes -->
         {% for integrante in site.integrantes %}
@@ -144,9 +123,9 @@ title: Inicio
           <div class="col-6 col-md-4 text-center mb-5">
             <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
               {% if integrante.github %}
-              <img src="https://github.com/{{ integrante.github }}.png?size=150" alt="{{ integrante.name }}" class="rounded-circle mb-3 avatar-circle" style="width: 130px; max-width: 100%; aspect-ratio: 1/1; height: auto; object-fit: cover; border-color: var(--accent-orange);">
+              <img src="https://github.com/{{ integrante.github }}.png?size=150" alt="{{ integrante.name }}" class="rounded-circle mb-3 avatar-circle" style="width: 130px; max-width: 100%; aspect-ratio: 1/1; height: auto; object-fit: cover;">
               {% else %}
-              <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 130px; max-width: 100%; aspect-ratio: 1/1; height: auto; border-color: var(--accent-orange);"></div>
+              <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 130px; max-width: 100%; aspect-ratio: 1/1; height: auto;"></div>
               {% endif %}
               <h5 class="fw-bold mb-1 text-dark">{{ integrante.name }} <i class="fa-solid fa-chalkboard-user text-orange ml-1"></i></h5>
               <span class="text-orange ui-font small fw-bold">Coach</span>
@@ -163,13 +142,13 @@ title: Inicio
     <h2 class="display-5 fw-bold mb-3">Nuestros Sponsors</h2>
     <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto; border-radius: 2px;"></div>
     <p class="lead text-muted mt-4 mb-5">Instituciones y empresas que apuestan por el talento universitario.</p>
-    
+
     {% assign regular_sponsors = site.sponsors | where: "type", "sponsor" | sort: "order" %}
     <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap mt-5">
       {% for sponsor in regular_sponsors %}
       <div class="text-center">
-        <a href="{{ sponsor.link }}" target="_blank" class="text-decoration-none text-dark d-block card bg-transparent p-4" style="width: 220px; height: 120px; display: flex !important; align-items: center; justify-content: center;">
-          <img src="{{ 'assets/logos/' | append: sponsor.logo | relative_url }}" alt="{{ sponsor.title }}" class="img-fluid" style="max-height: 80px; max-width: 100%; object-fit: contain;">
+        <a href="{{ sponsor.link }}" target="_blank" class="sponsor-logo">
+          <img src="{{ 'assets/logos/' | append: sponsor.logo | relative_url }}" alt="{{ sponsor.title }}">
         </a>
         {% if sponsor.level %}
         <p class="mt-3 text-muted fw-bold small text-uppercase ui-font">{{ sponsor.level }}</p>
@@ -183,8 +162,8 @@ title: Inicio
     <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap">
       {% for inst in institutional_sponsors %}
       <div class="text-center">
-        <a href="{{ inst.link }}" target="_blank" class="text-decoration-none text-dark d-block card bg-transparent p-4" style="width: 220px; height: 120px; display: flex !important; align-items: center; justify-content: center;">
-          <img src="{{ 'assets/logos/' | append: inst.logo | relative_url }}" alt="{{ inst.title }}" class="img-fluid" style="max-height: 80px; max-width: 100%; object-fit: contain;">
+        <a href="{{ inst.link }}" target="_blank" class="sponsor-logo">
+          <img src="{{ 'assets/logos/' | append: inst.logo | relative_url }}" alt="{{ inst.title }}">
         </a>
       </div>
       {% endfor %}
@@ -197,7 +176,7 @@ title: Inicio
 
   <!-- 8. BANCARPINCHOS -->
   <section class="my-5 bg-primary text-white rounded-lg p-4 p-md-5 shadow-lg" id="apoyanos" style="position: relative; overflow: hidden;">
-    <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 200%; background: radial-gradient(closest-side, rgba(5,160,175,0.15), rgba(3,0,42,0)); pointer-events: none;"></div>
+    <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 200%; background: radial-gradient(closest-side, rgba(28,176,213,0.15), rgba(19,50,79,0)); pointer-events: none;"></div>
     <div class="row align-items-center position-relative" style="z-index: 1;">
       <div class="col-lg-6 mb-5 mb-lg-0 pr-lg-5">
         <h2 class="fluid-title fw-bold text-white mb-4">La comunidad que nos sostiene</h2>
@@ -215,16 +194,16 @@ title: Inicio
         <p class="mt-4 small ui-font" style="opacity: 0.7;">Alias ARS: teamcarpinchos &bull; Alias USD: teamcarpinchos.usd</p>
       </div>
       <div class="col-lg-6">
-        <div class="bg-white text-dark rounded-lg p-4 p-md-5 shadow-lg">
-          <div class="d-flex align-items-center mb-4 border-bottom pb-3">
+        <div class="bancarpinchos p-lg-4">
+          <div class="bancarpinchos-header d-flex align-items-center mb-4 pb-3">
             <i class="fa-solid fa-heart text-orange fs-3 mr-2"></i>
-            <h4 class="fw-bold m-0">¡Gracias Bancarpinchos!</h4>
+            <h4 class="fw-bold m-0 text-white">¡Gracias Bancarpinchos!</h4>
           </div>
           <div class="bancarpinchos-list">
             <ul class="list-unstyled mb-0">
               {% for donor in site.data.bancarpinchos %}
               <li class="mb-3">
-                <span class="d-block text-dark fw-bold ui-font" style="font-size: 0.95rem;">{{ donor.name }}</span>
+                <span class="d-block ui-font" style="font-size: 0.95rem;">{{ donor.name }}</span>
               </li>
               {% endfor %}
             </ul>
@@ -244,12 +223,12 @@ title: Inicio
         <a href="{{ '/posts/' | relative_url }}" class="btn btn-outline-primary btn-sm">Ver archivo de noticias</a>
       </div>
     </div>
-    
+
     <div class="row">
       {% assign posts = site.posts %}
       {% for post in posts limit:3 %}
       <div class="col-md-4 mb-4">
-        <div class="card h-100 bg-white p-4">
+        <div class="card h-100 p-4">
           <div class="text-primary ui-font small fw-bold mb-3"><i class="fa-regular fa-calendar mr-2"></i>{{ post.date | date: "%d/%m/%Y" }}</div>
           <h5 class="fw-bold mb-3"><a href="{{ post.url | relative_url }}" class="text-dark text-decoration-none">{{ post.title }}</a></h5>
           <p class="text-muted small mb-0 mt-0">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>

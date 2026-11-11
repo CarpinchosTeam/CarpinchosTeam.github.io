@@ -1,14 +1,14 @@
 {%- comment -%}
   Circular avatar + name linking to a member page.
-  Params: person (an integrante document), coach (true = orange border)
+  Params: person (an integrante document)
 {%- endcomment -%}
 {%- assign person = include.person -%}
 <div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
   <a href="{{ person.url | relative_url }}" class="text-decoration-none">
     {% if person.github %}
-    <img src="https://github.com/{{ person.github }}.png?size=150" alt="{{ person.name }}" loading="lazy" class="rounded-circle mb-3 avatar-circle" style="width: 96px; aspect-ratio: 1/1; object-fit: cover;{% if include.coach %} border-color: var(--accent-orange);{% endif %}">
+    <img src="https://github.com/{{ person.github }}.png?size=150" alt="{{ person.name }}" loading="lazy" class="rounded-circle mb-3 avatar-circle" style="width: 96px; aspect-ratio: 1/1; object-fit: cover;">
     {% else %}
-    <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 96px; aspect-ratio: 1/1;{% if include.coach %} border-color: var(--accent-orange);{% endif %}"></div>
+    <div class="rounded-circle mb-3 bg-secondary d-inline-block avatar-circle" style="width: 96px; aspect-ratio: 1/1;"></div>
     {% endif %}
     <h5 class="fw-bold mb-0 text-dark" style="font-size: 1.05rem;">{{ person.name }}</h5>
   </a>
