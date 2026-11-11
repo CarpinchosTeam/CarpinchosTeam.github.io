@@ -3,7 +3,7 @@ layout: competencia
 event: indyscc25
 name: SC25 IndySCC
 logo: sc25.png
-year: 2025
+date: 2025-11-16
 location: St. Louis, Estados Unidos
 notes:
 - key: UNC Supercómputo

@@ -151,6 +151,9 @@ permalink: /posts/:year-:month-:day-:title/
 kramdown:
   input: GFM
 
+# Competencias y charlas usan `date`; sin esto Jekyll omite las que todavía no ocurrieron
+future: true
+
 # Default YAML values (more information on Jekyll's site)
 defaults:
   - scope:

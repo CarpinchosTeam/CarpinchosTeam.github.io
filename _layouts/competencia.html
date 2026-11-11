@@ -29,7 +29,7 @@ layout: base
         <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto; border-radius: 2px;">
         </div>
         <p class="lead text-muted mt-4 mb-0" style="font-size: 1.3rem;">
-          <i class="fa-solid fa-location-dot text-primary mr-2"></i><strong>{{ page.year }}</strong> &bull; {{
+          <i class="fa-solid fa-location-dot text-primary mr-2"></i><strong>{{ page.date | date: "%Y" }}</strong> &bull; {{
           page.location }}
         </p>
       </div>

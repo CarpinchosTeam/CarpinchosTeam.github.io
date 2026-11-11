@@ -3,7 +3,7 @@ layout: competencia
 event: indyscc24
 name: SC24 IndySCC
 logo: sc24.png
-year: 2024
+date: 2024-11-17
 location: Atlanta, Estados Unidos (remoto)
 notes:
 - key: UNC Supercómputo

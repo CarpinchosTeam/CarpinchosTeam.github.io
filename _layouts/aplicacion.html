@@ -19,8 +19,7 @@ layout: base
         {% for comp in site.competencias %}
         {% if comp.apps contains page.slug %}
         <li class="list-group-item bg-transparent">
-          🏆 <a href="{{ comp.url | relative_url }}" class="fw-bold text-decoration-none">{{ comp.name }} ({{ comp.year
-            }})</a>
+          🏆 <a href="{{ comp.url | relative_url }}" class="fw-bold text-decoration-none">{{ comp.name }} ({{ comp.date | date: "%Y" }})</a>
         </li>
         {% endif %}
         {% endfor %}

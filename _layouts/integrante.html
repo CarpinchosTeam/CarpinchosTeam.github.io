@@ -38,8 +38,7 @@ layout: base
         {% assign comp = site.competencias | where: "event", event_id | first %}
         {% if comp %}
         <li class="list-group-item bg-transparent">
-          🏆 <a href="{{ comp.url | relative_url }}" class="fw-bold text-decoration-none">{{ comp.name }} ({{ comp.year
-            }})</a>
+          🏆 <a href="{{ comp.url | relative_url }}" class="fw-bold text-decoration-none">{{ comp.name }} ({{ comp.date | date: "%Y" }})</a>
         </li>
         {% else %}
         <li class="list-group-item bg-transparent">{{ event_id }}</li>
@@ -55,8 +54,7 @@ layout: base
         {% assign comp = site.competencias | where: "event", event_id | first %}
         {% if comp %}
         <li class="list-group-item bg-transparent">
-          📋 <a href="{{ comp.url | relative_url }}" class="fw-bold text-decoration-none text-dark">{{ comp.name }} ({{
-            comp.year }})</a>
+          📋 <a href="{{ comp.url | relative_url }}" class="fw-bold text-decoration-none text-dark">{{ comp.name }} ({{ comp.date | date: "%Y" }})</a>
         </li>
         {% else %}
         <li class="list-group-item bg-transparent">{{ event_id }}</li>
