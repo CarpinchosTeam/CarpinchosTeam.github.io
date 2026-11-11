@@ -10,7 +10,7 @@ permalink: /posts/
   }
   .custom-hover:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+    box-shadow: var(--surface-shadow-hover);
   }
 </style>
 
@@ -26,7 +26,7 @@ permalink: /posts/
       <div class="row">
         {% for post in site.posts %}
         <div class="col-md-6 mb-4">
-          <div class="card h-100 bg-white p-4 shadow-sm border-0 rounded-lg custom-hover">
+          <div class="card h-100 p-4 custom-hover">
             <span class="text-uppercase fw-bold mb-2" style="font-size: 0.8rem; letter-spacing: 1px; color: var(--accent);">
               {{ post.date | date: "%d/%m/%Y" }}
             </span>

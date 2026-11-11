@@ -2,7 +2,7 @@
 name: "HIGH-PERFORMANCE COMPUTING"
 date: 2025-5-29
 location: "Córdoba, Argentina"
-event: "Reunión Regional Anual de Física, Tecnología y Aplicaciones (RRAFTA)"
+event: "RRAFTA"
 speakers:
 - jmercado
 - lkurtz

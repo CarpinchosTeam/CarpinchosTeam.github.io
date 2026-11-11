@@ -12,4 +12,4 @@ footer:
 
 timeline:
   talk: "Talk"
-  details: "More details"
+  months: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]

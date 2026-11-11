@@ -5,36 +5,70 @@
   --ui-font: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   /* Modern Identity Palette */
-  --primary: #03002A;
-  /* Dark Blue (from logo) */
-  --primary-light: #0d0a47;
-  /* Slightly lighter blue */
+  --primary: #13324f;
+  /* Dark blue that pairs with the orange */
   --accent: #1cb0d5;
   /* Strong Cyan */
   --accent-orange: #fd7408;
   /* Orange from logo */
+  --accent-orange-large: #ee6a02;
+  /* Logo orange nudged to 3:1 for large text on white */
+  --accent-brown: #6d1901;
+  /* Carpincho outline from logo */
+  --accent-rust: #dc4d05;
+  /* Muted orange for secondary icons */
+  --accent-brown-soft: #8c5442;
+  /* Soft brown for secondary text on hover (AA on cream) */
   --accent-text: #0b7a96;
   /* Darker cyan for text on light backgrounds (AA contrast) */
-  --accent-orange-text: #b85000;
-  /* Darker orange for text on light backgrounds (AA contrast) */
+  --accent-orange-text: var(--accent-brown);
+  /* Warm text accent on light backgrounds (AA contrast) */
 
-  --mid-col: #767582;
-  --page-col: #FAFAFA;
-  /* Very light grey for background */
+  --mid-col: #6b625c;
+  /* Warm grey for secondary text (AA contrast on the page background) */
+  --page-col: #fff;
+  /* White background */
+  --cream: #fff6ed;
+  /* Warm cream for cards and highlighted bands */
+  --accent-yellow: #ffd54f;
+  /* Gold for achievements (background only: too light for text) */
   --text-col: #2D3142;
   /* Dark grey for text */
+
+  /* Cards: cream surface on the white page */
+  --surface: var(--cream);
+  --surface-border: rgba(109, 25, 1, 0.08);
+  --surface-shadow: 0 2px 8px rgba(109, 25, 1, 0.05);
+  --surface-shadow-hover: 0 10px 24px rgba(109, 25, 1, 0.1);
 
   --link-col: var(--accent-text);
   --hover-col: #085d73;
 
-  --navbar-col: #03002A;
+  --navbar-col: var(--primary);
   --navbar-text-col: #FFFFFF;
-  --navbar-border-col: #03002A;
+  --navbar-border-col: var(--primary);
 
-  --footer-col: #EAEAEA;
-  --footer-text-col: #777777;
-  --footer-link-col: var(--accent-text);
-  --footer-hover-col: #085d73;
+  --footer-col: var(--primary);
+  --footer-text-col: var(--page-col);
+  --footer-link-col: var(--accent);
+  --footer-hover-col: white;
+}
+
+.text-muted {
+  color: var(--mid-col) !important;
+}
+
+/* Templates use Bootstrap 5 weight utilities, but the site loads Bootstrap 4 */
+.fw-normal {
+  font-weight: 400 !important;
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.fw-bolder {
+  font-weight: bolder !important;
 }
 
 body {
@@ -72,7 +106,7 @@ h6,
   background-color: var(--hover-col);
   border-color: var(--hover-col);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(5, 160, 175, 0.3);
+  box-shadow: 0 4px 12px rgba(28, 176, 213, 0.3);
 }
 
 .btn-outline-primary {
@@ -89,7 +123,7 @@ h6,
   background-color: var(--accent);
   border-color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(5, 160, 175, 0.2);
+  box-shadow: 0 4px 12px rgba(28, 176, 213, 0.2);
 }
 
 .btn-outline-light {
@@ -145,16 +179,25 @@ i.text-orange {
   font-family: var(--ui-font);
 }
 
-/* Remove excessive borders */
+/* Cards share one warm surface */
 .card {
-  border: none !important;
+  background-color: var(--surface);
+  border: 1px solid var(--surface-border) !important;
   border-radius: 12px;
+  box-shadow: var(--surface-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
+  transform: translateY(-3px);
+  box-shadow: var(--surface-shadow-hover);
+}
+
+.icon-bubble {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  background-color: var(--page-col);
 }
 
 hr {
@@ -185,7 +228,7 @@ hr {
   width: 100%;
   padding-left: 90px;
   padding-right: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .timeline-item:last-child {
@@ -199,29 +242,26 @@ hr {
   height: 20px;
   background-color: var(--page-col);
   border: 4px solid var(--accent);
-  top: 24px;
+  top: 17px;
   border-radius: 50%;
   z-index: 1;
   left: 42px;
 }
 
+/* Competitions: no box, the surface only shows up on hover (like talks).
+   Their extra breathing room is padding, so the hover surface covers it */
 .timeline-content {
-  padding: 20px 30px;
-  background-color: white;
   position: relative;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  padding: 1.25rem 1rem;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
 }
 
 .timeline-content:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  background-color: var(--surface);
 }
 
-.timeline-content h4 a {
-  color: var(--primary);
-}
+
 
 /* Year marker sitting on the line */
 .timeline-year {
@@ -244,17 +284,28 @@ hr {
 }
 
 /* Talks: compact rows linking to their detail page */
-.timeline-item-talk {
-  padding-bottom: 10px;
-}
-
+/* Talk node: a small dot on the line, with a microphone to its left */
 .timeline-item-talk::after {
   width: 12px;
   height: 12px;
   border: none;
   background-color: var(--accent);
-  top: 17px;
+  top: 16px;
   left: 46px;
+}
+
+.timeline-item-talk::before {
+  content: '\f130';
+  position: absolute;
+  top: 13px;
+  left: 22px;
+  width: 16px;
+  text-align: center;
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--accent-rust);
 }
 
 .timeline-item:has(+ .timeline-year) {
@@ -265,25 +316,42 @@ hr {
   display: block;
   padding: 0.6rem 1rem;
   border-radius: 10px;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .timeline-talk:hover {
-  background-color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  background-color: var(--surface);
 }
 
-.timeline-talk-title {
+/* Competitions and talks share the same title and meta styles */
+.timeline-content:hover .timeline-title,
+.timeline-talk:hover .timeline-title {
+  color: var(--accent-brown);
+}
+
+.timeline-content:hover .timeline-meta,
+.timeline-talk:hover .timeline-meta {
+  color: var(--accent-brown-soft);
+}
+
+.timeline-title {
   display: block;
   font-family: var(--header-font);
   font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin-bottom: 0.2rem;
   color: var(--primary);
+  transition: color 0.2s ease;
 }
 
-.timeline-talk-meta {
+.timeline-meta {
   display: block;
-  font-size: 0.9rem;
-  color: #6c757d;
+  font-family: var(--header-font);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--mid-col);
+  transition: color 0.2s ease;
 }
 
 @media screen and (max-width: 600px) {
@@ -302,6 +370,10 @@ hr {
 
   .timeline-item-talk::after {
     left: 16px;
+  }
+
+  .timeline-item-talk::before {
+    left: -4px;
   }
 
   .timeline-year span {
@@ -324,27 +396,56 @@ hr {
   padding-bottom: 0.5rem !important;
 }
 
-/* Impact numbers */
-.impact-number {
+/* "¿Qué hacemos?" pillars, each led by its number */
+.pillar-number {
   font-family: var(--ui-font);
   font-weight: 900;
-  font-size: clamp(2rem, 8vw, 3.5rem);
-  white-space: nowrap;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 0.5rem;
+  font-size: clamp(3.5rem, 8vw, 5.25rem);
+  line-height: 0.9;
+  color: var(--accent-orange-large);
 }
 
-/* Avatars */
+.pillar h4 {
+  font-size: 1.4rem;
+}
+
+.pillar p {
+  margin-top: 0;
+}
+
+/* The divider sits between the number and the text */
+.pillar-unit {
+  display: block;
+  margin: 0.6rem 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid var(--primary);
+  font-family: var(--ui-font);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+/* Avatars: on hover an orange ring appears around the photo */
 .avatar-circle {
-  border: 3px solid white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 0 0 0 var(--ring-gap, var(--page-col)), 0 0 0 0 var(--accent-orange), 0 4px 10px rgba(109, 25, 1, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-.avatar-circle:hover {
-  transform: scale(1.05);
-  border-color: var(--accent);
+/* One hover area covering photo, gap and name (an inline link leaves the gap out) */
+a:has(> .avatar-circle) {
+  display: inline-block;
+}
+
+a:hover>.avatar-circle,
+a:focus-visible>.avatar-circle {
+  box-shadow: 0 0 0 4px var(--ring-gap, var(--page-col)), 0 0 0 7px var(--accent-orange), 0 12px 24px rgba(109, 25, 1, 0.18);
+}
+
+a:hover>.avatar-circle~h5,
+a:focus-visible>.avatar-circle~h5 {
+  color: var(--accent-orange-text) !important;
 }
 
 /* Large headings that scale down on mobile without breaking words */
@@ -366,4 +467,121 @@ hr {
   .bancarpinchos-list ul {
     column-count: 2;
   }
+}
+
+/* Footer: the logo outline blends into the dark background */
+footer {
+  border-top: none;
+}
+
+footer .footer-logo {
+  display: block;
+  width: 96px;
+  margin: 0 auto 1.5rem;
+}
+
+footer .footer-links a {
+  color: var(--page-col);
+}
+
+footer .footer-links .list-inline-item {
+  margin: 0 0.4rem 0.5rem;
+}
+
+/* Same hover as the timeline: cream circle with a brown glyph */
+footer .footer-links a {
+  transition: color 0.2s ease;
+}
+
+footer .footer-links a:hover,
+footer .footer-links a:focus-visible {
+  color: var(--cream);
+}
+
+footer .footer-links .fa-inverse {
+  color: var(--primary);
+  transition: color 0.2s ease;
+}
+
+footer .footer-links a:hover .fa-inverse,
+footer .footer-links a:focus-visible .fa-inverse {
+  color: var(--accent-brown);
+}
+
+/* Sponsor logos: on hover the logo lifts and a brown underline draws from the center */
+.sponsor-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 120px;
+  padding: 1.5rem;
+}
+
+.sponsor-logo::after {
+  content: '';
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  bottom: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--accent-brown);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+.sponsor-logo:hover::after,
+.sponsor-logo:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.sponsor-logo img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.sponsor-logo:hover img,
+.sponsor-logo:focus-visible img {
+  transform: translateY(-4px);
+}
+
+/* Bancarpinchos list sits directly on the dark community block */
+.bancarpinchos-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bancarpinchos-list li {
+  color: var(--page-col);
+  opacity: 0.85;
+}
+/* Full-width cream band behind a section, without leaving the page container */
+.band {
+  --ring-gap: var(--cream);
+  background-color: var(--cream);
+  box-shadow: 0 0 0 100vmax var(--cream);
+  clip-path: inset(0 -100vmax);
+}
+
+/* Awards: gold pills */
+.award-pill {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  border-radius: 50px;
+  background-color: var(--accent-yellow);
+  color: var(--primary);
+  font-family: var(--ui-font);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.award-bubble {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background-color: var(--accent-yellow);
+  color: var(--primary);
 }
