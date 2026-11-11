@@ -106,11 +106,25 @@ title: Inicio
     </div>
     
     <div class="timeline mt-5">
-      {% assign comps_sorted = site.competencias | sort: "year" | reverse %}
+      {% assign comps_sorted = site.competencias | concat: site.charlas | sort: "year" | reverse %}
       {% for comp in comps_sorted %}
       <div class="timeline-item">
         <div class="timeline-content">
           <div class="timeline-year">{{ comp.year }}</div>
+          {% if comp.collection == "charlas" %}
+          <span class="badge badge-pill badge-light text-orange ui-font mt-2"><i class="fa-solid fa-microphone mr-1"></i>Talk</span>
+          <h4 class="fw-bold mb-2 mt-1">{{ comp.name }}</h4>
+          {% if comp.event %}<span class="text-muted d-block">{{ comp.event }}</span>{% endif %}
+          <span class="text-muted mb-2"><i class="fa-solid fa-location-dot mr-2 text-primary"></i>{{ comp.location }}</span>
+          <div>
+            {% if comp.slides %}
+            <a href="{% if comp.slides contains '://' %}{{ comp.slides }}{% else %}{{ comp.slides | relative_url }}{% endif %}" target="_blank" class="fw-bold text-primary ui-font text-decoration-none mr-3" style="font-size: 0.9rem;"><i class="fa-solid fa-file-pdf mr-1"></i>Slides</a>
+            {% endif %}
+            {% if comp.video %}
+            <a href="{{ comp.video }}" target="_blank" class="fw-bold text-primary ui-font text-decoration-none" style="font-size: 0.9rem;"><i class="fa-solid fa-video mr-1"></i>Video</a>
+            {% endif %}
+          </div>
+          {% else %}
           <h4 class="fw-bold mb-2 mt-1"><a href="{{ comp.url | relative_url }}" class="text-decoration-none text-dark">{{ comp.name }}</a></h4>
           <span class="text-muted mb-2"><i class="fa-solid fa-location-dot mr-2 text-primary"></i>{{ comp.location }}</span>
           {% if comp.awards %}
@@ -125,6 +139,7 @@ title: Inicio
           <div>
             <a href="{{ comp.url | relative_url }}" class="fw-bold text-primary ui-font text-decoration-none" style="font-size: 0.9rem;">More details <i class="fa-solid fa-arrow-right ml-1"></i></a>
           </div>
+          {% endif %}
         </div>
       </div>
       {% endfor %}

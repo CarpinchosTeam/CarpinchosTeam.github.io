@@ -187,3 +187,5 @@ collections:
   aplicaciones:
     output: true
     permalink: /aplicaciones/:name/
+  charlas:
+    output: false
