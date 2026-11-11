@@ -162,6 +162,11 @@ defaults:
     values:
       layout: "post"
   - scope:
+      path: ""
+      type: "charlas"
+    values:
+      layout: "charla"
+  - scope:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
@@ -191,4 +196,5 @@ collections:
     output: true
     permalink: /aplicaciones/:name/
   charlas:
-    output: false
+    output: true
+    permalink: /charlas/:name/

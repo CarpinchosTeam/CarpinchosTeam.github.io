@@ -1,0 +1,35 @@
+{%- assign t = site.data[page.lang].timeline -%}
+{%- assign items = site.competencias | concat: site.charlas | sort: "date" | reverse -%}
+{%- assign current_year = "" -%}
+<div class="timeline mt-5">
+  {% for item in items %}
+  {%- assign year = item.date | date: "%Y" -%}
+  {% if year != current_year %}
+  {%- assign current_year = year -%}
+  <div class="timeline-year"><span>{{ year }}</span></div>
+  {% endif %}
+
+  {% if item.collection == "charlas" %}
+  <div class="timeline-item timeline-item-talk">
+    <a href="{{ item.url | relative_url }}" class="timeline-talk text-decoration-none">
+      <span class="timeline-talk-title"><i class="fa-solid fa-microphone text-orange mr-2" aria-label="{{ t.talk }}"></i>{{ item.name }}</span>
+      <span class="timeline-talk-meta">
+        {%- if item.event %}{{ item.event }} &middot; {% endif -%}
+        {{ item.date | date: "%d/%m/%Y" }} &middot; {{ item.location }}
+      </span>
+    </a>
+  </div>
+  {% else %}
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <h4 class="fw-bold mt-0 mb-2"><a href="{{ item.url | relative_url }}" class="text-decoration-none">{{ item.name }}</a></h4>
+      <span class="d-block text-muted"><i class="fa-solid fa-location-dot mr-2 text-primary"></i>{{ item.location }}</span>
+      {% for award in item.awards %}
+      <span class="d-block text-orange fw-bold small ui-font mt-1"><i class="fa-solid fa-award mr-2"></i>{{ award }}</span>
+      {% endfor %}
+      <a href="{{ item.url | relative_url }}" class="d-inline-block mt-2 fw-bold text-primary ui-font text-decoration-none" style="font-size: 0.9rem;">{{ t.details }} <i class="fa-solid fa-arrow-right ml-1"></i></a>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>

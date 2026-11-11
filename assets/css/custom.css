@@ -219,12 +219,71 @@ hr {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
+.timeline-content h4 a {
+  color: var(--primary);
+}
+
+/* Year marker sitting on the line */
 .timeline-year {
+  position: relative;
+  z-index: 2;
+  padding: 0.5rem 0 1rem;
+}
+
+.timeline-year span {
+  display: inline-block;
+  margin-left: 52px;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.9rem;
+  border-radius: 50px;
+  background-color: var(--primary);
+  color: white;
   font-family: var(--ui-font);
-  font-weight: 700;
-  font-size: 1rem;
-  color: #949ea8;
-  margin-bottom: 0.5rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+/* Talks: compact rows linking to their detail page */
+.timeline-item-talk {
+  padding-bottom: 10px;
+}
+
+.timeline-item-talk::after {
+  width: 12px;
+  height: 12px;
+  border: none;
+  background-color: var(--accent);
+  top: 17px;
+  left: 46px;
+}
+
+.timeline-item:has(+ .timeline-year) {
+  padding-bottom: 30px;
+}
+
+.timeline-talk {
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-talk:hover {
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-talk-title {
+  display: block;
+  font-family: var(--header-font);
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.timeline-talk-meta {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
 }
 
 @media screen and (max-width: 600px) {
@@ -239,6 +298,15 @@ hr {
 
   .timeline-item::after {
     left: 12px;
+  }
+
+  .timeline-item-talk::after {
+    left: 16px;
+  }
+
+  .timeline-year span {
+    margin-left: 0;
+    transform: none;
   }
 }
 
@@ -279,8 +347,8 @@ hr {
   border-color: var(--accent);
 }
 
-/* Community / Bancarpinchos section */
-.community-title {
+/* Large headings that scale down on mobile without breaking words */
+.fluid-title {
   font-size: clamp(2rem, 7vw, 3.5rem);
   line-height: 1.15;
   overflow-wrap: normal;

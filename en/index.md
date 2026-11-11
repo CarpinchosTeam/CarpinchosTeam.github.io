@@ -105,64 +105,7 @@ title: Inicio
       <p class="lead text-muted mt-4">An archive of our journey</p>
     </div>
     
-    <div class="timeline mt-5">
-      {% assign comps_sorted = site.competencias | concat: site.charlas | sort: "date" | reverse %}
-      {% for comp in comps_sorted %}
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">{{ comp.date | date: "%Y" }}</div>
-          {% if comp.collection == "charlas" %}
-          <span class="badge badge-pill badge-light text-orange ui-font mt-2"><i class="fa-solid fa-microphone mr-1"></i>Talk</span>
-          <h4 class="fw-bold mb-2 mt-1">{{ comp.name }}</h4>
-          {% if comp.event %}<span class="text-muted d-block">{{ comp.event }}</span>{% endif %}
-          <span class="text-muted d-block"><i class="fa-regular fa-calendar mr-2 text-primary"></i>{{ comp.date | date: "%d/%m/%Y" }}</span>
-          <span class="text-muted mb-2"><i class="fa-solid fa-location-dot mr-2 text-primary"></i>{{ comp.location }}</span>
-          {% if comp.speakers %}
-          <span class="text-muted d-block"><i class="fa-solid fa-user mr-2 text-primary"></i>
-            {%- for speaker_slug in comp.speakers -%}
-            {%- assign speaker = site.integrantes | where: "slug", speaker_slug | first -%}
-            <a href="{{ speaker.url | relative_url }}" class="text-decoration-none">{{ speaker.name }}</a>{% unless forloop.last %}, {% endunless %}
-            {%- endfor -%}
-          </span>
-          {% endif %}
-          {% if comp.photos %}
-          <div class="d-flex flex-wrap mt-3">
-            {% for photo in comp.photos %}
-            {% if photo contains '://' %}{% assign photo_url = photo %}{% else %}{% assign photo_url = photo | relative_url %}{% endif %}
-            <a href="{{ photo_url }}" target="_blank" class="mr-2 mb-2">
-              <img src="{{ photo_url }}" alt="{{ comp.name }}" loading="lazy" class="rounded shadow-sm" style="height: 110px; max-width: 100%; object-fit: cover;">
-            </a>
-            {% endfor %}
-          </div>
-          {% endif %}
-          <div>
-            {% if comp.slides %}
-            <a href="{% if comp.slides contains '://' %}{{ comp.slides }}{% else %}{{ comp.slides | relative_url }}{% endif %}" target="_blank" class="fw-bold text-primary ui-font text-decoration-none mr-3" style="font-size: 0.9rem;"><i class="fa-solid fa-file-pdf mr-1"></i>Slides</a>
-            {% endif %}
-            {% if comp.video %}
-            <a href="{{ comp.video }}" target="_blank" class="fw-bold text-primary ui-font text-decoration-none" style="font-size: 0.9rem;"><i class="fa-solid fa-video mr-1"></i>Video</a>
-            {% endif %}
-          </div>
-          {% else %}
-          <h4 class="fw-bold mb-2 mt-1"><a href="{{ comp.url | relative_url }}" class="text-decoration-none text-dark">{{ comp.name }}</a></h4>
-          <span class="text-muted mb-2"><i class="fa-solid fa-location-dot mr-2 text-primary"></i>{{ comp.location }}</span>
-          {% if comp.awards %}
-            {% for award in comp.awards %}
-            <br>
-            <span class="text-orange fw-bold small ui-font {% if forloop.last == false %}mb-1{% endif %}">
-            <i class="fa-solid fa-award mr-2"></i>
-            {{ award }}
-            </span>
-            {% endfor %}
-          {% endif %}
-          <div>
-            <a href="{{ comp.url | relative_url }}" class="fw-bold text-primary ui-font text-decoration-none" style="font-size: 0.9rem;">More details <i class="fa-solid fa-arrow-right ml-1"></i></a>
-          </div>
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
+    {% include timeline.html %}
   </section>
 
   <!-- 6. EQUIPO ACTUAL -->
@@ -257,7 +200,7 @@ title: Inicio
     <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 200%; background: radial-gradient(closest-side, rgba(5,160,175,0.15), rgba(3,0,42,0)); pointer-events: none;"></div>
     <div class="row align-items-center position-relative" style="z-index: 1;">
       <div class="col-lg-6 mb-5 mb-lg-0 pr-lg-5">
-        <h2 class="community-title fw-bold text-white mb-4">The community behind us</h2>
+        <h2 class="fluid-title fw-bold text-white mb-4">The community behind us</h2>
         <div style="width: 60px; height: 4px; background-color: var(--accent); margin-bottom: 30px; border-radius: 2px;"></div>
         <p class="lead mb-4" style="font-size: 1.25rem; line-height: 1.7; opacity: 0.9;">
           Over 100 people supported the team financially.
