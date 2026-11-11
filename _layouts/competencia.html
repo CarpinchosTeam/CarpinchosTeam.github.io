@@ -17,6 +17,8 @@ layout: base
   <div class="row">
     <div class="col-lg-10 offset-lg-1">
 
+      {% include back-link.html url="/#recorrido" %}
+
       <!-- HERO DE COMPETENCIA -->
       <div class="text-center mb-5 mt-3">
         {% if page.logo %}
@@ -74,18 +76,7 @@ layout: base
       <h3 class="h2 fw-bold mt-5 mb-4 border-bottom pb-3">Integrantes del Equipo</h3>
       <div class="row mb-5">
         {% for integrante in site.integrantes %}
-        {% if integrante.competitions contains page.event %}
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm text-center py-3 rounded-lg custom-hover bg-white">
-            <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
-              <div class="card-body px-2">
-                <i class="fa-solid fa-user text-primary mb-3" style="font-size: 2rem;"></i>
-                <h5 class="fw-bold text-dark mb-0" style="font-size: 1.1rem;">{{ integrante.name }}</h5>
-              </div>
-            </a>
-          </div>
-        </div>
-        {% endif %}
+        {% if integrante.competitions contains page.event %}{% include person-card.html person=integrante %}{% endif %}
         {% endfor %}
       </div>
       {% endif %}
@@ -102,19 +93,7 @@ layout: base
       <h3 class="h2 fw-bold mt-5 mb-4 border-bottom pb-3">{% if coaches_count == 1 %}Coach{% else %}Coaches{% endif %}</h3>
       <div class="row mb-5">
         {% for integrante in site.integrantes %}
-        {% if integrante.coach_competitions contains page.event %}
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 border-0 shadow-sm text-center py-3 rounded-lg custom-hover"
-            style="background-color: rgba(255,102,0,0.03);">
-            <a href="{{ integrante.url | relative_url }}" class="text-decoration-none">
-              <div class="card-body px-2">
-                <i class="fa-solid fa-chalkboard-user text-orange mb-3" style="font-size: 2rem;"></i>
-                <h5 class="fw-bold text-dark mb-0" style="font-size: 1.1rem;">{{ integrante.name }}</h5>
-              </div>
-            </a>
-          </div>
-        </div>
-        {% endif %}
+        {% if integrante.coach_competitions contains page.event %}{% include person-card.html person=integrante coach=true %}{% endif %}
         {% endfor %}
       </div>
       {% endif %}

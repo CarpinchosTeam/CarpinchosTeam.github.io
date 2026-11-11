@@ -1,0 +1,8 @@
+{%- comment -%}
+  Back link at the top of detail pages: goes to the previous page when it is on this site.
+  Params: url (fallback destination for visitors who landed here directly)
+{%- endcomment -%}
+<a href="{{ include.url | relative_url }}" class="ui-font small fw-bold text-primary text-decoration-none"
+  onclick="if (history.length > 1 && document.referrer.startsWith(location.origin)) { history.back(); return false; }">
+  <i class="fa-solid fa-arrow-left mr-1"></i> Volver
+</a>
