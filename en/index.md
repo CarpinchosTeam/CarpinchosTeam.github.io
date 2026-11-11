@@ -105,30 +105,7 @@ title: Inicio
       <p class="lead text-muted mt-4">An archive of our journey</p>
     </div>
     
-    <div class="timeline mt-5">
-      {% assign comps_sorted = site.competencias | sort: "year" | reverse %}
-      {% for comp in comps_sorted %}
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <div class="timeline-year">{{ comp.year }}</div>
-          <h4 class="fw-bold mb-2 mt-1"><a href="{{ comp.url | relative_url }}" class="text-decoration-none text-dark">{{ comp.name }}</a></h4>
-          <span class="text-muted mb-2"><i class="fa-solid fa-location-dot mr-2 text-primary"></i>{{ comp.location }}</span>
-          {% if comp.awards %}
-            {% for award in comp.awards %}
-            <br>
-            <span class="text-orange fw-bold small ui-font {% if forloop.last == false %}mb-1{% endif %}">
-            <i class="fa-solid fa-award mr-2"></i>
-            {{ award }}
-            </span>
-            {% endfor %}
-          {% endif %}
-          <div>
-            <a href="{{ comp.url | relative_url }}" class="fw-bold text-primary ui-font text-decoration-none" style="font-size: 0.9rem;">More details <i class="fa-solid fa-arrow-right ml-1"></i></a>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
+    {% include timeline.html %}
   </section>
 
   <!-- 6. EQUIPO ACTUAL -->
@@ -219,11 +196,11 @@ title: Inicio
   </section>
 
   <!-- 8. BANCARPINCHOS -->
-  <section class="py-5 my-5 bg-primary text-white rounded-lg p-5 shadow-lg" id="apoyanos" style="position: relative; overflow: hidden;">
-    <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 200%; background: radial-gradient(circle, rgba(5,160,175,0.15) 0%, rgba(3,0,42,0) 70%); pointer-events: none;"></div>
+  <section class="my-5 bg-primary text-white rounded-lg p-4 p-md-5 shadow-lg" id="apoyanos" style="position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 200%; background: radial-gradient(closest-side, rgba(5,160,175,0.15), rgba(3,0,42,0)); pointer-events: none;"></div>
     <div class="row align-items-center position-relative" style="z-index: 1;">
       <div class="col-lg-6 mb-5 mb-lg-0 pr-lg-5">
-        <h2 class="display-4 fw-bold text-white mb-4">The community behind us</h2>
+        <h2 class="fluid-title fw-bold text-white mb-4">The community behind us</h2>
         <div style="width: 60px; height: 4px; background-color: var(--accent); margin-bottom: 30px; border-radius: 2px;"></div>
         <p class="lead mb-4" style="font-size: 1.25rem; line-height: 1.7; opacity: 0.9;">
           Over 100 people supported the team financially.
@@ -243,8 +220,8 @@ title: Inicio
             <i class="fa-solid fa-heart text-orange fs-3 mr-2"></i>
             <h4 class="fw-bold m-0">Thanks CapyBackers!</h4>
           </div>
-          <div class="bancarpinchos-list pr-3" style="max-height: 350px; overflow-y: auto;">
-            <ul class="list-unstyled mb-0" style="column-count: 2; column-gap: 2rem;">
+          <div class="bancarpinchos-list">
+            <ul class="list-unstyled mb-0">
               {% for donor in site.data.bancarpinchos %}
               <li class="mb-3">
                 <span class="d-block text-dark fw-bold ui-font" style="font-size: 0.95rem;">{{ donor.name }}</span>

@@ -9,3 +9,7 @@ navbar-links:
 
 footer:
   credits: "Fundados y entrenados por UNC Supercómputo"
+
+timeline:
+  talk: "Charla"
+  details: "Ver detalles completos"

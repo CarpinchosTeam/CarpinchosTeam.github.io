@@ -9,3 +9,7 @@ navbar-links:
 
 footer:
   credits: "Founded and trained by UNC Supercómputo"
+
+timeline:
+  talk: "Talk"
+  details: "More details"

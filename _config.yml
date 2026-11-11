@@ -151,6 +151,9 @@ permalink: /posts/:year-:month-:day-:title/
 kramdown:
   input: GFM
 
+# Competencias y charlas usan `date`; sin esto Jekyll omite las que todavía no ocurrieron
+future: true
+
 # Default YAML values (more information on Jekyll's site)
 defaults:
   - scope:
@@ -158,6 +161,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "charlas"
+    values:
+      layout: "charla"
   - scope:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
@@ -187,3 +195,6 @@ collections:
   aplicaciones:
     output: true
     permalink: /aplicaciones/:name/
+  charlas:
+    output: true
+    permalink: /charlas/:name/

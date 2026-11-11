@@ -4,7 +4,7 @@ name: Alejandro Ismael Silva
 affiliation: Universidad Nacional de Córdoba
 field: Ciencias de la Computación
 role: Antiguo Coach y Miembro
-github: AIDEA775
+github: alajandroisamel
 competitions:
 - indyscc23
 - asc24
