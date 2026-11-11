@@ -2,7 +2,7 @@
 name: "El límite no es tu hardware. Aprendé HPC."
 date: 2026-6-11
 location: "Córdoba, Argentina"
-event: "Reunión Regional Anual de Física, Tecnología y Aplicaciones (RRAFTA)"
+event: "RRAFTA"
 speakers:
 - jmercado
 - lkurtz
