@@ -106,16 +106,35 @@ title: Inicio
     </div>
     
     <div class="timeline mt-5">
-      {% assign comps_sorted = site.competencias | concat: site.charlas | sort: "year" | reverse %}
+      {% assign comps_sorted = site.competencias | concat: site.charlas | sort: "date" | reverse %}
       {% for comp in comps_sorted %}
       <div class="timeline-item">
         <div class="timeline-content">
-          <div class="timeline-year">{{ comp.year }}</div>
+          <div class="timeline-year">{{ comp.date | date: "%Y" }}</div>
           {% if comp.collection == "charlas" %}
           <span class="badge badge-pill badge-light text-orange ui-font mt-2"><i class="fa-solid fa-microphone mr-1"></i>Charla</span>
           <h4 class="fw-bold mb-2 mt-1">{{ comp.name }}</h4>
           {% if comp.event %}<span class="text-muted d-block">{{ comp.event }}</span>{% endif %}
+          <span class="text-muted d-block"><i class="fa-regular fa-calendar mr-2 text-primary"></i>{{ comp.date | date: "%d/%m/%Y" }}</span>
           <span class="text-muted mb-2"><i class="fa-solid fa-location-dot mr-2 text-primary"></i>{{ comp.location }}</span>
+          {% if comp.speakers %}
+          <span class="text-muted d-block"><i class="fa-solid fa-user mr-2 text-primary"></i>
+            {%- for speaker_slug in comp.speakers -%}
+            {%- assign speaker = site.integrantes | where: "slug", speaker_slug | first -%}
+            <a href="{{ speaker.url | relative_url }}" class="text-decoration-none">{{ speaker.name }}</a>{% unless forloop.last %}, {% endunless %}
+            {%- endfor -%}
+          </span>
+          {% endif %}
+          {% if comp.photos %}
+          <div class="d-flex flex-wrap mt-3">
+            {% for photo in comp.photos %}
+            {% if photo contains '://' %}{% assign photo_url = photo %}{% else %}{% assign photo_url = photo | relative_url %}{% endif %}
+            <a href="{{ photo_url }}" target="_blank" class="mr-2 mb-2">
+              <img src="{{ photo_url }}" alt="{{ comp.name }}" loading="lazy" class="rounded shadow-sm" style="height: 110px; max-width: 100%; object-fit: cover;">
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
           <div>
             {% if comp.slides %}
             <a href="{% if comp.slides contains '://' %}{{ comp.slides }}{% else %}{{ comp.slides | relative_url }}{% endif %}" target="_blank" class="fw-bold text-primary ui-font text-decoration-none mr-3" style="font-size: 0.9rem;"><i class="fa-solid fa-file-pdf mr-1"></i>Ver slides</a>
