@@ -13,6 +13,10 @@
   /* Strong Cyan */
   --accent-orange: #fd7408;
   /* Orange from logo */
+  --accent-text: #0b7a96;
+  /* Darker cyan for text on light backgrounds (AA contrast) */
+  --accent-orange-text: #b85000;
+  /* Darker orange for text on light backgrounds (AA contrast) */
 
   --mid-col: #767582;
   --page-col: #FAFAFA;
@@ -20,8 +24,8 @@
   --text-col: #2D3142;
   /* Dark grey for text */
 
-  --link-col: #1cb0d5;
-  --hover-col: #1796b5;
+  --link-col: var(--accent-text);
+  --hover-col: #085d73;
 
   --navbar-col: #03002A;
   --navbar-text-col: #FFFFFF;
@@ -29,8 +33,8 @@
 
   --footer-col: #EAEAEA;
   --footer-text-col: #777777;
-  --footer-link-col: #1cb0d5;
-  --footer-hover-col: #1796b5;
+  --footer-link-col: var(--accent-text);
+  --footer-hover-col: #085d73;
 }
 
 body {
@@ -72,7 +76,7 @@ h6,
 }
 
 .btn-outline-primary {
-  color: var(--accent);
+  color: var(--accent-text);
   border-color: var(--accent);
   border-radius: 50px;
   font-family: var(--ui-font);
@@ -116,10 +120,19 @@ h6,
 }
 
 .text-primary {
-  color: var(--accent) !important;
+  color: var(--accent-text) !important;
 }
 
 .text-orange {
+  color: var(--accent-orange-text) !important;
+}
+
+/* Icons keep the bright brand colors */
+i.text-primary {
+  color: var(--accent) !important;
+}
+
+i.text-orange {
   color: var(--accent-orange) !important;
 }
 
@@ -264,4 +277,25 @@ hr {
 .avatar-circle:hover {
   transform: scale(1.05);
   border-color: var(--accent);
+}
+
+/* Community / Bancarpinchos section */
+.community-title {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  line-height: 1.15;
+  overflow-wrap: normal;
+}
+
+.bancarpinchos-list ul {
+  column-gap: 2rem;
+}
+
+.bancarpinchos-list li {
+  break-inside: avoid;
+}
+
+@media (min-width: 576px) {
+  .bancarpinchos-list ul {
+    column-count: 2;
+  }
 }

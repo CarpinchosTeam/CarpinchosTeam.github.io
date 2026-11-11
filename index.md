@@ -253,11 +253,11 @@ title: Inicio
   </section>
 
   <!-- 8. BANCARPINCHOS -->
-  <section class="py-5 my-5 bg-primary text-white rounded-lg p-5 shadow-lg" id="apoyanos" style="position: relative; overflow: hidden;">
-    <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 200%; background: radial-gradient(circle, rgba(5,160,175,0.15) 0%, rgba(3,0,42,0) 70%); pointer-events: none;"></div>
+  <section class="my-5 bg-primary text-white rounded-lg p-4 p-md-5 shadow-lg" id="apoyanos" style="position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 200%; background: radial-gradient(closest-side, rgba(5,160,175,0.15), rgba(3,0,42,0)); pointer-events: none;"></div>
     <div class="row align-items-center position-relative" style="z-index: 1;">
       <div class="col-lg-6 mb-5 mb-lg-0 pr-lg-5">
-        <h2 class="display-4 fw-bold text-white mb-4">La comunidad que nos sostiene</h2>
+        <h2 class="community-title fw-bold text-white mb-4">La comunidad que nos sostiene</h2>
         <div style="width: 60px; height: 4px; background-color: var(--accent); margin-bottom: 30px; border-radius: 2px;"></div>
         <p class="lead mb-4" style="font-size: 1.25rem; line-height: 1.7; opacity: 0.9;">
           Más de 100 personas apoyaron económicamente al equipo.
@@ -277,8 +277,8 @@ title: Inicio
             <i class="fa-solid fa-heart text-orange fs-3 mr-2"></i>
             <h4 class="fw-bold m-0">¡Gracias Bancarpinchos!</h4>
           </div>
-          <div class="bancarpinchos-list pr-3" style="max-height: 350px; overflow-y: auto;">
-            <ul class="list-unstyled mb-0" style="column-count: 2; column-gap: 2rem;">
+          <div class="bancarpinchos-list">
+            <ul class="list-unstyled mb-0">
               {% for donor in site.data.bancarpinchos %}
               <li class="mb-3">
                 <span class="d-block text-dark fw-bold ui-font" style="font-size: 0.95rem;">{{ donor.name }}</span>
