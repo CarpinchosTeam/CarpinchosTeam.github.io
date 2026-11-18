@@ -174,9 +174,16 @@ title: Inicio
     </div>
   </section>
 
+  <!-- 7b. EQUIPOS AMIGOS -->
+  <section class="py-5 my-5 text-center" id="amigos">
+    <h2 class="display-5 fw-bold mb-3">Friend Teams</h2>
+    <div style="width: 60px; height: 4px; background-color: var(--accent); margin: 0 auto; border-radius: 2px;"></div>
+    <p class="lead text-muted mt-4">Student teams from the region who share our passion for HPC.</p>
+    {% include friends.html %}
+  </section>
+
   <!-- 8. BANCARPINCHOS -->
   <section class="my-5 bg-primary text-white rounded-lg p-4 p-md-5 shadow-lg" id="apoyanos" style="position: relative; overflow: hidden;">
-    <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 200%; background: radial-gradient(closest-side, rgba(28,176,213,0.15), rgba(19,50,79,0)); pointer-events: none;"></div>
     <div class="row align-items-center position-relative" style="z-index: 1;">
       <div class="col-lg-6 mb-5 mb-lg-0 pr-lg-5">
         <h2 class="fluid-title fw-bold text-white mb-4">The community behind us</h2>

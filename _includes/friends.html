@@ -1,0 +1,23 @@
+{% assign lang = page.lang | default: "es" %}
+<div class="row justify-content-center mt-5">
+  {% for team in site.data.friends %}
+  <div class="col-md-6 col-lg-5 mb-4">
+    <a href="{{ team.url[lang] }}" target="_blank" rel="noopener" class="card friend-card h-100 p-4 text-decoration-none">
+      <div class="d-flex align-items-center mb-3">
+        <span class="friend-flag mr-3" aria-hidden="true">{{ team.flag }}</span>
+        <div>
+          <h4 class="fw-bold mb-0 text-dark">{{ team.name }}</h4>
+          <span class="text-muted small text-uppercase ui-font">{{ team.country[lang] }}</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square ml-auto friend-arrow"></i>
+      </div>
+      <p class="text-muted mt-0 mb-3">{{ team.description[lang] }}</p>
+      {% if team.events %}
+      <div class="friend-events mt-auto">
+        {% for event in team.events %}<span class="friend-event">{{ event }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </a>
+  </div>
+  {% endfor %}
+</div>

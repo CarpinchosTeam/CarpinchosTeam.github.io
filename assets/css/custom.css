@@ -508,6 +508,49 @@ footer .footer-links a:focus-visible .fa-inverse {
   color: var(--accent-brown);
 }
 
+/* Friend teams: cards linking to other student teams */
+.friend-card {
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.friend-card:hover,
+.friend-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.friend-flag {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.friend-arrow {
+  color: var(--mid-col);
+  transition: color 0.2s ease;
+}
+
+.friend-card:hover .friend-arrow {
+  color: var(--accent);
+}
+
+/* Shared competitions, as small outlined pills at the bottom of the card */
+.friend-events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.friend-event {
+  padding: 0.15rem 0.7rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 50px;
+  color: var(--primary);
+  font-family: var(--ui-font);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 /* Sponsor logos: on hover the logo lifts and a brown underline draws from the center */
 .sponsor-logo {
   position: relative;
