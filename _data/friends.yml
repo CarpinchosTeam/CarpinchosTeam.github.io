@@ -1,5 +1,6 @@
 # Equipos amigos que se muestran en la portada (sección #amigos).
-# url/description tienen versión por idioma (es/en).
+# url/description tienen versión por idioma (es/en); events son las
+# competencias que compartimos, en orden cronológico.
 - name: SCAR
   country: { es: Colombia, en: Colombia }
   flag: "🇨🇴"
@@ -7,8 +8,9 @@
     es: "https://www.scar-hpc.site/scar-final.html"
     en: "https://www.scar-hpc.site/scar-final-en.html"
   description:
-    es: "Semillero de investigación en HPC. Compartimos la ASC 2026, SCC@CARLA 2026 y SC26 SCC Connect."
-    en: "High performance computing research seedbed. We met at ASC 2026, SCC@CARLA 2026 and SC26 SCC Connect."
+    es: "Semillero de investigación en HPC. Nos conocimos en la final de la ASC en Wuxi: dos equipos latinoamericanos al otro lado del mundo."
+    en: "HPC research seedbed. We met at the ASC final in Wuxi: two Latin American teams on the other side of the world."
+  events: [ASC 2026, SCC@CARLA 2026, SC26 SCC Connect]
 - name: HPC Brazil Force
   country: { es: Brasil, en: Brazil }
   flag: "🇧🇷"
@@ -16,5 +18,6 @@
     es: "https://hpc-brazil-force.github.io/"
     en: "https://hpc-brazil-force.github.io/"
   description:
-    es: "Equipo estudiantil de supercómputo. Nos cruzamos en SC25 IndySCC, SCC@CARLA 2026 y SC26 SCC Connect."
-    en: "Student supercomputing team. We met at SC25 IndySCC, SCC@CARLA 2026 and SC26 SCC Connect."
+    es: "Equipo estudiantil de HPC. Nos conocimos en el IndySCC de SC25, donde la rivalidad se convirtió en amistad."
+    en: "HPC student team. We met at IndySCC during SC25, where rivalry turned into friendship."
+  events: [SC25 IndySCC, SCC@CARLA 2026, SC26 SCC Connect]
