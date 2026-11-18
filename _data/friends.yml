@@ -1,0 +1,20 @@
+# Equipos amigos que se muestran en la portada (sección #amigos).
+# url/description tienen versión por idioma (es/en).
+- name: SCAR
+  country: { es: Colombia, en: Colombia }
+  flag: "🇨🇴"
+  url:
+    es: "https://www.scar-hpc.site/scar-final.html"
+    en: "https://www.scar-hpc.site/scar-final-en.html"
+  description:
+    es: "Semillero de investigación en HPC. Compartimos la ASC 2026, SCC@CARLA 2026 y SC26 SCC Connect."
+    en: "High performance computing research seedbed. We met at ASC 2026, SCC@CARLA 2026 and SC26 SCC Connect."
+- name: HPC Brazil Force
+  country: { es: Brasil, en: Brazil }
+  flag: "🇧🇷"
+  url:
+    es: "https://hpc-brazil-force.github.io/"
+    en: "https://hpc-brazil-force.github.io/"
+  description:
+    es: "Equipo estudiantil de supercómputo. Nos cruzamos en SC25 IndySCC, SCC@CARLA 2026 y SC26 SCC Connect."
+    en: "Student supercomputing team. We met at SC25 IndySCC, SCC@CARLA 2026 and SC26 SCC Connect."

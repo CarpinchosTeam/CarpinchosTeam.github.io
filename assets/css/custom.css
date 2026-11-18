@@ -508,6 +508,32 @@ footer .footer-links a:focus-visible .fa-inverse {
   color: var(--accent-brown);
 }
 
+/* Friend teams: cards linking to other student teams */
+.friend-card {
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.friend-card:hover,
+.friend-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.friend-flag {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.friend-arrow {
+  color: var(--mid-col);
+  transition: color 0.2s ease;
+}
+
+.friend-card:hover .friend-arrow {
+  color: var(--accent);
+}
+
 /* Sponsor logos: on hover the logo lifts and a brown underline draws from the center */
 .sponsor-logo {
   position: relative;
