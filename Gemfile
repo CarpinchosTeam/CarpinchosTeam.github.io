@@ -9,7 +9,7 @@ gem "jekyll", "~> 3.10.0"
 # GitHub Pages requires specific versions, uncomment and run `bundle update` if needed
 # gem "github-pages", group: :jekyll_plugins
 gem "kramdown-parser-gfm", "~> 1.1"
-gem "kramdown", "~> 2.3"
+gem "kramdown", "~> 2.6"
 gem "webrick", "~> 1.8"
 
 # Plugins specified in _config.yml

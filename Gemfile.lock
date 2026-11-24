@@ -61,7 +61,7 @@ GEM
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     json (3.1.0)
-    kramdown (2.5.2)
+    kramdown (2.6.1)
       rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -129,7 +129,7 @@ DEPENDENCIES
   jekyll-seo-tag (~> 2.9.1)
   jekyll-sitemap (~> 1.4)
   json
-  kramdown (~> 2.3)
+  kramdown (~> 2.6)
   kramdown-parser-gfm (~> 1.1)
   logger
   rubyzip (>= 3.4.0)
